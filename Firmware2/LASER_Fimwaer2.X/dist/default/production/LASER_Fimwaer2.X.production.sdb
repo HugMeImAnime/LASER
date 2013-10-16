@@ -1,0 +1,1704 @@
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F2520 ]
+"27 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\accelmeter.c
+[v _accelGetADC accelGetADC `(i  1 e 2 0 ]
+"52
+[v _accelSelfTest accelSelfTest `(v  1 e 0 0 ]
+"81
+[v _accelCalibrate accelCalibrate `(v  1 e 0 0 ]
+"97
+[v _accelGetRoll accelGetRoll `(i  1 e 2 0 ]
+"27 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\ADC/adcbusy.c
+[v _BusyADC BusyADC `(uc  1 e 1 0 ]
+"24 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\ADC/adcclose.c
+[v _CloseADC CloseADC `(v  1 e 0 0 ]
+"23 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\ADC/adcconv.c
+[v _ConvertADC ConvertADC `(v  1 e 0 0 ]
+"71 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\ADC/adcopen.c
+[v _OpenADC OpenADC `(v  1 e 0 0 ]
+"25 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\ADC/adcread.c
+[v _ReadADC ReadADC `(i  1 e 2 0 ]
+"16 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\ADC/adcselchconv.c
+[v _SelChanConvADC SelChanConvADC `(v  1 e 0 0 ]
+"31 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\ADC/adcsetch.c
+[v _SetChanADC SetChanADC `(v  1 e 0 0 ]
+"43 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\barometer.c
+[v _baroCalibrate baroCalibrate `(v  1 e 0 0 ]
+"90
+[v _baroTempStart baroTempStart `(v  1 e 0 0 ]
+"115
+[v _baroPresStart baroPresStart `(v  1 e 0 0 ]
+"141
+[v _baroGetVal baroGetVal `(us  1 e 2 0 ]
+"176
+[v _baroTrueTemp baroTrueTemp `(us  1 e 2 0 ]
+"192
+[v _baroTruePres baroTruePres `(l  1 e 4 0 ]
+"225
+[v _baroConvertAlt baroConvertAlt `(l  1 e 4 0 ]
+"22 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\batteries.c
+[v _battConfig battConfig `(v  1 e 0 0 ]
+"68
+[v _openSMBus openSMBus `(v  1 e 0 0 ]
+"76
+[v _updateBattData updateBattData `(v  1 e 0 0 ]
+"91
+[v _battWriteWord battWriteWord `(v  1 e 0 0 ]
+"103
+[v _battConfigByte battConfigByte `(v  1 e 0 0 ]
+"115
+[v _battReadWord battReadWord `(i  1 e 2 0 ]
+"140
+[v _battSafeCheck battSafeCheck `(v  1 e 0 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\abdiv.c
+[v ___abdiv __abdiv `(c  1 e 1 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\abmod.c
+[v ___abmod __abmod `(c  1 e 1 0 ]
+"32 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\abtofl.c
+[v ___abtofl __abtofl `(d  1 e 3 0 ]
+"34 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\abtoft.c
+[v ___abtoft __abtoft `(f  1 e 3 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\almod.c
+[v ___almod __almod `(l  1 e 4 0 ]
+"37 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\altofl.c
+[v ___altofl __altofl `(d  1 e 3 0 ]
+"43 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\altoft.c
+[v ___altoft __altoft `(f  1 e 3 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\asin.c
+[v _asin asin `(d  1 e 3 0 ]
+"9 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\atan.c
+[v _atan atan `(d  1 e 3 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\atdiv.c
+[v ___atdiv __atdiv `(m  1 e 3 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\atmod.c
+[v ___atmod __atmod `(m  1 e 3 0 ]
+"38 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\attofl.c
+[v ___attofl __attofl `(d  1 e 3 0 ]
+"38 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\attoft.c
+[v ___attoft __attoft `(f  1 e 3 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"32 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\awtofl.c
+[v ___awtofl __awtofl `(d  1 e 3 0 ]
+"33 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+"3 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\bmul.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"64 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\double.c
+[v ___flpack __flpack `(d  1 e 3 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\evalpoly.c
+[v _eval_poly eval_poly `(d  1 e 3 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\fabs.c
+[v _fabs fabs `(d  1 e 3 0 ]
+"89 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\fladd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"50 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\fldiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\flge.c
+[v ___flge __flge `(b  1 e 0 0 ]
+"51 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\flmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"16 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\flneg.c
+[v ___flneg __flneg `(d  1 e 3 0 ]
+"63 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"22 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\flsub.c
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"44 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+"87 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"50 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+"52 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"16 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+"22 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"45 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\lbdiv.c
+[v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\lbmod.c
+[v ___lbmod __lbmod `(uc  1 e 1 0 ]
+"28 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\lbtofl.c
+[v ___lbtofl __lbtofl `(d  1 e 3 0 ]
+"28 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\lbtoft.c
+[v ___lbtoft __lbtoft `(f  1 e 3 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"31 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\lltofl.c
+[v ___lltofl __lltofl `(d  1 e 3 0 ]
+"36 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\lltoft.c
+[v ___lltoft __lltoft `(f  1 e 3 0 ]
+"3 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\lmul.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\ltdiv.c
+[v ___ltdiv __ltdiv `(um  1 e 3 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\ltmod.c
+[v ___ltmod __ltmod `(um  1 e 3 0 ]
+"31 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\lttofl.c
+[v ___lttofl __lttofl `(d  1 e 3 0 ]
+"31 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\lttoft.c
+[v ___lttoft __lttoft `(f  1 e 3 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"29 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\lwtofl.c
+[v ___lwtofl __lwtofl `(d  1 e 3 0 ]
+"29 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+"14 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\sqrt.c
+[v _sqrt sqrt `(d  1 e 3 0 ]
+"3 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\tmul.c
+[v ___tmul __tmul `(um  1 e 3 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\wmul.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic18\asfladd.c
+[v ___asfladd __asfladd `(d  1 e 3 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic18\asfldiv.c
+[v ___asfldiv __asfldiv `(d  1 e 3 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic18\asflmul.c
+[v ___asflmul __asflmul `(d  1 e 3 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic18\asflsub.c
+[v ___asflsub __asflsub `(d  1 e 3 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic18\asftadd.c
+[v ___asftadd __asftadd `(f  1 e 3 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic18\asftdiv.c
+[v ___asftdiv __asftdiv `(f  1 e 3 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic18\asftmul.c
+[v ___asftmul __asftmul `(f  1 e 3 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic18\asftsub.c
+[v ___asftsub __asftsub `(f  1 e 3 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic18\aslmul.c
+[v ___aslmul __aslmul `(ul  1 e 4 0 ]
+"9 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic18\d10ktcyx.c
+[v _Delay10KTCYx Delay10KTCYx `(v  1 e 0 0 ]
+"9 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic18\d10tcyx.c
+[v _Delay10TCYx Delay10TCYx `(v  1 e 0 0 ]
+"19 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\errors.c
+[v _transmitError transmitError `(v  1 e 0 0 ]
+"29
+[v _morseCode morseCode `(v  1 e 0 0 ]
+"95
+[v _morseShort morseShort `(v  1 e 0 0 ]
+"106
+[v _morseLong morseLong `(v  1 e 0 0 ]
+"121
+[v _morseStop morseStop `(v  1 e 0 0 ]
+"29 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\gyroscope.c
+[v _gyroGetADC gyroGetADC `(i  1 e 2 0 ]
+"50
+[v _gyroCalibrate gyroCalibrate `(v  1 e 0 0 ]
+"69
+[v _gyroSelfTest gyroSelfTest `(v  1 e 0 0 ]
+"99
+[v _updateSensorPData updateSensorPData `(v  1 e 0 0 ]
+"117
+[v _gyroSleep gyroSleep `(v  1 e 0 0 ]
+"127
+[v _gyroWakeUp gyroWakeUp `(v  1 e 0 0 ]
+"136
+[v _gyroTimerStart gyroTimerStart `(v  1 e 0 0 ]
+"147
+[v _gyroTimerStop gyroTimerStop `(v  1 e 0 0 ]
+"14 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\i2c/i2c_ack.c
+[v _AckI2C AckI2C `(v  1 e 0 0 ]
+"20 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\i2c/i2c_clos.c
+[v _CloseI2C CloseI2C `(v  1 e 0 0 ]
+"14 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\i2c/i2c_dtrd.c
+[v _DataRdyI2C DataRdyI2C `(uc  1 e 1 0 ]
+"16 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\i2c/i2c_eeap.c
+[v _EEAckPolling EEAckPolling `(c  1 e 1 0 ]
+"18 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\i2c/i2c_eebw.c
+[v _EEByteWrite EEByteWrite `(c  1 e 1 0 ]
+"18 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\i2c/i2c_eecr.c
+[v _EECurrentAddRead EECurrentAddRead `(i  1 e 2 0 ]
+"18 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\i2c/i2c_eepw.c
+[v _EEPageWrite EEPageWrite `(c  1 e 1 0 ]
+"18 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\i2c/i2c_eerr.c
+[v _EERandomRead EERandomRead `(i  1 e 2 0 ]
+"19 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\i2c/i2c_eesr.c
+[v _EESequentialRead EESequentialRead `(c  1 e 1 0 ]
+"18 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\i2c/i2c_gets.c
+[v _getsI2C getsI2C `(c  1 e 1 0 ]
+"25 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\i2c/i2c_idle.c
+[v _IdleI2C IdleI2C `(v  1 e 0 0 ]
+"14 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\i2c/i2c_nack.c
+[v _NotAckI2C NotAckI2C `(v  1 e 0 0 ]
+"15 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\i2c/i2c_open.c
+[v _OpenI2C OpenI2C `(v  1 e 0 0 ]
+"20 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\i2c/i2c_puts.c
+[v _putsI2C putsI2C `(c  1 e 1 0 ]
+"12 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\i2c/i2c_read.c
+[v _ReadI2C ReadI2C `(uc  1 e 1 0 ]
+"14 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\i2c/i2c_rstr.c
+[v _RestartI2C RestartI2C `(v  1 e 0 0 ]
+"14 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\i2c/i2c_stop.c
+[v _StopI2C StopI2C `(v  1 e 0 0 ]
+"14 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\i2c/i2c_strt.c
+[v _StartI2C StartI2C `(v  1 e 0 0 ]
+"13 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\i2c/i2c_writ.c
+[v _WriteI2C WriteI2C `(c  1 e 1 0 ]
+"127 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\main.c
+[v _high_vector high_vector `(v  1 e 0 0 ]
+"137
+[v _HighInt_ISR HighInt_ISR `(v  1 e 0 0 ]
+"147
+[v _low_vector low_vector `(v  1 e 0 0 ]
+"158
+[v _LowInt_ISR LowInt_ISR `(v  1 e 0 0 ]
+"178
+[v _main main `(v  1 e 0 0 ]
+"25 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\power.c
+[v _getArrayVoltage getArrayVoltage `(i  1 e 2 0 ]
+"46
+[v _getArrayCurrent getArrayCurrent `(i  1 e 2 0 ]
+"67
+[v _getArrayPower getArrayPower `(i  1 e 2 0 ]
+"79
+[v _blinkLED blinkLED `(v  1 e 0 0 ]
+"85
+[v _updatePwrData updatePwrData `(v  1 e 0 0 ]
+"18 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\smbus.c
+[v _writeRegSMB writeRegSMB `(v  1 e 0 0 ]
+"38
+[v _readSMB readSMB `(uc  1 e 1 0 ]
+"77
+[v _ReadI2CByte ReadI2CByte `(uc  1 e 1 0 ]
+"97
+[v _ReadI2CWord ReadI2CWord `(us  1 e 2 0 ]
+"25 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\telemetry.c
+[v _openRS232 openRS232 `(v  1 e 0 0 ]
+"39
+[v _xBeeConfig xBeeConfig `(v  1 e 0 0 ]
+"50
+[v _xBeeSetATMode xBeeSetATMode `(v  1 e 0 0 ]
+"69
+[v _xBeeATCommand xBeeATCommand `(v  1 e 0 0 ]
+"80
+[v _xBeeATCommandUC xBeeATCommandUC `(v  1 e 0 0 ]
+"91
+[v _updateXBeeData updateXBeeData `(v  1 e 0 0 ]
+"116
+[v _xBeeEndATMode xBeeEndATMode `(v  1 e 0 0 ]
+"124
+[v _xBeeSleep xBeeSleep `(v  1 e 0 0 ]
+"132
+[v _xBeeWake xBeeWake `(v  1 e 0 0 ]
+"141
+[v _xBeeHoldRx xBeeHoldRx `(v  1 e 0 0 ]
+"148
+[v _xBeeResumeRx xBeeResumeRx `(v  1 e 0 0 ]
+"155
+[v _xBeeTxByte xBeeTxByte `(v  1 e 0 0 ]
+"160
+[v _xBeeTxString xBeeTxString `(v  1 e 0 0 ]
+"171
+[v _xBeeTxInt xBeeTxInt `(v  1 e 0 0 ]
+"179
+[v _xBeeTxShort xBeeTxShort `(v  1 e 0 0 ]
+"187
+[v _xBeeTxLong xBeeTxLong `(v  1 e 0 0 ]
+"197
+[v _xBeeTxSense xBeeTxSense `(v  1 e 0 0 ]
+"208
+[v _xBeeTxBatt xBeeTxBatt `(v  1 e 0 0 ]
+"223
+[v _xBeeTxPwr xBeeTxPwr `(v  1 e 0 0 ]
+"232
+[v _xBeeTxXBee xBeeTxXBee `(v  1 e 0 0 ]
+"244
+[v _xBeeRxByte xBeeRxByte `(uc  1 e 1 0 ]
+"252
+[v _xBeeRxInt xBeeRxInt `(i  1 e 2 0 ]
+"263
+[v _xBeeRxLong xBeeRxLong `(l  1 e 4 0 ]
+"276
+[v _telemTimerStart telemTimerStart `(v  1 e 0 0 ]
+"289
+[v _telemTimerStop telemTimerStop `(v  1 e 0 0 ]
+"296
+[v _updateSensorARData updateSensorARData `(v  1 e 0 0 ]
+"16 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\USART/ubaud.c
+[v _baudUSART baudUSART `(v  1 e 0 0 ]
+"14 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\USART/ubusy.c
+[v _BusyUSART BusyUSART `(uc  1 e 1 0 ]
+"16 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\USART/uclose.c
+[v _CloseUSART CloseUSART `(v  1 e 0 0 ]
+"16 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\USART/udrdy.c
+[v _DataRdyUSART DataRdyUSART `(uc  1 e 1 0 ]
+"15 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\USART/ugets.c
+[v _getsUSART getsUSART `(v  1 e 0 0 ]
+"74 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\USART/uopen.c
+[v _OpenUSART OpenUSART `(v  1 e 0 0 ]
+"14 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\USART/uputrs.c
+[v _putrsUSART putrsUSART `(v  1 e 0 0 ]
+"15 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\USART/uputs.c
+[v _putsUSART putsUSART `(v  1 e 0 0 ]
+"16 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\USART/uread.c
+[v _ReadUSART ReadUSART `(uc  1 e 1 0 ]
+"14 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\USART/uwrite.c
+[v _WriteUSART WriteUSART `(v  1 e 0 0 ]
+"19 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\accelmeter.c
+[v _accelZero accelZero `i  1 e 2 0 ]
+"20
+[v _accelFail accelFail `uc  1 e 1 0 ]
+"17 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\barometer.c
+[v _presSeaLevel presSeaLevel `l  1 e 4 0 ]
+"18
+[v _altOffset altOffset `l  1 e 4 0 ]
+"20
+[v _AC1 AC1 `s  1 s 2 AC1 ]
+"21
+[v _AC2 AC2 `s  1 s 2 AC2 ]
+"22
+[v _AC3 AC3 `s  1 s 2 AC3 ]
+"23
+[v _AC4 AC4 `us  1 s 2 AC4 ]
+"24
+[v _AC5 AC5 `us  1 s 2 AC5 ]
+"25
+[v _AC6 AC6 `us  1 s 2 AC6 ]
+"26
+[v _B1 B1 `s  1 s 2 B1 ]
+"27
+[v _B2 B2 `s  1 s 2 B2 ]
+"28
+[v _B3 B3 `l  1 s 4 B3 ]
+"29
+[v _B4 B4 `ul  1 s 4 B4 ]
+"30
+[v _B5 B5 `l  1 s 4 B5 ]
+"31
+[v _B6 B6 `l  1 s 4 B6 ]
+"32
+[v _B7 B7 `ul  1 s 4 B7 ]
+"33
+[v _MB MB `s  1 s 2 MB ]
+"34
+[v _MC MC `s  1 s 2 MC ]
+"35
+[v _MD MD `s  1 s 2 MD ]
+"44 C:\Program Files (x86)\Microchip\xc8\v1.20\include\pic18f2520.h
+[v _PORTA PORTA `VEuc  1 e 1 @3968 ]
+[s S3310 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+`uc 1 RA7 1 0 :1:7 
+]
+"110
+[s S3319 . 1 `uc 1 AN0 1 0 :1:0 
+`uc 1 AN1 1 0 :1:1 
+`uc 1 AN2 1 0 :1:2 
+`uc 1 AN3 1 0 :1:3 
+`uc 1 T0CKI 1 0 :1:4 
+`uc 1 AN4 1 0 :1:5 
+`uc 1 OSC2 1 0 :1:6 
+`uc 1 OSC1 1 0 :1:7 
+]
+[s S3328 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 VREFN 1 0 :1:2 
+`uc 1 VREFP 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 SS 1 0 :1:5 
+`uc 1 CLKO 1 0 :1:6 
+`uc 1 CLKI 1 0 :1:7 
+]
+[s S3336 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_SS 1 0 :1:5 
+]
+[s S3339 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 CVREF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nSS 1 0 :1:5 
+]
+[s S3344 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 LVDIN 1 0 :1:5 
+]
+[s S3347 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 HLVDIN 1 0 :1:5 
+]
+[s S3350 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 C1OUT 1 0 :1:4 
+`uc 1 C2OUT 1 0 :1:5 
+]
+[s S3354 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 RJPU 1 0 :1:7 
+]
+[s S3357 . 1 `uc 1 ULPWUIN 1 0 :1:0 
+]
+[u S3359 . 1 `S3310 1 . 1 0 `S3319 1 . 1 0 `S3328 1 . 1 0 `S3336 1 . 1 0 `S3339 1 . 1 0 `S3344 1 . 1 0 `S3347 1 . 1 0 `S3350 1 . 1 0 `S3354 1 . 1 0 `S3357 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES3359  1 e 1 @3968 ]
+"264
+[v _PORTB PORTB `VEuc  1 e 1 @3969 ]
+[s S2230 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"308
+[s S2239 . 1 `uc 1 INT0 1 0 :1:0 
+`uc 1 INT1 1 0 :1:1 
+`uc 1 INT2 1 0 :1:2 
+`uc 1 CCP2 1 0 :1:3 
+`uc 1 KBI0 1 0 :1:4 
+`uc 1 KBI1 1 0 :1:5 
+`uc 1 KBI2 1 0 :1:6 
+`uc 1 KBI3 1 0 :1:7 
+]
+[s S2248 . 1 `uc 1 AN12 1 0 :1:0 
+`uc 1 AN10 1 0 :1:1 
+`uc 1 AN8 1 0 :1:2 
+`uc 1 AN9 1 0 :1:3 
+`uc 1 AN11 1 0 :1:4 
+`uc 1 PGM 1 0 :1:5 
+`uc 1 PGC 1 0 :1:6 
+`uc 1 PGD 1 0 :1:7 
+]
+[s S2257 . 1 `uc 1 FLT0 1 0 :1:0 
+]
+[s S2259 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP2_PA2 1 0 :1:3 
+]
+[u S2262 . 1 `S2230 1 . 1 0 `S2239 1 . 1 0 `S2248 1 . 1 0 `S2257 1 . 1 0 `S2259 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES2262  1 e 1 @3969 ]
+"442
+[v _PORTC PORTC `VEuc  1 e 1 @3970 ]
+[s S1167 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"490
+[s S2772 . 1 `uc 1 T1OSO 1 0 :1:0 
+`uc 1 T1OSI 1 0 :1:1 
+`uc 1 CCP1 1 0 :1:2 
+`uc 1 SCK 1 0 :1:3 
+`uc 1 SDI 1 0 :1:4 
+`uc 1 SDO 1 0 :1:5 
+`uc 1 TX 1 0 :1:6 
+`uc 1 RX 1 0 :1:7 
+]
+[s S2781 . 1 `uc 1 T13CKI 1 0 :1:0 
+`uc 1 CCP2 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 SCL 1 0 :1:3 
+`uc 1 SDA 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 CK 1 0 :1:6 
+`uc 1 DT 1 0 :1:7 
+]
+[s S2790 . 1 `uc 1 T1CKI 1 0 :1:0 
+]
+[s S2792 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PA1 1 0 :1:2 
+]
+[s S2795 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 PA2 1 0 :1:1 
+]
+[u S2798 . 1 `S1167 1 . 1 0 `S2772 1 . 1 0 `S2781 1 . 1 0 `S2790 1 . 1 0 `S2792 1 . 1 0 `S2795 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES2798  1 e 1 @3970 ]
+"1284
+[v _TRISA TRISA `VEuc  1 e 1 @3986 ]
+"1505
+[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
+"1726
+[v _TRISC TRISC `VEuc  1 e 1 @3988 ]
+[s S1158 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1758
+[u S1176 . 1 `S1158 1 . 1 0 `S1167 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES1176  1 e 1 @3988 ]
+"2011
+[v _PIE1 PIE1 `VEuc  1 e 1 @3997 ]
+[s S146 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+]
+"2035
+[s S154 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 RC1IE 1 0 :1:5 
+]
+[s S157 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TX1IE 1 0 :1:4 
+]
+[u S160 . 1 `S146 1 . 1 0 `S154 1 . 1 0 `S157 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES160  1 e 1 @3997 ]
+"2108
+[v _PIR1bits PIR1bits `VES160  1 e 1 @3998 ]
+"2181
+[v _IPR1bits IPR1bits `VES160  1 e 1 @3999 ]
+[s S730 . 1 `uc 1 CCP2IF 1 0 :1:0 
+`uc 1 TMR3IF 1 0 :1:1 
+`uc 1 HLVDIF 1 0 :1:2 
+`uc 1 BCLIF 1 0 :1:3 
+`uc 1 EEIF 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 CMIF 1 0 :1:6 
+`uc 1 OSCFIF 1 0 :1:7 
+]
+"2316
+[s S739 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 LVDIF 1 0 :1:2 
+]
+[u S742 . 1 `S730 1 . 1 0 `S739 1 . 1 0 ]
+[v _PIR2bits PIR2bits `VES742  1 e 1 @4001 ]
+"2508
+[v _RCSTA RCSTA `VEuc  1 e 1 @4011 ]
+[s S1926 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"2538
+[s S1935 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 ADEN 1 0 :1:3 
+]
+[s S1938 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 SRENA 1 0 :1:5 
+]
+[u S1941 . 1 `S1926 1 . 1 0 `S1935 1 . 1 0 `S1938 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES1941  1 e 1 @4011 ]
+"2665
+[v _TXSTA TXSTA `VEuc  1 e 1 @4012 ]
+[s S1686 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"2718
+[s S1695 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 BRGH1 1 0 :1:2 
+]
+[s S1698 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 CSRC1 1 0 :1:7 
+]
+[s S1701 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SENDB1 1 0 :1:3 
+]
+[s S1704 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 SYNC1 1 0 :1:4 
+]
+[s S1707 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 TRMT1 1 0 :1:1 
+]
+[s S1710 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX91 1 0 :1:6 
+]
+[s S1713 . 1 `uc 1 TX9D1 1 0 :1:0 
+]
+[s S1715 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 TXEN1 1 0 :1:5 
+]
+[u S1718 . 1 `S1686 1 . 1 0 `S1695 1 . 1 0 `S1698 1 . 1 0 `S1701 1 . 1 0 `S1704 1 . 1 0 `S1707 1 . 1 0 `S1710 1 . 1 0 `S1713 1 . 1 0 `S1715 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES1718  1 e 1 @4012 ]
+"2928
+[v _TXREG TXREG `VEuc  1 e 1 @4013 ]
+"2939
+[v _RCREG RCREG `VEuc  1 e 1 @4014 ]
+"2950
+[v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
+"2961
+[v _SPBRGH SPBRGH `VEuc  1 e 1 @4016 ]
+"3439
+[v _BAUDCON BAUDCON `VEuc  1 e 1 @4024 ]
+"3810
+[v _ADCON2 ADCON2 `VEuc  1 e 1 @4032 ]
+"3880
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+"3970
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @4034 ]
+[s S21 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_NOT_DONE 1 0 :1:1 
+]
+"4018
+[s S24 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :4:2 
+]
+[s S31 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+]
+[s S38 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 DONE 1 0 :1:1 
+]
+[s S41 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_DONE 1 0 :1:1 
+]
+[s S44 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[s S47 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_DONE 1 0 :1:1 
+]
+[s S50 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GODONE 1 0 :1:1 
+]
+[u S53 . 1 `S21 1 . 1 0 `S24 1 . 1 0 `S21 1 . 1 0 `S31 1 . 1 0 `S38 1 . 1 0 `S41 1 . 1 0 `S44 1 . 1 0 `S47 1 . 1 0 `S50 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES53  1 e 1 @4034 ]
+"4098
+[v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
+"4104
+[v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
+"4110
+[v _SSPCON2 SSPCON2 `VEuc  1 e 1 @4037 ]
+[s S490 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"4135
+[s S499 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 ADMSK1 1 0 :1:1 
+`uc 1 ADMSK2 1 0 :1:2 
+`uc 1 ADMSK3 1 0 :1:3 
+`uc 1 ADMSK4 1 0 :1:4 
+`uc 1 ADMSK5 1 0 :1:5 
+]
+[u S506 . 1 `S490 1 . 1 0 `S499 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES506  1 e 1 @4037 ]
+"4204
+[v _SSPCON1 SSPCON1 `VEuc  1 e 1 @4038 ]
+[s S1209 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"4224
+[s S1215 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[u S1220 . 1 `S1209 1 . 1 0 `S1215 1 . 1 0 ]
+[v _SSPCON1bits SSPCON1bits `VES1220  1 e 1 @4038 ]
+"4273
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @4039 ]
+[s S537 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_NOT_W 1 0 :1:2 
+]
+"4368
+[s S540 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 D_NOT_A 1 0 :1:5 
+]
+[s S543 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+[s S558 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D 1 0 :1:5 
+]
+[s S563 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 A 1 0 :1:5 
+]
+[s S568 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA 1 0 :1:5 
+]
+[s S573 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A 1 0 :1:5 
+]
+[s S578 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_WRITE 1 0 :1:2 
+]
+[s S581 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_ADDRESS 1 0 :1:5 
+]
+[s S584 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS 1 0 :1:5 
+]
+[s S589 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 DA 1 0 :1:5 
+]
+[s S592 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 RW 1 0 :1:2 
+]
+[s S595 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 START 1 0 :1:3 
+]
+[s S598 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 STOP 1 0 :1:4 
+]
+[s S601 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_W 1 0 :1:2 
+]
+[s S604 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_A 1 0 :1:5 
+]
+[u S607 . 1 `S537 1 . 1 0 `S540 1 . 1 0 `S543 1 . 1 0 `S537 1 . 1 0 `S540 1 . 1 0 `S558 1 . 1 0 `S563 1 . 1 0 `S568 1 . 1 0 `S573 1 . 1 0 `S578 1 . 1 0 `S581 1 . 1 0 `S584 1 . 1 0 `S589 1 . 1 0 `S592 1 . 1 0 `S595 1 . 1 0 `S598 1 . 1 0 `S601 1 . 1 0 `S604 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES607  1 e 1 @4039 ]
+"4512
+[v _SSPADD SSPADD `VEuc  1 e 1 @4040 ]
+"4518
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @4041 ]
+[s S3851 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_T1SYNC 1 0 :1:2 
+]
+"4673
+[s S3854 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 TMR1CS 1 0 :1:1 
+`uc 1 nT1SYNC 1 0 :1:2 
+`uc 1 T1OSCEN 1 0 :1:3 
+`uc 1 T1CKPS 1 0 :2:4 
+`uc 1 T1RUN 1 0 :1:6 
+`uc 1 RD16 1 0 :1:7 
+]
+[s S3862 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T1SYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+]
+[s S3868 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SOSCEN 1 0 :1:3 
+]
+[s S3871 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 T1RD16 1 0 :1:7 
+]
+[u S3874 . 1 `S3851 1 . 1 0 `S3854 1 . 1 0 `S3862 1 . 1 0 `S3868 1 . 1 0 `S3871 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES3874  1 e 1 @4045 ]
+[s S3180 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+]
+"4803
+[s S3182 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_POR 1 0 :1:1 
+]
+[s S3185 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_PD 1 0 :1:2 
+]
+[s S3188 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 NOT_TO 1 0 :1:3 
+]
+[s S3191 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 NOT_RI 1 0 :1:4 
+]
+[s S3194 . 1 `uc 1 nBOR 1 0 :1:0 
+`uc 1 nPOR 1 0 :1:1 
+`uc 1 nPD 1 0 :1:2 
+`uc 1 nTO 1 0 :1:3 
+`uc 1 nRI 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 SBOREN 1 0 :1:6 
+`uc 1 IPEN 1 0 :1:7 
+]
+[s S3203 . 1 `uc 1 BOR 1 0 :1:0 
+`uc 1 POR 1 0 :1:1 
+`uc 1 PD 1 0 :1:2 
+`uc 1 TO 1 0 :1:3 
+`uc 1 RI 1 0 :1:4 
+]
+[u S3209 . 1 `S3180 1 . 1 0 `S3182 1 . 1 0 `S3185 1 . 1 0 `S3188 1 . 1 0 `S3191 1 . 1 0 `S3194 1 . 1 0 `S3203 1 . 1 0 ]
+[v _RCONbits RCONbits `VES3209  1 e 1 @4048 ]
+[s S2917 . 1 `uc 1 T0PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+`uc 1 T08BIT 1 0 :1:6 
+`uc 1 TMR0ON 1 0 :1:7 
+]
+"5293
+[s S2924 . 1 `uc 1 T0PS0 1 0 :1:0 
+`uc 1 T0PS1 1 0 :1:1 
+`uc 1 T0PS2 1 0 :1:2 
+`uc 1 T0PS3 1 0 :1:3 
+`uc 1 . 1 0 :2:4 
+`uc 1 T016BIT 1 0 :1:6 
+]
+[u S2931 . 1 `S2917 1 . 1 0 `S2924 1 . 1 0 ]
+[v _T0CONbits T0CONbits `VES2931  1 e 1 @4053 ]
+[s S3093 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 NOT_RBPU 1 0 :1:7 
+]
+"5725
+[s S3096 . 1 `uc 1 RBIP 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 TMR0IP 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INTEDG2 1 0 :1:4 
+`uc 1 INTEDG1 1 0 :1:5 
+`uc 1 INTEDG0 1 0 :1:6 
+`uc 1 nRBPU 1 0 :1:7 
+]
+[s S3105 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 RBPU 1 0 :1:7 
+]
+[u S3108 . 1 `S3093 1 . 1 0 `S3096 1 . 1 0 `S3105 1 . 1 0 ]
+[v _INTCON2bits INTCON2bits `VES3108  1 e 1 @4081 ]
+[s S289 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"5821
+[s S298 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S307 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[s S316 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT0F 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INT0E 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S325 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S329 . 1 `S289 1 . 1 0 `S298 1 . 1 0 `S307 1 . 1 0 `S316 1 . 1 0 `S325 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES329  1 e 1 @4082 ]
+"3 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\errno.c
+[v _errno errno `i  1 e 2 0 ]
+"21 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\gyroscope.c
+[v _gyroZero gyroZero `i  1 s 2 gyroZero ]
+"22
+[v _gyroFail gyroFail `uc  1 s 1 gyroFail ]
+"29 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\gyroscope.h
+[v gyroscope@gyroZero gyroZero `i  1 s 2 gyroZero ]
+"30
+[v gyroscope@gyroFail gyroFail `uc  1 s 1 gyroFail ]
+[s S2980 . 6 `i 1 voltage 2 0 `i 1 current 2 2 `i 1 power 2 4 ]
+"107 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\main.c
+[v _powerData powerData `S2980  1 e 6 0 ]
+"108
+[v _powerPtr powerPtr `*.39S2980  1 e 2 0 ]
+[s S2583 . 18 `i 1 cell1V 2 0 `i 1 cell2V 2 2 `i 1 cell3V 2 4 `i 1 current 2 6 `i 1 average 2 8 `i 1 temp 2 10 `i 1 capacity 2 12 `i 1 status 2 14 `i 1 time 2 16 ]
+"109
+[v _battData battData `S2583  1 e 18 0 ]
+"110
+[v _battPtr battPtr `*.39S2583  1 e 2 0 ]
+[s S2907 . 14 `us 1 temp 2 0 `l 1 pressure 4 2 `l 1 altitude 4 6 `i 1 pitch 2 10 `i 1 roll 2 12 ]
+"111
+[v _sensorData sensorData `S2907  1 e 14 0 ]
+"112
+[v _sensorPtr sensorPtr `*.39S2907  1 e 2 0 ]
+[s S3000 . 16 `l 1 firmVers 4 0 `i 1 hardVers 2 4 `l 1 configCode 4 6 `i 1 nRFerrors 2 10 `i 1 temp 2 12 `i 1 supplyV 2 14 ]
+"113
+[v _xBeeData xBeeData `S3000  1 e 16 0 ]
+"114
+[v _xBeePtr xBeePtr `*.39S3000  1 e 2 0 ]
+"17 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\power.c
+[v _onLEDBlinker onLEDBlinker `uc  1 s 1 onLEDBlinker ]
+[s S1816 . 1 `uc 1 RX_NINE 1 0 :1:0 
+`uc 1 TX_NINE 1 0 :1:1 
+`uc 1 FRAME_ERROR 1 0 :1:2 
+`uc 1 OVERRUN_ERROR 1 0 :1:3 
+`uc 1 fill 1 0 :4:4 
+]
+"5 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\USART/udefs.c
+[u S1822 USART 1 `uc 1 val 1 0 `S1816 1 . 1 0 ]
+[v _USART_Status USART_Status `S1822  1 e 1 0 ]
+"178 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\main.c
+[v _main main `(v  1 e 0 0 ]
+{
+"265
+[v main@message2 message2 `[18]uc  1 a 18 7 ]
+"264
+[v main@message1 message1 `[13]uc  1 a 13 25 ]
+"267
+[v main@input2 input2 `ui  1 a 2 40 ]
+"266
+[v main@input1 input1 `ui  1 a 2 38 ]
+"264
+[v main@F4036 F4036 `[13]uc  1 s 13 F4036 ]
+"265
+[v main@F4038 F4038 `[18]uc  1 s 18 F4038 ]
+"319
+} 0
+"10 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwmod@counter counter `uc  1 a 1 5 ]
+"10
+[v ___lwmod@dividend dividend `ui  1 p 2 0 ]
+[v ___lwmod@divisor divisor `ui  1 p 2 2 ]
+"26
+} 0
+"10 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwdiv@quotient quotient `ui  1 a 2 11 ]
+"12
+[v ___lwdiv@counter counter `uc  1 a 1 13 ]
+"10
+[v ___lwdiv@dividend dividend `ui  1 p 2 6 ]
+[v ___lwdiv@divisor divisor `ui  1 p 2 8 ]
+"31
+} 0
+"160 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\telemetry.c
+[v _xBeeTxString xBeeTxString `(v  1 e 0 0 ]
+{
+"161
+[v xBeeTxString@i i `i  1 a 2 17 ]
+"160
+[v xBeeTxString@data data `*.39uc  1 p 2 15 ]
+"166
+} 0
+"79 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\power.c
+[v _blinkLED blinkLED `(v  1 e 0 0 ]
+{
+"82
+} 0
+"296 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\telemetry.c
+[v _updateSensorARData updateSensorARData `(v  1 e 0 0 ]
+{
+"298
+[v updateSensorARData@rawPres rawPres `us  1 a 2 2 ]
+"297
+[v updateSensorARData@rawTemp rawTemp `us  1 a 2 0 ]
+[s S2907 . 14 `us 1 temp 2 0 `l 1 pressure 4 2 `l 1 altitude 4 6 `i 1 pitch 2 10 `i 1 roll 2 12 ]
+"296
+[v updateSensorARData@ptr ptr `*.39S2907  1 p 2 122 ]
+"311
+} 0
+"97 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\accelmeter.c
+[v _accelGetRoll accelGetRoll `(i  1 e 2 0 ]
+{
+"99
+[v accelGetRoll@accelTemp accelTemp `f  1 a 3 119 ]
+"98
+[v accelGetRoll@accelRaw accelRaw `i  1 a 2 117 ]
+"100
+[v accelGetRoll@rollAngle rollAngle `i  1 a 2 115 ]
+"118
+} 0
+"10 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\asin.c
+[v _asin asin `(d  1 e 3 0 ]
+{
+"11
+[v asin@y y `d  1 a 3 105 ]
+"12
+[v asin@sgn sgn `d  1 a 3 93 ]
+"10
+[v asin@x x `d  1 p 3 90 ]
+"25
+} 0
+"9 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\atan.c
+[v _atan atan `(d  1 e 3 0 ]
+{
+"28
+[v atan@val val `d  1 a 3 87 ]
+[v atan@val_squared val_squared `d  1 a 3 84 ]
+[v atan@x x `d  1 a 3 80 ]
+[v atan@y y `d  1 a 3 77 ]
+"27
+[v atan@recip recip `uc  1 a 1 83 ]
+"9
+[v atan@f f `d  1 p 3 74 ]
+"10
+[v atan@coeff_a coeff_a `C[6]d  1 s 18 coeff_a ]
+"19
+[v atan@coeff_b coeff_b `C[5]d  1 s 15 coeff_b ]
+"41
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\evalpoly.c
+[v _eval_poly eval_poly `(d  1 e 3 0 ]
+{
+"6
+[v eval_poly@res res `d  1 a 3 71 ]
+"5
+[v eval_poly@x x `d  1 p 3 59 ]
+[v eval_poly@d d `*.25Cd  1 p 2 62 ]
+[v eval_poly@n n `i  1 p 2 64 ]
+"12
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\fabs.c
+[v _fabs fabs `(d  1 e 3 0 ]
+{
+[v fabs@d d `d  1 p 3 20 ]
+"9
+} 0
+"16 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+{
+[v ___ftneg@f1 f1 `f  1 p 3 8 ]
+"20
+} 0
+"14 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\sqrt.c
+[v _sqrt sqrt `(d  1 e 3 0 ]
+{
+"15
+[v sqrt@x x `d  1 a 3 86 ]
+[v sqrt@q q `d  1 a 3 83 ]
+[v sqrt@z z `d  1 a 3 79 ]
+[v sqrt@og og `d  1 a 3 76 ]
+"16
+[v sqrt@i i `uc  1 a 1 82 ]
+"14
+[v sqrt@y y `d  1 p 3 70 ]
+"44
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic18\asftsub.c
+[v ___asftsub __asftsub `(f  1 e 3 0 ]
+{
+[v ___asftsub@f1p f1p `*.39f  1 p 2 65 ]
+[v ___asftsub@f2 f2 `f  1 p 3 67 ]
+"7
+} 0
+"22 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+{
+[v ___ftsub@f1 f1 `f  1 p 3 59 ]
+[v ___ftsub@f2 f2 `f  1 p 3 62 ]
+"25
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic18\asftmul.c
+[v ___asftmul __asftmul `(f  1 e 3 0 ]
+{
+[v ___asftmul@f1p f1p `*.39f  1 p 2 45 ]
+[v ___asftmul@f2 f2 `f  1 p 3 47 ]
+"7
+} 0
+"276 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\telemetry.c
+[v _telemTimerStart telemTimerStart `(v  1 e 0 0 ]
+{
+"284
+} 0
+"232
+[v _xBeeTxXBee xBeeTxXBee `(v  1 e 0 0 ]
+{
+[s S3000 . 16 `l 1 firmVers 4 0 `i 1 hardVers 2 4 `l 1 configCode 4 6 `i 1 nRFerrors 2 10 `i 1 temp 2 12 `i 1 supplyV 2 14 ]
+[v xBeeTxXBee@ptr ptr `*.39S3000  1 p 2 26 ]
+"239
+} 0
+"187
+[v _xBeeTxLong xBeeTxLong `(v  1 e 0 0 ]
+{
+[v xBeeTxLong@data data `l  1 p 4 15 ]
+"192
+} 0
+"171
+[v _xBeeTxInt xBeeTxInt `(v  1 e 0 0 ]
+{
+[v xBeeTxInt@data data `i  1 p 2 15 ]
+"174
+} 0
+"91
+[v _updateXBeeData updateXBeeData `(v  1 e 0 0 ]
+{
+[s S3000 . 16 `l 1 firmVers 4 0 `i 1 hardVers 2 4 `l 1 configCode 4 6 `i 1 nRFerrors 2 10 `i 1 temp 2 12 `i 1 supplyV 2 14 ]
+[v updateXBeeData@data data `*.39S3000  1 p 2 18 ]
+"111
+} 0
+"252
+[v _xBeeRxInt xBeeRxInt `(i  1 e 2 0 ]
+{
+"253
+[v xBeeRxInt@value value `i  1 a 2 4 ]
+"258
+} 0
+"263
+[v _xBeeRxLong xBeeRxLong `(l  1 e 4 0 ]
+{
+"264
+[v xBeeRxLong@value value `l  1 a 4 12 ]
+"271
+} 0
+"244
+[v _xBeeRxByte xBeeRxByte `(uc  1 e 1 0 ]
+{
+"247
+} 0
+"16 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\USART/uread.c
+[v _ReadUSART ReadUSART `(uc  1 e 1 0 ]
+{
+"17
+[v ReadUSART@data data `uc  1 a 1 0 ]
+"37
+} 0
+"39 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\telemetry.c
+[v _xBeeConfig xBeeConfig `(v  1 e 0 0 ]
+{
+"44
+} 0
+"116
+[v _xBeeEndATMode xBeeEndATMode `(v  1 e 0 0 ]
+{
+"119
+} 0
+"69
+[v _xBeeATCommand xBeeATCommand `(v  1 e 0 0 ]
+{
+[v xBeeATCommand@cmd1 cmd1 `uc  1 p 1 15 ]
+[v xBeeATCommand@cmd2 cmd2 `uc  1 p 1 16 ]
+"72
+} 0
+"80
+[v _xBeeATCommandUC xBeeATCommandUC `(v  1 e 0 0 ]
+{
+[v xBeeATCommandUC@cmd1 cmd1 `uc  1 p 1 15 ]
+[v xBeeATCommandUC@cmd2 cmd2 `uc  1 p 1 16 ]
+[v xBeeATCommandUC@param param `uc  1 p 1 17 ]
+"85
+} 0
+"50
+[v _xBeeSetATMode xBeeSetATMode `(v  1 e 0 0 ]
+{
+"51
+[v xBeeSetATMode@i i `i  1 a 2 16 ]
+"62
+} 0
+"25
+[v _openRS232 openRS232 `(v  1 e 0 0 ]
+{
+"33
+} 0
+"74 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\USART/uopen.c
+[v _OpenUSART OpenUSART `(v  1 e 0 0 ]
+{
+[v OpenUSART@config config `uc  1 p 1 0 ]
+[v OpenUSART@spbrg spbrg `ui  1 p 2 1 ]
+"143
+} 0
+"85 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\power.c
+[v _updatePwrData updatePwrData `(v  1 e 0 0 ]
+{
+[s S2980 . 6 `i 1 voltage 2 0 `i 1 current 2 2 `i 1 power 2 4 ]
+[v updatePwrData@ptr ptr `*.39S2980  1 p 2 54 ]
+"90
+} 0
+"67
+[v _getArrayPower getArrayPower `(i  1 e 2 0 ]
+{
+"69
+[v getArrayPower@temp temp `f  1 a 3 49 ]
+"68
+[v getArrayPower@power power `i  1 a 2 52 ]
+"67
+[v getArrayPower@voltage voltage `i  1 p 2 45 ]
+[v getArrayPower@current current `i  1 p 2 47 ]
+"74
+} 0
+"50 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+{
+"52
+[v ___ftdiv@f3 f3 `f  1 a 3 40 ]
+"51
+[v ___ftdiv@sign sign `uc  1 a 1 44 ]
+[v ___ftdiv@exp exp `uc  1 a 1 43 ]
+[v ___ftdiv@cntr cntr `uc  1 a 1 39 ]
+"50
+[v ___ftdiv@f1 f1 `f  1 p 3 28 ]
+[v ___ftdiv@f2 f2 `f  1 p 3 31 ]
+"78
+} 0
+"46 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\power.c
+[v _getArrayCurrent getArrayCurrent `(i  1 e 2 0 ]
+{
+"48
+[v getArrayCurrent@average average `i  1 a 2 50 ]
+"47
+[v getArrayCurrent@i i `i  1 a 2 48 ]
+"61
+} 0
+"33 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+{
+"34
+[v ___awtoft@sign sign `uc  1 a 1 27 ]
+"33
+[v ___awtoft@c c `i  1 p 2 23 ]
+"42
+} 0
+"25 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\power.c
+[v _getArrayVoltage getArrayVoltage `(i  1 e 2 0 ]
+{
+"27
+[v getArrayVoltage@average average `i  1 a 2 50 ]
+"26
+[v getArrayVoltage@i i `i  1 a 2 48 ]
+"40
+} 0
+"69 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\gyroscope.c
+[v _gyroSelfTest gyroSelfTest `(v  1 e 0 0 ]
+{
+"70
+[v gyroSelfTest@i i `i  1 a 2 22 ]
+"72
+[v gyroSelfTest@new new `i  1 a 2 20 ]
+"71
+[v gyroSelfTest@base base `i  1 a 2 18 ]
+"92
+} 0
+"50
+[v _gyroCalibrate gyroCalibrate `(v  1 e 0 0 ]
+{
+"51
+[v gyroCalibrate@i i `i  1 a 2 18 ]
+"52
+[v gyroCalibrate@average average `i  1 a 2 16 ]
+"61
+} 0
+"136
+[v _gyroTimerStart gyroTimerStart `(v  1 e 0 0 ]
+{
+"142
+} 0
+"29
+[v _gyroGetADC gyroGetADC `(i  1 e 2 0 ]
+{
+"31
+[v gyroGetADC@average average `i  1 a 2 14 ]
+"30
+[v gyroGetADC@i i `i  1 a 2 12 ]
+"43
+} 0
+"140 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\batteries.c
+[v _battSafeCheck battSafeCheck `(v  1 e 0 0 ]
+{
+"141
+[v battSafeCheck@error error `uc  1 a 1 21 ]
+[s S2583 . 18 `i 1 cell1V 2 0 `i 1 cell2V 2 2 `i 1 cell3V 2 4 `i 1 current 2 6 `i 1 average 2 8 `i 1 temp 2 10 `i 1 capacity 2 12 `i 1 status 2 14 `i 1 time 2 16 ]
+"140
+[v battSafeCheck@ptr ptr `*.39S2583  1 p 2 17 ]
+"172
+} 0
+"76
+[v _updateBattData updateBattData `(v  1 e 0 0 ]
+{
+[s S2583 . 18 `i 1 cell1V 2 0 `i 1 cell2V 2 2 `i 1 cell3V 2 4 `i 1 current 2 6 `i 1 average 2 8 `i 1 temp 2 10 `i 1 capacity 2 12 `i 1 status 2 14 `i 1 time 2 16 ]
+[v updateBattData@data data `*.39S2583  1 p 2 8 ]
+"86
+} 0
+"115
+[v _battReadWord battReadWord `(i  1 e 2 0 ]
+{
+"116
+[v battReadWord@value value `i  1 a 2 6 ]
+"115
+[v battReadWord@reg reg `uc  1 p 1 1 ]
+"134
+} 0
+"68
+[v _openSMBus openSMBus `(v  1 e 0 0 ]
+{
+"71
+} 0
+"15 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\i2c/i2c_open.c
+[v _OpenI2C OpenI2C `(v  1 e 0 0 ]
+{
+[v OpenI2C@sync_mode sync_mode `uc  1 p 1 0 ]
+[v OpenI2C@slew slew `uc  1 p 1 1 ]
+"26
+} 0
+"22 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\batteries.c
+[v _battConfig battConfig `(v  1 e 0 0 ]
+{
+"63
+} 0
+"103
+[v _battConfigByte battConfigByte `(v  1 e 0 0 ]
+{
+[v battConfigByte@reg reg `uc  1 p 1 1 ]
+[v battConfigByte@data data `uc  1 p 1 2 ]
+"110
+} 0
+"43 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\barometer.c
+[v _baroCalibrate baroCalibrate `(v  1 e 0 0 ]
+{
+"45
+[v baroCalibrate@presLocalTrue presLocalTrue `l  1 a 4 88 ]
+"48
+[v baroCalibrate@b b `f  1 a 3 81 ]
+"47
+[v baroCalibrate@m m `f  1 a 3 78 ]
+"46
+[v baroCalibrate@temperatureRaw temperatureRaw `us  1 a 2 86 ]
+"44
+[v baroCalibrate@presLocalRaw presLocalRaw `us  1 a 2 84 ]
+"81
+} 0
+"45 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval lval `ul  1 a 4 18 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 22 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 17 ]
+"45
+[v ___fttol@f1 f1 `f  1 p 3 8 ]
+"73
+} 0
+"43 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\altoft.c
+[v ___altoft __altoft `(f  1 e 3 0 ]
+{
+"44
+[v ___altoft@sign sign `uc  1 a 1 24 ]
+[v ___altoft@exp exp `uc  1 a 1 23 ]
+"43
+[v ___altoft@c c `l  1 p 4 15 ]
+"57
+} 0
+"63 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 0 ]
+[v ___ftpack@exp exp `uc  1 p 1 3 ]
+[v ___ftpack@sign sign `uc  1 p 1 4 ]
+"86
+} 0
+"225 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\barometer.c
+[v _baroConvertAlt baroConvertAlt `(l  1 e 4 0 ]
+{
+"229
+[v baroConvertAlt@val val `l  1 a 4 73 ]
+"227
+[v baroConvertAlt@ratio ratio `f  1 a 3 67 ]
+"225
+[v baroConvertAlt@pressure pressure `l  1 p 4 59 ]
+"234
+} 0
+"52 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+{
+"54
+[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 40 ]
+"53
+[v ___ftmul@sign sign `uc  1 a 1 44 ]
+[v ___ftmul@cntr cntr `uc  1 a 1 43 ]
+[v ___ftmul@exp exp `uc  1 a 1 39 ]
+"52
+[v ___ftmul@f1 f1 `f  1 p 3 28 ]
+[v ___ftmul@f2 f2 `f  1 p 3 31 ]
+"84
+} 0
+"87 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+{
+"88
+[v ___ftadd@exp1 exp1 `uc  1 a 1 58 ]
+[v ___ftadd@exp2 exp2 `uc  1 a 1 57 ]
+[v ___ftadd@sign sign `uc  1 a 1 56 ]
+"87
+[v ___ftadd@f1 f1 `f  1 p 3 45 ]
+[v ___ftadd@f2 f2 `f  1 p 3 48 ]
+"148
+} 0
+"192 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\barometer.c
+[v _baroTruePres baroTruePres `(l  1 e 4 0 ]
+{
+"193
+[v baroTruePres@pressure pressure `l  1 a 4 48 ]
+"194
+[v baroTruePres@X1 X1 `l  1 a 4 44 ]
+"195
+[v baroTruePres@X2 X2 `l  1 a 4 40 ]
+"196
+[v baroTruePres@X3 X3 `l  1 a 4 32 ]
+"192
+[v baroTruePres@rawPres rawPres `us  1 p 2 15 ]
+"217
+} 0
+"10 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"11
+[v ___lldiv@quotient quotient `ul  1 a 4 9 ]
+"12
+[v ___lldiv@counter counter `uc  1 a 1 13 ]
+"10
+[v ___lldiv@dividend dividend `ul  1 p 4 0 ]
+[v ___lldiv@divisor divisor `ul  1 p 4 4 ]
+"31
+} 0
+"3 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\lmul.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+{
+"4
+[v ___lmul@product product `ul  1 a 4 8 ]
+"3
+[v ___lmul@multiplier multiplier `ul  1 p 4 0 ]
+[v ___lmul@multiplicand multiplicand `ul  1 p 4 4 ]
+"13
+} 0
+"10 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+{
+"11
+[v ___aldiv@quotient quotient `l  1 a 4 11 ]
+"12
+[v ___aldiv@sign sign `uc  1 a 1 10 ]
+[v ___aldiv@counter counter `uc  1 a 1 9 ]
+"10
+[v ___aldiv@dividend dividend `l  1 p 4 0 ]
+[v ___aldiv@divisor divisor `l  1 p 4 4 ]
+"42
+} 0
+"176 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\barometer.c
+[v _baroTrueTemp baroTrueTemp `(us  1 e 2 0 ]
+{
+"178
+[v baroTrueTemp@X1 X1 `l  1 a 4 31 ]
+"179
+[v baroTrueTemp@X2 X2 `l  1 a 4 27 ]
+"177
+[v baroTrueTemp@temperature temperature `l  1 a 4 23 ]
+"176
+[v baroTrueTemp@rawTemp rawTemp `us  1 p 2 15 ]
+"183
+} 0
+"115
+[v _baroPresStart baroPresStart `(v  1 e 0 0 ]
+{
+"131
+} 0
+"90
+[v _baroTempStart baroTempStart `(v  1 e 0 0 ]
+{
+"105
+} 0
+"9 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic18\d10tcyx.c
+[v _Delay10TCYx Delay10TCYx `(v  1 e 0 0 ]
+{
+[v Delay10TCYx@unit unit `uc  1 p 1 0 ]
+"13
+} 0
+"141 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\barometer.c
+[v _baroGetVal baroGetVal `(us  1 e 2 0 ]
+{
+"142
+[v baroGetVal@data data `us  1 a 2 4 ]
+"141
+[v baroGetVal@reg reg `uc  1 p 1 1 ]
+"169
+} 0
+"12 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\i2c/i2c_read.c
+[v _ReadI2C ReadI2C `(uc  1 e 1 0 ]
+{
+"17
+} 0
+"13 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\i2c/i2c_writ.c
+[v _WriteI2C WriteI2C `(c  1 e 1 0 ]
+{
+[v WriteI2C@data_out data_out `uc  1 p 1 0 ]
+"43
+} 0
+"25 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\i2c/i2c_idle.c
+[v _IdleI2C IdleI2C `(v  1 e 0 0 ]
+{
+"28
+} 0
+"81 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\accelmeter.c
+[v _accelCalibrate accelCalibrate `(v  1 e 0 0 ]
+{
+"82
+[v accelCalibrate@i i `i  1 a 2 18 ]
+"83
+[v accelCalibrate@average average `i  1 a 2 16 ]
+"90
+} 0
+"52
+[v _accelSelfTest accelSelfTest `(v  1 e 0 0 ]
+{
+"54
+[v accelSelfTest@i i `i  1 a 2 22 ]
+"55
+[v accelSelfTest@accelNew accelNew `i  1 a 2 20 ]
+"53
+[v accelSelfTest@accelBase accelBase `i  1 a 2 18 ]
+"75
+} 0
+"29 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\errors.c
+[v _morseCode morseCode `(v  1 e 0 0 ]
+{
+[v morseCode@error error `uc  1 p 1 3 ]
+"90
+} 0
+"121
+[v _morseStop morseStop `(v  1 e 0 0 ]
+{
+"130
+} 0
+"95
+[v _morseShort morseShort `(v  1 e 0 0 ]
+{
+"101
+} 0
+"106
+[v _morseLong morseLong `(v  1 e 0 0 ]
+{
+"114
+} 0
+"9 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic18\d10ktcyx.c
+[v _Delay10KTCYx Delay10KTCYx `(v  1 e 0 0 ]
+{
+[v Delay10KTCYx@unit unit `uc  1 p 1 0 ]
+"13
+} 0
+"19 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\errors.c
+[v _transmitError transmitError `(v  1 e 0 0 ]
+{
+[v transmitError@error error `uc  1 p 1 15 ]
+"24
+} 0
+"155 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\telemetry.c
+[v _xBeeTxByte xBeeTxByte `(v  1 e 0 0 ]
+{
+[v xBeeTxByte@data data `uc  1 p 1 14 ]
+"158
+} 0
+"14 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\USART/uwrite.c
+[v _WriteUSART WriteUSART `(v  1 e 0 0 ]
+{
+[v WriteUSART@data data `uc  1 p 1 0 ]
+"23
+} 0
+"27 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\accelmeter.c
+[v _accelGetADC accelGetADC `(i  1 e 2 0 ]
+{
+"28
+[v accelGetADC@accelRaw accelRaw `i  1 a 2 14 ]
+"29
+[v accelGetADC@i i `i  1 a 2 12 ]
+"42
+} 0
+"10 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"11
+[v ___awdiv@quotient quotient `i  1 a 2 7 ]
+"12
+[v ___awdiv@sign sign `uc  1 a 1 6 ]
+[v ___awdiv@counter counter `uc  1 a 1 5 ]
+"10
+[v ___awdiv@dividend dividend `i  1 p 2 0 ]
+[v ___awdiv@divisor divisor `i  1 p 2 2 ]
+"42
+} 0
+"31 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\ADC/adcsetch.c
+[v _SetChanADC SetChanADC `(v  1 e 0 0 ]
+{
+[v SetChanADC@channel channel `uc  1 p 1 0 ]
+"36
+} 0
+"25 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\ADC/adcread.c
+[v _ReadADC ReadADC `(i  1 e 2 0 ]
+{
+"27
+} 0
+"23 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\ADC/adcconv.c
+[v _ConvertADC ConvertADC `(v  1 e 0 0 ]
+{
+"25
+} 0
+"27 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\ADC/adcbusy.c
+[v _BusyADC BusyADC `(uc  1 e 1 0 ]
+{
+"29
+} 0
+"71 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\ADC/adcopen.c
+[v _OpenADC OpenADC `(v  1 e 0 0 ]
+{
+[v OpenADC@config config `uc  1 p 1 0 ]
+[v OpenADC@config2 config2 `uc  1 p 1 1 ]
+[v OpenADC@portconfig portconfig `uc  1 p 1 2 ]
+"89
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\wmul.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"6
+[v ___wmul@product product `ui  1 a 2 4 ]
+"5
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"31
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+{
+[v ___ftge@ff1 ff1 `f  1 p 3 11 ]
+[v ___ftge@ff2 ff2 `f  1 p 3 14 ]
+"13
+} 0
