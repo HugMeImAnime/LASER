@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC18 LITE Macro Assembler V1.20 build 52243 
-                                                                                               Wed Oct 16 13:01:58 2013
+                                                                                               Mon Oct 21 22:07:30 2013
 
 Microchip Technology Omniscient Code Generator (Lite mode) build 52243
      1                           	processor	18F2520
@@ -15013,7 +15013,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V1.20 build 52243 
-Symbol Table                                                                                   Wed Oct 16 13:01:58 2013
+Symbol Table                                                                                   Mon Oct 21 22:07:30 2013
 
      __end_of_battConfigByte 38FC         __end_of_baroTrueTemp 1C38         __end_of_baroTruePres 0B9A  
                ___altoft@exp 0018               baroCalibrate@b 0052               baroCalibrate@m 004F  
