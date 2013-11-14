@@ -61,10 +61,11 @@ unsigned char readSMB(unsigned char addr,
     AckI2C();
 
     //TODO don't know if this is correct
+    /*
     while(SSPCON2bits.ACKSTAT);
     StopI2C();                  //Send STOP condition
     while ( SSPCON2bits.PEN );  //Wait until stop condition is over
-
+    */
     return value;
 
 }

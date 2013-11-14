@@ -3621,16 +3621,12 @@ IdleI2C();
 
 SSPCON2bits.ACKDT=0;SSPCON2bits.ACKEN=1;while(SSPCON2bits.ACKEN);
 
-
-while(SSPCON2bits.ACKSTAT);
-SSPCON2bits.PEN=1;while(SSPCON2bits.PEN);
-while ( SSPCON2bits.PEN );
-
+# 69
 return value;
 
 }
 
-# 76
+# 77
 unsigned char ReadI2CByte(unsigned char Address)
 {
 unsigned char Data;

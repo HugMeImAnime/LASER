@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC18 LITE Macro Assembler V1.20 build 52243 
-                                                                                               Mon Oct 21 22:07:30 2013
+                                                                                               Thu Nov 14 12:43:10 2013
 
 Microchip Technology Omniscient Code Generator (Lite mode) build 52243
      1                           	processor	18F2520
@@ -1586,7 +1586,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   1579                           
   1580                           ;main.c: 249: if(!RCONbits.TO){
   1581  000C7A  B6D0               	btfsc	4048,3,c	;volatile
-  1582  000C7C  D011               	goto	l7858
+  1582  000C7C  D011               	goto	l7849
   1583                           
   1584                           ;main.c: 250: RCONbits.TO = 1;
   1585  000C7E  86D0               	bsf	4048,3,c	;volatile
@@ -1608,7 +1608,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   1601  000C98  0100               	movlb	0	; () banked
   1602  000C9A  51C3               	movf	??_main& (0+255),w,b
   1603  000C9C  ECFB  F011         	call	_morseCode	;wreg free
-  1604  000CA0                     l7858:
+  1604  000CA0                     l7849:
   1605                           
   1606                           ;main.c: 253: }
   1607                           ;main.c: 255: xBeeTxXBee(xBeePtr);
@@ -1623,31 +1623,31 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   1616  000CB0  0100               	movlb	0	; () banked
   1617  000CB2  0100               	movlb	0	; () banked
   1618  000CB4  67B8               	tstfsz	gyroscope@gyroFail& (0+255),b
-  1619  000CB6  D002               	goto	l7866
+  1619  000CB6  D002               	goto	l7857
   1620                           
   1621                           ; BSR set to: 0
   1622                           ;main.c: 260: gyroTimerStart();
   1623  000CB8  EC83  F01D         	call	_gyroTimerStart	;wreg free
-  1624  000CBC                     l7866:
+  1624  000CBC                     l7857:
   1625                           
   1626                           ;main.c: 261: }
   1627                           ;main.c: 264: char message1[] = "Channel 1 = ";
   1628  000CBC  EE21  F042         	lfsr	2,main@F4036
   1629  000CC0  EE10  F0D8         	lfsr	1,main@message1
   1630  000CC4  0E0D               	movlw	13
-  1631  000CC6                     u7071:
+  1631  000CC6                     u7011:
   1632  000CC6  CFDE FFE6          	movff	postinc2,postinc1
   1633  000CCA  2EE8               	decfsz	wreg,f,c
-  1634  000CCC  D7FC               	goto	u7071
+  1634  000CCC  D7FC               	goto	u7011
   1635                           
   1636                           ;main.c: 265: char message2[] = "     Channel 2 = ";
   1637  000CCE  EE21  F030         	lfsr	2,main@F4038
   1638  000CD2  EE10  F0C6         	lfsr	1,main@message2
   1639  000CD6  0E12               	movlw	18
-  1640  000CD8                     u7081:
+  1640  000CD8                     u7021:
   1641  000CD8  CFDE FFE6          	movff	postinc2,postinc1
   1642  000CDC  2EE8               	decfsz	wreg,f,c
-  1643  000CDE  D7FC               	goto	u7081
+  1643  000CDE  D7FC               	goto	u7021
   1644                           
   1645                           ;main.c: 266: unsigned int input1;
   1646                           ;main.c: 267: unsigned int input2;
@@ -1681,7 +1681,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   1674                           ;main.c: 272: ADCON1 = 0b00001010;
   1675  000D0E  0E0A               	movlw	10
   1676  000D10  6EC1               	movwf	4033,c	;volatile
-  1677  000D12                     l7878:
+  1677  000D12                     l7869:
   1678                           
   1679                           ;main.c: 277: updateBattData(battPtr);
   1680  000D12  C0EB  F009         	movff	_battPtr,?_updateBattData
@@ -1738,11 +1738,11 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   1731                           
   1732                           ;main.c: 292: ConvertADC();
   1733  000D78  ECBA  F01D         	call	_ConvertADC	;wreg free
-  1734  000D7C                     l7898:
+  1734  000D7C                     l7889:
   1735  000D7C  ECB7  F01D         	call	_BusyADC	;wreg free
   1736  000D80  0900               	iorlw	0
   1737  000D82  A4D8               	btfss	status,2,c
-  1738  000D84  D7FB               	goto	l7898
+  1738  000D84  D7FB               	goto	l7889
   1739                           
   1740                           ;main.c: 294: input1 = ReadADC();
   1741  000D86  ECB2  F01D         	call	_ReadADC	;wreg free
@@ -1835,11 +1835,11 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   1828                           
   1829                           ;main.c: 304: ConvertADC();
   1830  000E52  ECBA  F01D         	call	_ConvertADC	;wreg free
-  1831  000E56                     l7916:
+  1831  000E56                     l7907:
   1832  000E56  ECB7  F01D         	call	_BusyADC	;wreg free
   1833  000E5A  0900               	iorlw	0
   1834  000E5C  A4D8               	btfss	status,2,c
-  1835  000E5E  D7FB               	goto	l7916
+  1835  000E5E  D7FB               	goto	l7907
   1836                           
   1837                           ;main.c: 306: input2 = ReadADC();
   1838  000E60  ECB2  F01D         	call	_ReadADC	;wreg free
@@ -1932,7 +1932,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   1925  000F26  0100               	movlb	0	; () banked
   1926  000F28  51C3               	movf	??_main& (0+255),w,b
   1927  000F2A  EC9A  F01D         	call	_xBeeTxByte	;wreg free
-  1928  000F2E  D6F1               	goto	l7878
+  1928  000F2E  D6F1               	goto	l7869
   1929  000F30                     __end_of_main:
   1930                           	opt stack 0
   1931                           tblptru	equ	0xFF8
@@ -1990,38 +1990,38 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   1983  003658  5004               	movf	___lwmod@divisor+1,w,c
   1984  00365A  1003               	iorwf	___lwmod@divisor,w,c
   1985  00365C  B4D8               	btfsc	status,2,c
-  1986  00365E  D01A               	goto	l2035
+  1986  00365E  D01A               	goto	l2026
   1987  003660  6E05               	movwf	??___lwmod& (0+255),c
   1988  003662  0E01               	movlw	1
   1989  003664  6E06               	movwf	___lwmod@counter,c
   1990  003666  5005               	movf	??___lwmod& (0+255),w,c
-  1991  003668  D004               	goto	l6724
-  1992  00366A                     l6722:
+  1991  003668  D004               	goto	l6715
+  1992  00366A                     l6713:
   1993  00366A  90D8               	bcf	status,0,c
   1994  00366C  3603               	rlcf	___lwmod@divisor,f,c
   1995  00366E  3604               	rlcf	___lwmod@divisor+1,f,c
   1996  003670  2A06               	incf	___lwmod@counter,f,c
-  1997  003672                     l6724:
+  1997  003672                     l6715:
   1998  003672  AE04               	btfss	___lwmod@divisor+1,7,c
-  1999  003674  D7FA               	goto	l6722
-  2000  003676                     l6726:
+  1999  003674  D7FA               	goto	l6713
+  2000  003676                     l6717:
   2001  003676  5003               	movf	___lwmod@divisor,w,c
   2002  003678  5C01               	subwf	___lwmod@dividend,w,c
   2003  00367A  5004               	movf	___lwmod@divisor+1,w,c
   2004  00367C  5802               	subwfb	___lwmod@dividend+1,w,c
   2005  00367E  A0D8               	btfss	status,0,c
-  2006  003680  D004               	goto	l6730
+  2006  003680  D004               	goto	l6721
   2007  003682  5003               	movf	___lwmod@divisor,w,c
   2008  003684  5E01               	subwf	___lwmod@dividend,f,c
   2009  003686  5004               	movf	___lwmod@divisor+1,w,c
   2010  003688  5A02               	subwfb	___lwmod@dividend+1,f,c
-  2011  00368A                     l6730:
+  2011  00368A                     l6721:
   2012  00368A  90D8               	bcf	status,0,c
   2013  00368C  3204               	rrcf	___lwmod@divisor+1,f,c
   2014  00368E  3203               	rrcf	___lwmod@divisor,f,c
   2015  003690  2E06               	decfsz	___lwmod@counter,f,c
-  2016  003692  D7F1               	goto	l6726
-  2017  003694                     l2035:
+  2016  003692  D7F1               	goto	l6717
+  2017  003694                     l2026:
   2018  003694  C001  F001         	movff	___lwmod@dividend,?___lwmod
   2019  003698  C002  F002         	movff	___lwmod@dividend+1,?___lwmod+1
   2020  00369C  0012               	return	
@@ -2087,21 +2087,21 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   2080  00340E  500A               	movf	___lwdiv@divisor+1,w,c
   2081  003410  1009               	iorwf	___lwdiv@divisor,w,c
   2082  003412  B4D8               	btfsc	status,2,c
-  2083  003414  D01E               	goto	l2025
+  2083  003414  D01E               	goto	l2016
   2084  003416  6E0B               	movwf	??___lwdiv& (0+255),c
   2085  003418  0E01               	movlw	1
   2086  00341A  6E0E               	movwf	___lwdiv@counter,c
   2087  00341C  500B               	movf	??___lwdiv& (0+255),w,c
-  2088  00341E  D004               	goto	l7110
-  2089  003420                     l7108:
+  2088  00341E  D004               	goto	l7101
+  2089  003420                     l7099:
   2090  003420  90D8               	bcf	status,0,c
   2091  003422  3609               	rlcf	___lwdiv@divisor,f,c
   2092  003424  360A               	rlcf	___lwdiv@divisor+1,f,c
   2093  003426  2A0E               	incf	___lwdiv@counter,f,c
-  2094  003428                     l7110:
+  2094  003428                     l7101:
   2095  003428  AE0A               	btfss	___lwdiv@divisor+1,7,c
-  2096  00342A  D7FA               	goto	l7108
-  2097  00342C                     l7112:
+  2096  00342A  D7FA               	goto	l7099
+  2097  00342C                     l7103:
   2098  00342C  90D8               	bcf	status,0,c
   2099  00342E  360C               	rlcf	___lwdiv@quotient,f,c
   2100  003430  360D               	rlcf	___lwdiv@quotient+1,f,c
@@ -2110,19 +2110,19 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   2103  003436  500A               	movf	___lwdiv@divisor+1,w,c
   2104  003438  5808               	subwfb	___lwdiv@dividend+1,w,c
   2105  00343A  A0D8               	btfss	status,0,c
-  2106  00343C  D005               	goto	l7120
+  2106  00343C  D005               	goto	l7111
   2107  00343E  5009               	movf	___lwdiv@divisor,w,c
   2108  003440  5E07               	subwf	___lwdiv@dividend,f,c
   2109  003442  500A               	movf	___lwdiv@divisor+1,w,c
   2110  003444  5A08               	subwfb	___lwdiv@dividend+1,f,c
   2111  003446  800C               	bsf	___lwdiv@quotient,0,c
-  2112  003448                     l7120:
+  2112  003448                     l7111:
   2113  003448  90D8               	bcf	status,0,c
   2114  00344A  320A               	rrcf	___lwdiv@divisor+1,f,c
   2115  00344C  3209               	rrcf	___lwdiv@divisor,f,c
   2116  00344E  2E0E               	decfsz	___lwdiv@counter,f,c
-  2117  003450  D7ED               	goto	l7112
-  2118  003452                     l2025:
+  2117  003450  D7ED               	goto	l7103
+  2118  003452                     l2016:
   2119  003452  C00C  F007         	movff	___lwdiv@quotient,?___lwdiv
   2120  003456  C00D  F008         	movff	___lwdiv@quotient+1,?___lwdiv+1
   2121  00345A  0012               	return	
@@ -2189,8 +2189,8 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   2182  003860  6E12               	movwf	xBeeTxString@i,c
   2183                           
   2184                           ;telemetry.c: 162: while (data[i]){
-  2185  003862  D00C               	goto	l7262
-  2186  003864                     l7258:
+  2185  003862  D00C               	goto	l7253
+  2186  003864                     l7249:
   2187                           
   2188                           ;telemetry.c: 163: xBeeTxByte(data[i]);
   2189  003864  5012               	movf	xBeeTxString@i,w,c
@@ -2206,7 +2206,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   2199                           ;telemetry.c: 164: i++;
   2200  003878  4A12               	infsnz	xBeeTxString@i,f,c
   2201  00387A  2A13               	incf	xBeeTxString@i+1,f,c
-  2202  00387C                     l7262:
+  2202  00387C                     l7253:
   2203  00387C  5012               	movf	xBeeTxString@i,w,c
   2204  00387E  2410               	addwf	xBeeTxString@data,w,c
   2205  003880  6ED9               	movwf	fsr2l,c
@@ -2216,7 +2216,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   2209  003888  50DF               	movf	indf2,w,c
   2210  00388A  B4D8               	btfsc	status,2,c
   2211  00388C  0012               	return	
-  2212  00388E  D7EA               	goto	l7258
+  2212  00388E  D7EA               	goto	l7249
   2213  003890                     __end_of_xBeeTxString:
   2214                           	opt stack 0
   2215                           tblptru	equ	0xFF8
@@ -2277,12 +2277,12 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   2270                           ;incstack = 0
   2271  00397E  507F               	movf	_onLEDBlinker,w,c
   2272  003980  A4D8               	btfss	status,2,c
-  2273  003982  D002               	goto	u5020
+  2273  003982  D002               	goto	u4990
   2274  003984  0E01               	movlw	1
-  2275  003986  D001               	goto	u5026
-  2276  003988                     u5020:
+  2275  003986  D001               	goto	u4996
+  2276  003988                     u4990:
   2277  003988  0E00               	movlw	0
-  2278  00398A                     u5026:
+  2278  00398A                     u4996:
   2279  00398A  6E7F               	movwf	_onLEDBlinker,c
   2280                           
   2281                           ;power.c: 81: PORTAbits.RA5 = (onLEDBlinker & 1);
@@ -2715,7 +2715,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   2708  000F54  C015  F00F         	movff	?_fabs,?___ftge+3
   2709  000F58  ECAF  F016         	call	___ftge	;wreg free
   2710  000F5C  B0D8               	btfsc	status,0,c
-  2711  000F5E  D00E               	goto	l7728
+  2711  000F5E  D00E               	goto	l7719
   2712  000F60  0E00               	movlw	0
   2713  000F62  0100               	movlb	0	; () banked
   2714  000F64  0100               	movlb	0	; () banked
@@ -2729,8 +2729,8 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   2722  000F74  6E5C               	movwf	?_asin+1,c
   2723  000F76  0E00               	movlw	0
   2724  000F78  6E5D               	movwf	?_asin+2,c
-  2725  000F7A  D117               	goto	l1592
-  2726  000F7C                     l7728:
+  2725  000F7A  D117               	goto	l1583
+  2726  000F7C                     l7719:
   2727  000F7C  0E00               	movlw	0
   2728  000F7E  6E5E               	movwf	asin@sgn,c
   2729  000F80  0E80               	movlw	128
@@ -2783,7 +2783,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   2776  00101E  6E11               	movwf	?___ftge+5,c
   2777  001020  ECAF  F016         	call	___ftge	;wreg free
   2778  001024  B0D8               	btfsc	status,0,c
-  2779  001026  D023               	goto	l7742
+  2779  001026  D023               	goto	l7733
   2780  001028  C05B  F01D         	movff	asin@x,?___ftdiv
   2781  00102C  C05C  F01E         	movff	asin@x+1,?___ftdiv+1
   2782  001030  C05D  F01F         	movff	asin@x+2,?___ftdiv+2
@@ -2801,20 +2801,20 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   2794  001060  C04D  F05D         	movff	?_atan+2,?_asin+2
   2795  001064  C04C  F05C         	movff	?_atan+1,?_asin+1
   2796  001068  C04B  F05B         	movff	?_atan,?_asin
-  2797  00106C  D09E               	goto	l1592
-  2798  00106E                     l7742:
+  2797  00106C  D09E               	goto	l1583
+  2798  00106E                     l7733:
   2799  00106E  505D               	movf	asin@x+2,w,c
   2800  001070  0A80               	xorlw	128
   2801  001072  0F80               	addlw	128
-  2802  001074  E105               	bnz	u7045
+  2802  001074  E105               	bnz	u6985
   2803  001076  0E00               	movlw	0
   2804  001078  5C5C               	subwf	asin@x+1,w,c
-  2805  00107A  E102               	bnz	u7045
+  2805  00107A  E102               	bnz	u6985
   2806  00107C  0E00               	movlw	0
   2807  00107E  5C5B               	subwf	asin@x,w,c
-  2808  001080                     u7045:
+  2808  001080                     u6985:
   2809  001080  B0D8               	btfsc	status,0,c
-  2810  001082  D055               	goto	l7754
+  2810  001082  D055               	goto	l7745
   2811  001084  C05B  F020         	movff	asin@x,?___ftdiv+3
   2812  001088  C05C  F021         	movff	asin@x+1,?___ftdiv+4
   2813  00108C  C05D  F022         	movff	asin@x+2,?___ftdiv+5
@@ -2860,8 +2860,8 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   2853  001120  C00B  F05D         	movff	?___ftneg+2,?_asin+2
   2854  001124  C00A  F05C         	movff	?___ftneg+1,?_asin+1
   2855  001128  C009  F05B         	movff	?___ftneg,?_asin
-  2856  00112C  D03E               	goto	l1592
-  2857  00112E                     l7754:
+  2856  00112C  D03E               	goto	l1583
+  2857  00112E                     l7745:
   2858  00112E  C05B  F020         	movff	asin@x,?___ftdiv+3
   2859  001132  C05C  F021         	movff	asin@x+1,?___ftdiv+4
   2860  001136  C05D  F022         	movff	asin@x+2,?___ftdiv+5
@@ -2896,7 +2896,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   2889  00119E  C030  F05D         	movff	?___ftadd+2,?_asin+2
   2890  0011A2  C02F  F05C         	movff	?___ftadd+1,?_asin+1
   2891  0011A6  C02E  F05B         	movff	?___ftadd,?_asin
-  2892  0011AA                     l1592:
+  2892  0011AA                     l1583:
   2893  0011AA  0012               	return	
   2894  0011AC                     __end_of_asin:
   2895                           	opt stack 0
@@ -2979,15 +2979,15 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   2972  001802  1059               	iorwf	(atan@val+1)& (0+255),w,c
   2973  001804  1058               	iorwf	atan@val& (0+255),w,c
   2974  001806  A4D8               	btfss	status,2,c
-  2975  001808  D007               	goto	l7700
+  2975  001808  D007               	goto	l7691
   2976  00180A  0E00               	movlw	0
   2977  00180C  6E4B               	movwf	?_atan,c
   2978  00180E  0E00               	movlw	0
   2979  001810  6E4C               	movwf	?_atan+1,c
   2980  001812  0E00               	movlw	0
   2981  001814  6E4D               	movwf	?_atan+2,c
-  2982  001816  D0C4               	goto	l1611
-  2983  001818                     l7700:
+  2982  001816  D0C4               	goto	l1602
+  2983  001818                     l7691:
   2984  001818  0E00               	movlw	0
   2985  00181A  6E0C               	movwf	?___ftge,c
   2986  00181C  0E80               	movlw	128
@@ -2999,16 +2999,16 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   2992  00182C  C05A  F011         	movff	atan@val+2,?___ftge+5
   2993  001830  ECAF  F016         	call	___ftge	;wreg free
   2994  001834  B0D8               	btfsc	status,0,c
-  2995  001836  D002               	goto	u6980
+  2995  001836  D002               	goto	u6920
   2996  001838  0E01               	movlw	1
-  2997  00183A  D001               	goto	u6986
-  2998  00183C                     u6980:
+  2997  00183A  D001               	goto	u6926
+  2998  00183C                     u6920:
   2999  00183C  0E00               	movlw	0
-  3000  00183E                     u6986:
+  3000  00183E                     u6926:
   3001  00183E  6E54               	movwf	atan@recip,c
   3002  001840  5054               	movf	atan@recip& (0+255),w,c
   3003  001842  B4D8               	btfsc	status,2,c
-  3004  001844  D014               	goto	l1612
+  3004  001844  D014               	goto	l1603
   3005  001846  0E00               	movlw	0
   3006  001848  6E1D               	movwf	?___ftdiv,c
   3007  00184A  0E80               	movlw	128
@@ -3022,7 +3022,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   3015  001862  C01F  F05A         	movff	?___ftdiv+2,atan@val+2
   3016  001866  C01E  F059         	movff	?___ftdiv+1,atan@val+1
   3017  00186A  C01D  F058         	movff	?___ftdiv,atan@val
-  3018  00186E                     l1612:
+  3018  00186E                     l1603:
   3019  00186E  C058  F01D         	movff	atan@val,?___ftmul
   3020  001872  C059  F01E         	movff	atan@val+1,?___ftmul+1
   3021  001876  C05A  F01F         	movff	atan@val+2,?___ftmul+2
@@ -3080,7 +3080,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   3073  00191E  ECF2  F01B         	call	___asftmul	;wreg free
   3074  001922  5054               	movf	atan@recip,w,c
   3075  001924  B4D8               	btfsc	status,2,c
-  3076  001926  D01C               	goto	l7714
+  3076  001926  D01C               	goto	l7705
   3077  001928  C058  F009         	movff	atan@val,?___ftneg
   3078  00192C  C059  F00A         	movff	atan@val+1,?___ftneg+1
   3079  001930  C05A  F00B         	movff	atan@val+2,?___ftneg+2
@@ -3098,24 +3098,24 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   3091  001954  C030  F05A         	movff	?___ftadd+2,atan@val+2
   3092  001958  C02F  F059         	movff	?___ftadd+1,atan@val+1
   3093  00195C  C02E  F058         	movff	?___ftadd,atan@val
-  3094  001960                     l7714:
+  3094  001960                     l7705:
   3095  001960  504D               	movf	atan@f+2,w,c
   3096  001962  0A80               	xorlw	128
   3097  001964  0F80               	addlw	128
-  3098  001966  E105               	bnz	u7015
+  3098  001966  E105               	bnz	u6955
   3099  001968  0E00               	movlw	0
   3100  00196A  5C4C               	subwf	atan@f+1,w,c
-  3101  00196C  E102               	bnz	u7015
+  3101  00196C  E102               	bnz	u6955
   3102  00196E  0E00               	movlw	0
   3103  001970  5C4B               	subwf	atan@f,w,c
-  3104  001972                     u7015:
+  3104  001972                     u6955:
   3105  001972  A0D8               	btfss	status,0,c
-  3106  001974  D007               	goto	l7718
+  3106  001974  D007               	goto	l7709
   3107  001976  C058  F04B         	movff	atan@val,?_atan
   3108  00197A  C059  F04C         	movff	atan@val+1,?_atan+1
   3109  00197E  C05A  F04D         	movff	atan@val+2,?_atan+2
-  3110  001982  D00E               	goto	l1611
-  3111  001984                     l7718:
+  3110  001982  D00E               	goto	l1602
+  3111  001984                     l7709:
   3112  001984  C058  F009         	movff	atan@val,?___ftneg
   3113  001988  C059  F00A         	movff	atan@val+1,?___ftneg+1
   3114  00198C  C05A  F00B         	movff	atan@val+2,?___ftneg+2
@@ -3123,7 +3123,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   3116  001994  C00B  F04D         	movff	?___ftneg+2,?_atan+2
   3117  001998  C00A  F04C         	movff	?___ftneg+1,?_atan+1
   3118  00199C  C009  F04B         	movff	?___ftneg,?_atan
-  3119  0019A0                     l1611:
+  3119  0019A0                     l1602:
   3120  0019A0  0012               	return	
   3121  0019A2                     __end_of_atan:
   3122                           	opt stack 0
@@ -3212,8 +3212,8 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   3205  002522  C047  F04A         	movff	??_eval_poly+4,eval_poly@res+2
   3206  002526  C046  F049         	movff	??_eval_poly+3,eval_poly@res+1
   3207  00252A  C045  F048         	movff	??_eval_poly+2,eval_poly@res
-  3208  00252E  D042               	goto	l7372
-  3209  002530                     l7370:
+  3208  00252E  D042               	goto	l7363
+  3209  002530                     l7361:
   3210  002530  C048  F020         	movff	eval_poly@res,?___ftmul+3
   3211  002534  C049  F021         	movff	eval_poly@res+1,?___ftmul+4
   3212  002538  C04A  F022         	movff	eval_poly@res+2,?___ftmul+5
@@ -3255,11 +3255,11 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   3248  0025A8  C030  F04A         	movff	?___ftadd+2,eval_poly@res+2
   3249  0025AC  C02F  F049         	movff	?___ftadd+1,eval_poly@res+1
   3250  0025B0  C02E  F048         	movff	?___ftadd,eval_poly@res
-  3251  0025B4                     l7372:
+  3251  0025B4                     l7363:
   3252  0025B4  5042               	movf	eval_poly@n+1,w,c
   3253  0025B6  1041               	iorwf	eval_poly@n,w,c
   3254  0025B8  A4D8               	btfss	status,2,c
-  3255  0025BA  D7BA               	goto	l7370
+  3255  0025BA  D7BA               	goto	l7361
   3256  0025BC  C048  F03C         	movff	eval_poly@res,?_eval_poly
   3257  0025C0  C049  F03D         	movff	eval_poly@res+1,?_eval_poly+1
   3258  0025C4  C04A  F03E         	movff	eval_poly@res+2,?_eval_poly+2
@@ -3326,15 +3326,15 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   3319  0036E2  5017               	movf	fabs@d+2,w,c
   3320  0036E4  0A80               	xorlw	128
   3321  0036E6  0F80               	addlw	128
-  3322  0036E8  E105               	bnz	u6675
+  3322  0036E8  E105               	bnz	u6615
   3323  0036EA  0E00               	movlw	0
   3324  0036EC  5C16               	subwf	fabs@d+1,w,c
-  3325  0036EE  E102               	bnz	u6675
+  3325  0036EE  E102               	bnz	u6615
   3326  0036F0  0E00               	movlw	0
   3327  0036F2  5C15               	subwf	fabs@d,w,c
-  3328  0036F4                     u6675:
+  3328  0036F4                     u6615:
   3329  0036F4  B0D8               	btfsc	status,0,c
-  3330  0036F6  D00F               	goto	l1741
+  3330  0036F6  D00F               	goto	l1732
   3331  0036F8  C015  F009         	movff	fabs@d,?___ftneg
   3332  0036FC  C016  F00A         	movff	fabs@d+1,?___ftneg+1
   3333  003700  C017  F00B         	movff	fabs@d+2,?___ftneg+2
@@ -3342,12 +3342,12 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   3335  003708  C00B  F017         	movff	?___ftneg+2,?_fabs+2
   3336  00370C  C00A  F016         	movff	?___ftneg+1,?_fabs+1
   3337  003710  C009  F015         	movff	?___ftneg,?_fabs
-  3338  003714  D006               	goto	l1742
-  3339  003716                     l1741:
+  3338  003714  D006               	goto	l1733
+  3339  003716                     l1732:
   3340  003716  C015  F015         	movff	fabs@d,?_fabs
   3341  00371A  C016  F016         	movff	fabs@d+1,?_fabs+1
   3342  00371E  C017  F017         	movff	fabs@d+2,?_fabs+2
-  3343  003722                     l1742:
+  3343  003722                     l1733:
   3344  003722  0012               	return	
   3345  003724                     __end_of_fabs:
   3346                           	opt stack 0
@@ -3413,14 +3413,14 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   3406  0039A8  100A               	iorwf	___ftneg@f1+1,w,c
   3407  0039AA  1009               	iorwf	___ftneg@f1,w,c
   3408  0039AC  B4D8               	btfsc	status,2,c
-  3409  0039AE  D006               	goto	l1907
+  3409  0039AE  D006               	goto	l1898
   3410  0039B0  0E00               	movlw	0
   3411  0039B2  1A09               	xorwf	___ftneg@f1,f,c
   3412  0039B4  0E00               	movlw	0
   3413  0039B6  1A0A               	xorwf	___ftneg@f1+1,f,c
   3414  0039B8  0E80               	movlw	128
   3415  0039BA  1A0B               	xorwf	___ftneg@f1+2,f,c
-  3416  0039BC                     l1907:
+  3416  0039BC                     l1898:
   3417  0039BC  C009  F009         	movff	___ftneg@f1,?___ftneg
   3418  0039C0  C00A  F00A         	movff	___ftneg@f1+1,?___ftneg+1
   3419  0039C4  C00B  F00B         	movff	___ftneg@f1+2,?___ftneg+2
@@ -3501,19 +3501,19 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   3494  0019B6  C049  F011         	movff	sqrt@y+2,?___ftge+5
   3495  0019BA  ECAF  F016         	call	___ftge	;wreg free
   3496  0019BE  A0D8               	btfss	status,0,c
-  3497  0019C0  D019               	goto	l2057
+  3497  0019C0  D019               	goto	l2048
   3498  0019C2  5049               	movf	sqrt@y+2,w,c
   3499  0019C4  0A80               	xorlw	128
   3500  0019C6  0F80               	addlw	128
-  3501  0019C8  E105               	bnz	u6965
+  3501  0019C8  E105               	bnz	u6905
   3502  0019CA  0E00               	movlw	0
   3503  0019CC  5C48               	subwf	sqrt@y+1,w,c
-  3504  0019CE  E102               	bnz	u6965
+  3504  0019CE  E102               	bnz	u6905
   3505  0019D0  0E00               	movlw	0
   3506  0019D2  5C47               	subwf	sqrt@y,w,c
-  3507  0019D4                     u6965:
+  3507  0019D4                     u6905:
   3508  0019D4  B0D8               	btfsc	status,0,c
-  3509  0019D6  D007               	goto	l2058
+  3509  0019D6  D007               	goto	l2049
   3510  0019D8  0E00               	movlw	0
   3511  0019DA  0100               	movlb	0	; () banked
   3512  0019DC  0100               	movlb	0	; () banked
@@ -3521,15 +3521,15 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   3514  0019E0  0E21               	movlw	33
   3515  0019E2  0100               	movlb	0	; () banked
   3516  0019E4  6FB2               	movwf	_errno& (0+255),b
-  3517  0019E6                     l2058:
+  3517  0019E6                     l2049:
   3518  0019E6  0E00               	movlw	0
   3519  0019E8  6E47               	movwf	?_sqrt,c
   3520  0019EA  0E00               	movlw	0
   3521  0019EC  6E48               	movwf	?_sqrt+1,c
   3522  0019EE  0E00               	movlw	0
   3523  0019F0  6E49               	movwf	?_sqrt+2,c
-  3524  0019F2  D08A               	goto	l2059
-  3525  0019F4                     l2057:
+  3524  0019F2  D08A               	goto	l2050
+  3525  0019F4                     l2048:
   3526  0019F4  C047  F050         	movff	sqrt@y,sqrt@z
   3527  0019F8  C048  F051         	movff	sqrt@y+1,sqrt@z+1
   3528  0019FC  C049  F052         	movff	sqrt@y+2,sqrt@z+2
@@ -3566,7 +3566,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   3559  001A42  0E04               	movlw	4
   3560  001A44  6E53               	movwf	sqrt@i,c
   3561  001A46  504A               	movf	??_sqrt& (0+255),w,c
-  3562  001A48                     l7676:
+  3562  001A48                     l7667:
   3563  001A48  C057  F04D         	movff	sqrt@x,sqrt@og
   3564  001A4C  C058  F04E         	movff	sqrt@x+1,sqrt@og+1
   3565  001A50  C059  F04F         	movff	sqrt@x+2,sqrt@og+2
@@ -3616,7 +3616,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   3609  001AD4  C056  F046         	movff	sqrt@q+2,?___asftsub+4
   3610  001AD8  ECD4  F01B         	call	___asftsub	;wreg free
   3611  001ADC  2E53               	decfsz	sqrt@i,f,c
-  3612  001ADE  D7B4               	goto	l7676
+  3612  001ADE  D7B4               	goto	l7667
   3613  001AE0  C057  F01D         	movff	sqrt@x,?___ftmul
   3614  001AE4  C058  F01E         	movff	sqrt@x+1,?___ftmul+1
   3615  001AE8  C059  F01F         	movff	sqrt@x+2,?___ftmul+2
@@ -3627,7 +3627,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   3620  001AFC  C01F  F049         	movff	?___ftmul+2,?_sqrt+2
   3621  001B00  C01E  F048         	movff	?___ftmul+1,?_sqrt+1
   3622  001B04  C01D  F047         	movff	?___ftmul,?_sqrt
-  3623  001B08                     l2059:
+  3623  001B08                     l2050:
   3624  001B08  0012               	return	
   3625  001B0A                     __end_of_sqrt:
   3626                           	opt stack 0
@@ -4140,30 +4140,30 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   4133  002BC0  C011  F016         	movff	xBeeTxLong@data+1,??_xBeeTxLong+2
   4134  002BC4  C012  F017         	movff	xBeeTxLong@data+2,??_xBeeTxLong+3
   4135  002BC8  C013  F018         	movff	xBeeTxLong@data+3,??_xBeeTxLong+4
-  4136  002BCC                     u6645:
+  4136  002BCC                     u6585:
   4137  002BCC  6614               	tstfsz	??_xBeeTxLong,c
-  4138  002BCE  D001               	goto	u6646
-  4139  002BD0  D007               	goto	u6647
-  4140  002BD2                     u6646:
+  4138  002BCE  D001               	goto	u6586
+  4139  002BD0  D007               	goto	u6587
+  4140  002BD2                     u6586:
   4141  002BD2  3418               	rlcf	??_xBeeTxLong+4,w,c
   4142  002BD4  3218               	rrcf	??_xBeeTxLong+4,f,c
   4143  002BD6  3217               	rrcf	??_xBeeTxLong+3,f,c
   4144  002BD8  3216               	rrcf	??_xBeeTxLong+2,f,c
   4145  002BDA  3215               	rrcf	??_xBeeTxLong+1,f,c
   4146  002BDC  2E14               	decfsz	??_xBeeTxLong,f,c
-  4147  002BDE  D7F6               	goto	u6645
-  4148  002BE0                     u6647:
+  4147  002BDE  D7F6               	goto	u6585
+  4148  002BE0                     u6587:
   4149  002BE0  5018               	movf	??_xBeeTxLong+4,w,c
   4150  002BE2  1015               	iorwf	??_xBeeTxLong+1,w,c
   4151  002BE4  1016               	iorwf	??_xBeeTxLong+2,w,c
   4152  002BE6  1017               	iorwf	??_xBeeTxLong+3,w,c
   4153  002BE8  B4D8               	btfsc	status,2,c
-  4154  002BEA  D004               	goto	l7344
+  4154  002BEA  D004               	goto	l7335
   4155  002BEC  6E14               	movwf	??_xBeeTxLong& (0+255),c
   4156  002BEE  0E01               	movlw	1
   4157  002BF0  6E19               	movwf	_xBeeTxLong$3946,c
   4158  002BF2  5014               	movf	??_xBeeTxLong& (0+255),w,c
-  4159  002BF4                     l7344:
+  4159  002BF4                     l7335:
   4160  002BF4  C019  F00F         	movff	_xBeeTxLong$3946,?_xBeeTxByte
   4161  002BF8  EC9A  F01D         	call	_xBeeTxByte	;wreg free
   4162                           
@@ -4183,12 +4183,12 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   4176  002C1A  1015               	iorwf	??_xBeeTxLong+1,w,c
   4177  002C1C  1016               	iorwf	??_xBeeTxLong+2,w,c
   4178  002C1E  B4D8               	btfsc	status,2,c
-  4179  002C20  D004               	goto	l7352
+  4179  002C20  D004               	goto	l7343
   4180  002C22  6E14               	movwf	??_xBeeTxLong& (0+255),c
   4181  002C24  0E01               	movlw	1
   4182  002C26  6E1A               	movwf	_xBeeTxLong$3947,c
   4183  002C28  5014               	movf	??_xBeeTxLong& (0+255),w,c
-  4184  002C2A                     l7352:
+  4184  002C2A                     l7343:
   4185  002C2A  C01A  F00F         	movff	_xBeeTxLong$3947,?_xBeeTxByte
   4186  002C2E  EC9A  F01D         	call	_xBeeTxByte	;wreg free
   4187                           
@@ -4705,9 +4705,9 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   4698                           	opt stack 0
   4699  003B5A                     _xBeeRxByte:
   4700                           	opt stack 27
-  4701  003B5A                     l1443:
+  4701  003B5A                     l1434:
   4702  003B5A  AA9E               	btfss	3998,5,c	;volatile
-  4703  003B5C  D7FE               	goto	l1443
+  4703  003B5C  D7FE               	goto	l1434
   4704                           
   4705                           ;telemetry.c: 246: return ReadUSART();
   4706  003B5E  ECF5  F01C         	call	_ReadUSART	;wreg free
@@ -5204,7 +5204,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   5197  003232  B4D8               	btfsc	status,2,c
   5198  003234  5C11               	subwf	xBeeSetATMode@i,w,c
   5199  003236  B0D8               	btfsc	status,0,c
-  5200  003238  D011               	goto	l7304
+  5200  003238  D011               	goto	l7295
   5201                           
   5202                           ;telemetry.c: 53: PORTCbits.RC0 = 1;
   5203  00323A  8082               	bsf	3970,0,c	;volatile
@@ -5228,7 +5228,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   5221  003256  4A11               	infsnz	xBeeSetATMode@i,f,c
   5222  003258  2A12               	incf	xBeeSetATMode@i+1,f,c
   5223  00325A  D7E7               	goto	L1
-  5224  00325C                     l7304:
+  5224  00325C                     l7295:
   5225                           
   5226                           ;telemetry.c: 57: }
   5227                           ;telemetry.c: 59: for(i = 0; i < 3; ++i){
@@ -5243,7 +5243,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   5236  00326C  B4D8               	btfsc	status,2,c
   5237  00326E  5C11               	subwf	xBeeSetATMode@i,w,c
   5238  003270  B0D8               	btfsc	status,0,c
-  5239  003272  D009               	goto	l1379
+  5239  003272  D009               	goto	l1370
   5240                           
   5241                           ;telemetry.c: 60: xBeeTxByte(0x2B);
   5242  003274  6E10               	movwf	??_xBeeSetATMode& (0+255),c
@@ -5254,7 +5254,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   5247  003280  4A11               	infsnz	xBeeSetATMode@i,f,c
   5248  003282  2A12               	incf	xBeeSetATMode@i+1,f,c
   5249  003284  D7EF               	goto	L2
-  5250  003286                     l1379:
+  5250  003286                     l1370:
   5251  003286  0012               	return	
   5252  003288                     __end_of_xBeeSetATMode:
   5253                           	opt stack 0
@@ -5789,21 +5789,21 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   5782  002304  C01F  F026         	movff	___ftdiv@f1+2,??___ftdiv+3
   5783  002308  2823               	incf	??___ftdiv,w,c
   5784  00230A  6E27               	movwf	(??___ftdiv+4)& (0+255),c
-  5785  00230C  D004               	goto	u6750
-  5786  00230E                     u6755:
+  5785  00230C  D004               	goto	u6690
+  5786  00230E                     u6695:
   5787  00230E  90D8               	bcf	status,0,c
   5788  002310  3226               	rrcf	??___ftdiv+3,f,c
   5789  002312  3225               	rrcf	??___ftdiv+2,f,c
   5790  002314  3224               	rrcf	??___ftdiv+1,f,c
-  5791  002316                     u6750:
+  5791  002316                     u6690:
   5792  002316  2E27               	decfsz	(??___ftdiv+4)& (0+255),f,c
-  5793  002318  D7FA               	goto	u6755
+  5793  002318  D7FA               	goto	u6695
   5794  00231A  5024               	movf	??___ftdiv+1,w,c
   5795  00231C  6E2C               	movwf	___ftdiv@exp,c
   5796  00231E  662C               	tstfsz	___ftdiv@exp& (0+255),c
-  5797  002320  D001               	goto	l7496
-  5798  002322  D015               	goto	u6780
-  5799  002324                     l7496:
+  5797  002320  D001               	goto	l7487
+  5798  002322  D015               	goto	u6720
+  5799  002324                     l7487:
   5800  002324  0E0F               	movlw	15
   5801  002326  6E23               	movwf	??___ftdiv& (0+255),c
   5802  002328  C020  F024         	movff	___ftdiv@f2,??___ftdiv+1
@@ -5811,28 +5811,28 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   5804  002330  C022  F026         	movff	___ftdiv@f2+2,??___ftdiv+3
   5805  002334  2823               	incf	??___ftdiv,w,c
   5806  002336  6E27               	movwf	(??___ftdiv+4)& (0+255),c
-  5807  002338  D004               	goto	u6770
-  5808  00233A                     u6775:
+  5807  002338  D004               	goto	u6710
+  5808  00233A                     u6715:
   5809  00233A  90D8               	bcf	status,0,c
   5810  00233C  3226               	rrcf	??___ftdiv+3,f,c
   5811  00233E  3225               	rrcf	??___ftdiv+2,f,c
   5812  002340  3224               	rrcf	??___ftdiv+1,f,c
-  5813  002342                     u6770:
+  5813  002342                     u6710:
   5814  002342  2E27               	decfsz	(??___ftdiv+4)& (0+255),f,c
-  5815  002344  D7FA               	goto	u6775
+  5815  002344  D7FA               	goto	u6715
   5816  002346  5024               	movf	??___ftdiv+1,w,c
   5817  002348  6E2D               	movwf	___ftdiv@sign,c
   5818  00234A  662D               	tstfsz	___ftdiv@sign& (0+255),c
-  5819  00234C  D007               	goto	l7502
-  5820  00234E                     u6780:
+  5819  00234C  D007               	goto	l7493
+  5820  00234E                     u6720:
   5821  00234E  0E00               	movlw	0
   5822  002350  6E1D               	movwf	?___ftdiv,c
   5823  002352  0E00               	movlw	0
   5824  002354  6E1E               	movwf	?___ftdiv+1,c
   5825  002356  0E00               	movlw	0
   5826  002358  6E1F               	movwf	?___ftdiv+2,c
-  5827  00235A  D04C               	goto	l1882
-  5828  00235C                     l7502:
+  5827  00235A  D04C               	goto	l1873
+  5828  00235C                     l7493:
   5829  00235C  0E00               	movlw	0
   5830  00235E  6E29               	movwf	___ftdiv@f3,c
   5831  002360  0E00               	movlw	0
@@ -5865,7 +5865,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   5858  002398  0E18               	movlw	24
   5859  00239A  6E28               	movwf	___ftdiv@cntr,c
   5860  00239C  5023               	movf	??___ftdiv& (0+255),w,c
-  5861  00239E                     l1884:
+  5861  00239E                     l1875:
   5862  00239E  90D8               	bcf	status,0,c
   5863  0023A0  3629               	rlcf	___ftdiv@f3,f,c
   5864  0023A2  362A               	rlcf	___ftdiv@f3+1,f,c
@@ -5877,7 +5877,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   5870  0023AE  5022               	movf	___ftdiv@f2+2,w,c
   5871  0023B0  581F               	subwfb	___ftdiv@f1+2,w,c
   5872  0023B2  A0D8               	btfss	status,0,c
-  5873  0023B4  D007               	goto	l1885
+  5873  0023B4  D007               	goto	l1876
   5874  0023B6  5020               	movf	___ftdiv@f2,w,c
   5875  0023B8  5E1D               	subwf	___ftdiv@f1,f,c
   5876  0023BA  5021               	movf	___ftdiv@f2+1,w,c
@@ -5885,13 +5885,13 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   5878  0023BE  5022               	movf	___ftdiv@f2+2,w,c
   5879  0023C0  5A1F               	subwfb	___ftdiv@f1+2,f,c
   5880  0023C2  8029               	bsf	___ftdiv@f3,0,c
-  5881  0023C4                     l1885:
+  5881  0023C4                     l1876:
   5882  0023C4  90D8               	bcf	status,0,c
   5883  0023C6  361D               	rlcf	___ftdiv@f1,f,c
   5884  0023C8  361E               	rlcf	___ftdiv@f1+1,f,c
   5885  0023CA  361F               	rlcf	___ftdiv@f1+2,f,c
   5886  0023CC  2E28               	decfsz	___ftdiv@cntr,f,c
-  5887  0023CE  D7E7               	goto	l1884
+  5887  0023CE  D7E7               	goto	l1875
   5888  0023D0  C029  F001         	movff	___ftdiv@f3,?___ftpack
   5889  0023D4  C02A  F002         	movff	___ftdiv@f3+1,?___ftpack+1
   5890  0023D8  C02B  F003         	movff	___ftdiv@f3+2,?___ftpack+2
@@ -5901,7 +5901,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   5894  0023E8  C003  F01F         	movff	?___ftpack+2,?___ftdiv+2
   5895  0023EC  C002  F01E         	movff	?___ftpack+1,?___ftdiv+1
   5896  0023F0  C001  F01D         	movff	?___ftpack,?___ftdiv
-  5897  0023F4                     l1882:
+  5897  0023F4                     l1873:
   5898  0023F4  0012               	return	
   5899  0023F6                     __end_of___ftdiv:
   5900                           	opt stack 0
@@ -5996,15 +5996,15 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   5989  002930  B4D8               	btfsc	status,2,c
   5990  002932  5C31               	subwf	getArrayCurrent@i,w,c
   5991  002934  B0D8               	btfsc	status,0,c
-  5992  002936  D010               	goto	l7482
+  5992  002936  D010               	goto	l7473
   5993                           
   5994                           ;power.c: 53: ConvertADC();
   5995  002938  ECBA  F01D         	call	_ConvertADC	;wreg free
-  5996  00293C                     l7474:
+  5996  00293C                     l7465:
   5997  00293C  ECB7  F01D         	call	_BusyADC	;wreg free
   5998  002940  0900               	iorlw	0
   5999  002942  A4D8               	btfss	status,2,c
-  6000  002944  D7FB               	goto	l7474
+  6000  002944  D7FB               	goto	l7465
   6001                           
   6002                           ;power.c: 55: average += ReadADC();
   6003  002946  ECB2  F01D         	call	_ReadADC	;wreg free
@@ -6015,7 +6015,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   6008  002952  4A31               	infsnz	getArrayCurrent@i,f,c
   6009  002954  2A32               	incf	getArrayCurrent@i+1,f,c
   6010  002956  D7E8               	goto	L3
-  6011  002958                     l7482:
+  6011  002958                     l7473:
   6012                           
   6013                           ;power.c: 56: }
   6014                           ;power.c: 58: average /= 4;
@@ -6121,7 +6121,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   6114  0036A2  6E1C               	movwf	___awtoft@sign,c
   6115  0036A4  501B               	movf	??___awtoft& (0+255),w,c
   6116  0036A6  AE19               	btfss	___awtoft@c+1,7,c
-  6117  0036A8  D008               	goto	l7382
+  6117  0036A8  D008               	goto	l7373
   6118  0036AA  6C18               	negf	___awtoft@c,c
   6119  0036AC  1E19               	comf	___awtoft@c+1,f,c
   6120  0036AE  B0D8               	btfsc	status,0,c
@@ -6130,7 +6130,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   6123  0036B4  0E01               	movlw	1
   6124  0036B6  6E1C               	movwf	___awtoft@sign,c
   6125  0036B8  501B               	movf	??___awtoft& (0+255),w,c
-  6126  0036BA                     l7382:
+  6126  0036BA                     l7373:
   6127  0036BA  C018  F001         	movff	___awtoft@c,?___ftpack
   6128  0036BE  C019  F002         	movff	___awtoft@c+1,?___ftpack+1
   6129  0036C2  6A03               	clrf	?___ftpack+2,c
@@ -6237,15 +6237,15 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   6230  0029E2  B4D8               	btfsc	status,2,c
   6231  0029E4  5C31               	subwf	getArrayVoltage@i,w,c
   6232  0029E6  B0D8               	btfsc	status,0,c
-  6233  0029E8  D010               	goto	l7284
+  6233  0029E8  D010               	goto	l7275
   6234                           
   6235                           ;power.c: 32: ConvertADC();
   6236  0029EA  ECBA  F01D         	call	_ConvertADC	;wreg free
-  6237  0029EE                     l7276:
+  6237  0029EE                     l7267:
   6238  0029EE  ECB7  F01D         	call	_BusyADC	;wreg free
   6239  0029F2  0900               	iorlw	0
   6240  0029F4  A4D8               	btfss	status,2,c
-  6241  0029F6  D7FB               	goto	l7276
+  6241  0029F6  D7FB               	goto	l7267
   6242                           
   6243                           ;power.c: 34: average += ReadADC();
   6244  0029F8  ECB2  F01D         	call	_ReadADC	;wreg free
@@ -6256,7 +6256,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   6249  002A04  4A31               	infsnz	getArrayVoltage@i,f,c
   6250  002A06  2A32               	incf	getArrayVoltage@i+1,f,c
   6251  002A08  D7E8               	goto	L4
-  6252  002A0A                     l7284:
+  6252  002A0A                     l7275:
   6253                           
   6254                           ;power.c: 35: }
   6255                           ;power.c: 37: average /= 4;
@@ -6390,7 +6390,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   6383  002B38  B4D8               	btfsc	status,2,c
   6384  002B3A  5C17               	subwf	gyroSelfTest@i,w,c
   6385  002B3C  B0D8               	btfsc	status,0,c
-  6386  002B3E  D009               	goto	l7626
+  6386  002B3E  D009               	goto	l7617
   6387                           
   6388                           ;gyroscope.c: 77: Delay10KTCYx(0);
   6389  002B40  6E12               	movwf	??_gyroSelfTest& (0+255),c
@@ -6401,7 +6401,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   6394  002B4C  4A17               	infsnz	gyroSelfTest@i,f,c
   6395  002B4E  2A18               	incf	gyroSelfTest@i+1,f,c
   6396  002B50  D7EF               	goto	L5
-  6397  002B52                     l7626:
+  6397  002B52                     l7617:
   6398                           
   6399                           ;gyroscope.c: 78: }
   6400                           ;gyroscope.c: 80: new = gyroGetADC();
@@ -6422,7 +6422,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   6415  002B6C  0A80               	xorlw	128
   6416  002B6E  5812               	subwfb	??_gyroSelfTest& (0+255),w,c
   6417  002B70  B0D8               	btfsc	status,0,c
-  6418  002B72  D013               	goto	l7638
+  6418  002B72  D013               	goto	l7629
   6419                           
   6420                           ;gyroscope.c: 85: gyroFail = 1;
   6421  002B74  6E12               	movwf	??_gyroSelfTest& (0+255),c
@@ -6449,7 +6449,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   6442                           
   6443                           ;gyroscope.c: 88: }
   6444  002B98  D006               	goto	l1035
-  6445  002B9A                     l7638:
+  6445  002B9A                     l7629:
   6446                           
   6447                           ;gyroscope.c: 89: else{
   6448                           ;gyroscope.c: 90: gyroFail = 0;
@@ -6542,7 +6542,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   6535  0035CC  B4D8               	btfsc	status,2,c
   6536  0035CE  5C13               	subwf	gyroCalibrate@i,w,c
   6537  0035D0  B0D8               	btfsc	status,0,c
-  6538  0035D2  D009               	goto	l7252
+  6538  0035D2  D009               	goto	l7243
   6539                           
   6540                           ;gyroscope.c: 55: average += gyroGetADC();
   6541  0035D4  EC01  F018         	call	_gyroGetADC	;wreg free
@@ -6553,7 +6553,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   6546  0035E0  4A13               	infsnz	gyroCalibrate@i,f,c
   6547  0035E2  2A14               	incf	gyroCalibrate@i+1,f,c
   6548  0035E4  D7EF               	goto	L6
-  6549  0035E6                     l7252:
+  6549  0035E6                     l7243:
   6550                           
   6551                           ;gyroscope.c: 56: }
   6552                           ;gyroscope.c: 58: gyroZero = average / 4;
@@ -6739,15 +6739,15 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   6732  003026  B4D8               	btfsc	status,2,c
   6733  003028  5C0D               	subwf	gyroGetADC@i,w,c
   6734  00302A  B0D8               	btfsc	status,0,c
-  6735  00302C  D010               	goto	l6886
+  6735  00302C  D010               	goto	l6877
   6736                           
   6737                           ;gyroscope.c: 36: ConvertADC();
   6738  00302E  ECBA  F01D         	call	_ConvertADC	;wreg free
-  6739  003032                     l6878:
+  6739  003032                     l6869:
   6740  003032  ECB7  F01D         	call	_BusyADC	;wreg free
   6741  003036  0900               	iorlw	0
   6742  003038  A4D8               	btfss	status,2,c
-  6743  00303A  D7FB               	goto	l6878
+  6743  00303A  D7FB               	goto	l6869
   6744                           
   6745                           ;gyroscope.c: 38: average += ReadADC();
   6746  00303C  ECB2  F01D         	call	_ReadADC	;wreg free
@@ -6758,7 +6758,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   6751  003048  4A0D               	infsnz	gyroGetADC@i,f,c
   6752  00304A  2A0E               	incf	gyroGetADC@i+1,f,c
   6753  00304C  D7E8               	goto	L7
-  6754  00304E                     l6886:
+  6754  00304E                     l6877:
   6755                           
   6756                           ;gyroscope.c: 39: }
   6757                           ;gyroscope.c: 41: average /= 4;
@@ -6852,13 +6852,13 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   6845  001FC0  CFDE F014          	movff	postinc2,??_battSafeCheck
   6846  001FC4  CFDD F015          	movff	postdec2,??_battSafeCheck+1
   6847  001FC8  AE15               	btfss	??_battSafeCheck+1,7,c
-  6848  001FCA  D003               	goto	l7574
+  6848  001FCA  D003               	goto	l7565
   6849                           
   6850                           ;batteries.c: 144: error = 0x43;
   6851  001FCC  6E14               	movwf	??_battSafeCheck& (0+255),c
   6852  001FCE  0E43               	movlw	67
   6853  001FD0  D06E               	goto	L14
-  6854  001FD2                     l7574:
+  6854  001FD2                     l7565:
   6855                           
   6856                           ;batteries.c: 146: else if (ptr->status & 0x4000){
   6857  001FD2  EE20 F00E          	lfsr	2,14
@@ -6869,13 +6869,13 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   6862  001FDE  CFDE F014          	movff	postinc2,??_battSafeCheck
   6863  001FE2  CFDD F015          	movff	postdec2,??_battSafeCheck+1
   6864  001FE6  AC15               	btfss	??_battSafeCheck+1,6,c
-  6865  001FE8  D003               	goto	l7578
+  6865  001FE8  D003               	goto	l7569
   6866                           
   6867                           ;batteries.c: 147: error = 0x46;
   6868  001FEA  6E14               	movwf	??_battSafeCheck& (0+255),c
   6869  001FEC  0E46               	movlw	70
   6870  001FEE  D05F               	goto	L14
-  6871  001FF0                     l7578:
+  6871  001FF0                     l7569:
   6872                           
   6873                           ;batteries.c: 149: else if (ptr->status & 0x1000){
   6874  001FF0  EE20 F00E          	lfsr	2,14
@@ -6886,13 +6886,13 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   6879  001FFC  CFDE F014          	movff	postinc2,??_battSafeCheck
   6880  002000  CFDD F015          	movff	postdec2,??_battSafeCheck+1
   6881  002004  A815               	btfss	??_battSafeCheck+1,4,c
-  6882  002006  D003               	goto	l7582
+  6882  002006  D003               	goto	l7573
   6883                           
   6884                           ;batteries.c: 150: error = 0x45;
   6885  002008  6E14               	movwf	??_battSafeCheck& (0+255),c
   6886  00200A  0E45               	movlw	69
   6887  00200C  D050               	goto	L14
-  6888  00200E                     l7582:
+  6888  00200E                     l7573:
   6889                           
   6890                           ;batteries.c: 152: else if ((ptr->status & 0x0800) || (ptr->temp > 3230)){
   6891  00200E  EE20 F00E          	lfsr	2,14
@@ -6903,7 +6903,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   6896  00201A  CFDE F014          	movff	postinc2,??_battSafeCheck
   6897  00201E  CFDD F015          	movff	postdec2,??_battSafeCheck+1
   6898  002022  B615               	btfsc	??_battSafeCheck+1,3,c
-  6899  002024  D00F               	goto	l7586
+  6899  002024  D00F               	goto	l7577
   6900  002026  EE20 F00A          	lfsr	2,10
   6901  00202A  5012               	movf	battSafeCheck@ptr,w,c
   6902  00202C  26D9               	addwf	fsr2l,f,c
@@ -6917,14 +6917,14 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   6910  00203C  B4D8               	btfsc	status,2,c
   6911  00203E  5CDF               	subwf	indf2,w,c
   6912  002040  A0D8               	btfss	status,0,c
-  6913  002042  D003               	goto	l7588
-  6914  002044                     l7586:
+  6913  002042  D003               	goto	l7579
+  6914  002044                     l7577:
   6915                           
   6916                           ;batteries.c: 153: error = 0x54;
   6917  002044  6E14               	movwf	??_battSafeCheck& (0+255),c
   6918  002046  0E54               	movlw	84
   6919  002048  D032               	goto	L14
-  6920  00204A                     l7588:
+  6920  00204A                     l7579:
   6921                           
   6922                           ;batteries.c: 155: else if (ptr->status & 0x0200){
   6923  00204A  EE20 F00E          	lfsr	2,14
@@ -6935,13 +6935,13 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   6928  002056  CFDE F014          	movff	postinc2,??_battSafeCheck
   6929  00205A  CFDD F015          	movff	postdec2,??_battSafeCheck+1
   6930  00205E  A215               	btfss	??_battSafeCheck+1,1,c
-  6931  002060  D003               	goto	l7592
+  6931  002060  D003               	goto	l7583
   6932                           
   6933                           ;batteries.c: 156: error = 0x4C;
   6934  002062  6E14               	movwf	??_battSafeCheck& (0+255),c
   6935  002064  0E4C               	movlw	76
   6936  002066  D023               	goto	L14
-  6937  002068                     l7592:
+  6937  002068                     l7583:
   6938                           
   6939                           ;batteries.c: 158: else if (ptr->status&0x0100){
   6940  002068  EE20 F00E          	lfsr	2,14
@@ -6952,13 +6952,13 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   6945  002074  CFDE F014          	movff	postinc2,??_battSafeCheck
   6946  002078  CFDD F015          	movff	postdec2,??_battSafeCheck+1
   6947  00207C  A015               	btfss	??_battSafeCheck+1,0,c
-  6948  00207E  D003               	goto	l7596
+  6948  00207E  D003               	goto	l7587
   6949                           
   6950                           ;batteries.c: 159: error = 0x5A;
   6951  002080  6E14               	movwf	??_battSafeCheck& (0+255),c
   6952  002082  0E5A               	movlw	90
   6953  002084  D014               	goto	L14
-  6954  002086                     l7596:
+  6954  002086                     l7587:
   6955                           
   6956                           ;batteries.c: 161: else if (ptr->temp < 2556){
   6957  002086  EE20 F00A          	lfsr	2,10
@@ -6974,13 +6974,13 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   6967  00209C  B4D8               	btfsc	status,2,c
   6968  00209E  5CDF               	subwf	indf2,w,c
   6969  0020A0  B0D8               	btfsc	status,0,c
-  6970  0020A2  D003               	goto	l7600
+  6970  0020A2  D003               	goto	l7591
   6971                           
   6972                           ;batteries.c: 162: error = 0x55;
   6973  0020A4  6E14               	movwf	??_battSafeCheck& (0+255),c
   6974  0020A6  0E55               	movlw	85
   6975  0020A8  D002               	goto	L14
-  6976  0020AA                     l7600:
+  6976  0020AA                     l7591:
   6977                           
   6978                           ;batteries.c: 164: else{
   6979                           ;batteries.c: 165: error = 0;
@@ -8322,21 +8322,21 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   8315  0025D6  C00B  F010         	movff	___fttol@f1+2,??___fttol+3
   8316  0025DA  280D               	incf	??___fttol,w,c
   8317  0025DC  6E11               	movwf	(??___fttol+4)& (0+255),c
-  8318  0025DE  D004               	goto	u6150
-  8319  0025E0                     u6155:
+  8318  0025DE  D004               	goto	u6090
+  8319  0025E0                     u6095:
   8320  0025E0  90D8               	bcf	status,0,c
   8321  0025E2  3210               	rrcf	??___fttol+3,f,c
   8322  0025E4  320F               	rrcf	??___fttol+2,f,c
   8323  0025E6  320E               	rrcf	??___fttol+1,f,c
-  8324  0025E8                     u6150:
+  8324  0025E8                     u6090:
   8325  0025E8  2E11               	decfsz	(??___fttol+4)& (0+255),f,c
-  8326  0025EA  D7FA               	goto	u6155
+  8326  0025EA  D7FA               	goto	u6095
   8327  0025EC  500E               	movf	??___fttol+1,w,c
   8328  0025EE  6E17               	movwf	___fttol@exp1,c
   8329  0025F0  6617               	tstfsz	___fttol@exp1& (0+255),c
-  8330  0025F2  D001               	goto	l7062
-  8331  0025F4  D035               	goto	u6200
-  8332  0025F6                     l7062:
+  8330  0025F2  D001               	goto	l7053
+  8331  0025F4  D035               	goto	u6140
+  8332  0025F6                     l7053:
   8333  0025F6  0E17               	movlw	23
   8334  0025F8  6E0D               	movwf	??___fttol& (0+255),c
   8335  0025FA  C009  F00E         	movff	___fttol@f1,??___fttol+1
@@ -8344,15 +8344,15 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   8337  002602  C00B  F010         	movff	___fttol@f1+2,??___fttol+3
   8338  002606  280D               	incf	??___fttol,w,c
   8339  002608  6E11               	movwf	(??___fttol+4)& (0+255),c
-  8340  00260A  D004               	goto	u6170
-  8341  00260C                     u6175:
+  8340  00260A  D004               	goto	u6110
+  8341  00260C                     u6115:
   8342  00260C  90D8               	bcf	status,0,c
   8343  00260E  3210               	rrcf	??___fttol+3,f,c
   8344  002610  320F               	rrcf	??___fttol+2,f,c
   8345  002612  320E               	rrcf	??___fttol+1,f,c
-  8346  002614                     u6170:
+  8346  002614                     u6110:
   8347  002614  2E11               	decfsz	(??___fttol+4)& (0+255),f,c
-  8348  002616  D7FA               	goto	u6175
+  8348  002616  D7FA               	goto	u6115
   8349  002618  500E               	movf	??___fttol+1,w,c
   8350  00261A  6E12               	movwf	___fttol@sign1,c
   8351  00261C  8E0A               	bsf	___fttol@f1+1,7,c
@@ -8372,26 +8372,26 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   8365  002638  0E8E               	movlw	142
   8366  00263A  5E17               	subwf	___fttol@exp1,f,c
   8367  00263C  AE17               	btfss	___fttol@exp1,7,c
-  8368  00263E  D00D               	goto	l7084
+  8368  00263E  D00D               	goto	l7075
   8369  002640  5017               	movf	___fttol@exp1,w,c
   8370  002642  0A80               	xorlw	128
   8371  002644  0F8F               	addlw	143
   8372  002646  A0D8               	btfss	status,0,c
-  8373  002648  D00B               	goto	u6200
-  8374  00264A                     l7080:
+  8373  002648  D00B               	goto	u6140
+  8374  00264A                     l7071:
   8375  00264A  90D8               	bcf	status,0,c
   8376  00264C  3216               	rrcf	___fttol@lval+3,f,c
   8377  00264E  3215               	rrcf	___fttol@lval+2,f,c
   8378  002650  3214               	rrcf	___fttol@lval+1,f,c
   8379  002652  3213               	rrcf	___fttol@lval,f,c
   8380  002654  3E17               	incfsz	___fttol@exp1,f,c
-  8381  002656  D7F9               	goto	l7080
-  8382  002658  D014               	goto	l7094
-  8383  00265A                     l7084:
+  8381  002656  D7F9               	goto	l7071
+  8382  002658  D014               	goto	l7085
+  8383  00265A                     l7075:
   8384  00265A  0E17               	movlw	23
   8385  00265C  6417               	cpfsgt	___fttol@exp1,c
-  8386  00265E  D00F               	goto	l7092
-  8387  002660                     u6200:
+  8386  00265E  D00F               	goto	l7083
+  8387  002660                     u6140:
   8388  002660  0E00               	movlw	0
   8389  002662  6E09               	movwf	?___fttol,c
   8390  002664  0E00               	movlw	0
@@ -8400,21 +8400,21 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   8393  00266A  6E0B               	movwf	?___fttol+2,c
   8394  00266C  0E00               	movlw	0
   8395  00266E  6E0C               	movwf	?___fttol+3,c
-  8396  002670  D01B               	goto	l1917
-  8397  002672                     l7090:
+  8396  002670  D01B               	goto	l1908
+  8397  002672                     l7081:
   8398  002672  90D8               	bcf	status,0,c
   8399  002674  3613               	rlcf	___fttol@lval,f,c
   8400  002676  3614               	rlcf	___fttol@lval+1,f,c
   8401  002678  3615               	rlcf	___fttol@lval+2,f,c
   8402  00267A  3616               	rlcf	___fttol@lval+3,f,c
   8403  00267C  0617               	decf	___fttol@exp1,f,c
-  8404  00267E                     l7092:
+  8404  00267E                     l7083:
   8405  00267E  6617               	tstfsz	___fttol@exp1,c
-  8406  002680  D7F8               	goto	l7090
-  8407  002682                     l7094:
+  8406  002680  D7F8               	goto	l7081
+  8407  002682                     l7085:
   8408  002682  5012               	movf	___fttol@sign1,w,c
   8409  002684  B4D8               	btfsc	status,2,c
-  8410  002686  D008               	goto	l7098
+  8410  002686  D008               	goto	l7089
   8411  002688  1E16               	comf	___fttol@lval+3,f,c
   8412  00268A  1E15               	comf	___fttol@lval+2,f,c
   8413  00268C  1E14               	comf	___fttol@lval+1,f,c
@@ -8423,12 +8423,12 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   8416  002692  2214               	addwfc	___fttol@lval+1,f,c
   8417  002694  2215               	addwfc	___fttol@lval+2,f,c
   8418  002696  2216               	addwfc	___fttol@lval+3,f,c
-  8419  002698                     l7098:
+  8419  002698                     l7089:
   8420  002698  C013  F009         	movff	___fttol@lval,?___fttol
   8421  00269C  C014  F00A         	movff	___fttol@lval+1,?___fttol+1
   8422  0026A0  C015  F00B         	movff	___fttol@lval+2,?___fttol+2
   8423  0026A4  C016  F00C         	movff	___fttol@lval+3,?___fttol+3
-  8424  0026A8                     l1917:
+  8424  0026A8                     l1908:
   8425  0026A8  0012               	return	
   8426  0026AA                     __end_of___fttol:
   8427                           	opt stack 0
@@ -8499,7 +8499,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   8492  002F0C  6E18               	movwf	___altoft@exp,c
   8493  002F0E  5014               	movf	??___altoft& (0+255),w,c
   8494  002F10  AE13               	btfss	___altoft@c+3,7,c
-  8495  002F12  D013               	goto	l6910
+  8495  002F12  D013               	goto	l6901
   8496  002F14  1E13               	comf	___altoft@c+3,f,c
   8497  002F16  1E12               	comf	___altoft@c+2,f,c
   8498  002F18  1E11               	comf	___altoft@c+1,f,c
@@ -8512,15 +8512,15 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   8505  002F26  0E01               	movlw	1
   8506  002F28  6E19               	movwf	___altoft@sign,c
   8507  002F2A  5014               	movf	??___altoft& (0+255),w,c
-  8508  002F2C  D006               	goto	l6910
-  8509  002F2E                     l6908:
+  8508  002F2C  D006               	goto	l6901
+  8509  002F2E                     l6899:
   8510  002F2E  90D8               	bcf	status,0,c
   8511  002F30  3213               	rrcf	___altoft@c+3,f,c
   8512  002F32  3212               	rrcf	___altoft@c+2,f,c
   8513  002F34  3211               	rrcf	___altoft@c+1,f,c
   8514  002F36  3210               	rrcf	___altoft@c,f,c
   8515  002F38  2A18               	incf	___altoft@exp,f,c
-  8516  002F3A                     l6910:
+  8516  002F3A                     l6901:
   8517  002F3A  0E00               	movlw	0
   8518  002F3C  1410               	andwf	___altoft@c,w,c
   8519  002F3E  6E14               	movwf	??___altoft& (0+255),c
@@ -8538,7 +8538,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   8531  002F56  1015               	iorwf	??___altoft+1,w,c
   8532  002F58  1016               	iorwf	??___altoft+2,w,c
   8533  002F5A  A4D8               	btfss	status,2,c
-  8534  002F5C  D7E8               	goto	l6908
+  8534  002F5C  D7E8               	goto	l6899
   8535  002F5E  C010  F001         	movff	___altoft@c,?___ftpack
   8536  002F62  C011  F002         	movff	___altoft@c+1,?___ftpack+1
   8537  002F66  C012  F003         	movff	___altoft@c+2,?___ftpack+2
@@ -8614,27 +8614,27 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   8607                           ;incstack = 0
   8608  002854  5004               	movf	___ftpack@exp,w,c
   8609  002856  B4D8               	btfsc	status,2,c
-  8610  002858  D005               	goto	l6568
+  8610  002858  D005               	goto	l6559
   8611  00285A  5001               	movf	___ftpack@arg,w,c
   8612  00285C  1002               	iorwf	___ftpack@arg+1,w,c
   8613  00285E  1003               	iorwf	___ftpack@arg+2,w,c
   8614  002860  A4D8               	btfss	status,2,c
-  8615  002862  D00C               	goto	l6574
-  8616  002864                     l6568:
+  8615  002862  D00C               	goto	l6565
+  8616  002864                     l6559:
   8617  002864  0E00               	movlw	0
   8618  002866  6E01               	movwf	?___ftpack,c
   8619  002868  0E00               	movlw	0
   8620  00286A  6E02               	movwf	?___ftpack+1,c
   8621  00286C  0E00               	movlw	0
   8622  00286E  6E03               	movwf	?___ftpack+2,c
-  8623  002870  D04C               	goto	l1813
-  8624  002872                     l6572:
+  8623  002870  D04C               	goto	l1804
+  8624  002872                     l6563:
   8625  002872  2A04               	incf	___ftpack@exp,f,c
   8626  002874  90D8               	bcf	status,0,c
   8627  002876  3203               	rrcf	___ftpack@arg+2,f,c
   8628  002878  3202               	rrcf	___ftpack@arg+1,f,c
   8629  00287A  3201               	rrcf	___ftpack@arg,f,c
-  8630  00287C                     l6574:
+  8630  00287C                     l6565:
   8631  00287C  0E00               	movlw	0
   8632  00287E  1401               	andwf	___ftpack@arg,w,c
   8633  002880  6E06               	movwf	??___ftpack& (0+255),c
@@ -8648,9 +8648,9 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   8641  002890  1007               	iorwf	??___ftpack+1,w,c
   8642  002892  1008               	iorwf	??___ftpack+2,w,c
   8643  002894  B4D8               	btfsc	status,2,c
-  8644  002896  D00C               	goto	l6580
-  8645  002898  D7EC               	goto	l6572
-  8646  00289A                     l6576:
+  8644  002896  D00C               	goto	l6571
+  8645  002898  D7EC               	goto	l6563
+  8646  00289A                     l6567:
   8647  00289A  2A04               	incf	___ftpack@exp,f,c
   8648  00289C  0E01               	movlw	1
   8649  00289E  2601               	addwf	___ftpack@arg,f,c
@@ -8662,7 +8662,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   8655  0028AA  3203               	rrcf	___ftpack@arg+2,f,c
   8656  0028AC  3202               	rrcf	___ftpack@arg+1,f,c
   8657  0028AE  3201               	rrcf	___ftpack@arg,f,c
-  8658  0028B0                     l6580:
+  8658  0028B0                     l6571:
   8659  0028B0  0E00               	movlw	0
   8660  0028B2  1401               	andwf	___ftpack@arg,w,c
   8661  0028B4  6E06               	movwf	??___ftpack& (0+255),c
@@ -8676,17 +8676,17 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   8669  0028C4  1007               	iorwf	??___ftpack+1,w,c
   8670  0028C6  1008               	iorwf	??___ftpack+2,w,c
   8671  0028C8  B4D8               	btfsc	status,2,c
-  8672  0028CA  D006               	goto	l6584
-  8673  0028CC  D7E6               	goto	l6576
-  8674  0028CE                     l6582:
+  8672  0028CA  D006               	goto	l6575
+  8673  0028CC  D7E6               	goto	l6567
+  8674  0028CE                     l6573:
   8675  0028CE  0604               	decf	___ftpack@exp,f,c
   8676  0028D0  90D8               	bcf	status,0,c
   8677  0028D2  3601               	rlcf	___ftpack@arg,f,c
   8678  0028D4  3602               	rlcf	___ftpack@arg+1,f,c
   8679  0028D6  3603               	rlcf	___ftpack@arg+2,f,c
-  8680  0028D8                     l6584:
+  8680  0028D8                     l6575:
   8681  0028D8  AE02               	btfss	___ftpack@arg+1,7,c
-  8682  0028DA  D7F9               	goto	l6582
+  8682  0028DA  D7F9               	goto	l6573
   8683  0028DC  A004               	btfss	___ftpack@exp,0,c
   8684  0028DE  9E02               	bcf	___ftpack@arg+1,7,c
   8685  0028E0  90D8               	bcf	status,0,c
@@ -8707,7 +8707,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   8700  0028FE  C001  F001         	movff	___ftpack@arg,?___ftpack
   8701  002902  C002  F002         	movff	___ftpack@arg+1,?___ftpack+1
   8702  002906  C003  F003         	movff	___ftpack@arg+2,?___ftpack+2
-  8703  00290A                     l1813:
+  8703  00290A                     l1804:
   8704  00290A  0012               	return	
   8705  00290C                     __end_of___ftpack:
   8706                           	opt stack 0
@@ -8973,21 +8973,21 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   8966  0021F4  C01F  F026         	movff	___ftmul@f1+2,??___ftmul+3
   8967  0021F8  2823               	incf	??___ftmul,w,c
   8968  0021FA  6E27               	movwf	(??___ftmul+4)& (0+255),c
-  8969  0021FC  D004               	goto	u6050
-  8970  0021FE                     u6055:
+  8969  0021FC  D004               	goto	u5990
+  8970  0021FE                     u5995:
   8971  0021FE  90D8               	bcf	status,0,c
   8972  002200  3226               	rrcf	??___ftmul+3,f,c
   8973  002202  3225               	rrcf	??___ftmul+2,f,c
   8974  002204  3224               	rrcf	??___ftmul+1,f,c
-  8975  002206                     u6050:
+  8975  002206                     u5990:
   8976  002206  2E27               	decfsz	(??___ftmul+4)& (0+255),f,c
-  8977  002208  D7FA               	goto	u6055
+  8977  002208  D7FA               	goto	u5995
   8978  00220A  5024               	movf	??___ftmul+1,w,c
   8979  00220C  6E28               	movwf	___ftmul@exp,c
   8980  00220E  6628               	tstfsz	___ftmul@exp& (0+255),c
-  8981  002210  D001               	goto	l6992
-  8982  002212  D015               	goto	u6080
-  8983  002214                     l6992:
+  8981  002210  D001               	goto	l6983
+  8982  002212  D015               	goto	u6020
+  8983  002214                     l6983:
   8984  002214  0E0F               	movlw	15
   8985  002216  6E23               	movwf	??___ftmul& (0+255),c
   8986  002218  C020  F024         	movff	___ftmul@f2,??___ftmul+1
@@ -8995,28 +8995,28 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   8988  002220  C022  F026         	movff	___ftmul@f2+2,??___ftmul+3
   8989  002224  2823               	incf	??___ftmul,w,c
   8990  002226  6E27               	movwf	(??___ftmul+4)& (0+255),c
-  8991  002228  D004               	goto	u6070
-  8992  00222A                     u6075:
+  8991  002228  D004               	goto	u6010
+  8992  00222A                     u6015:
   8993  00222A  90D8               	bcf	status,0,c
   8994  00222C  3226               	rrcf	??___ftmul+3,f,c
   8995  00222E  3225               	rrcf	??___ftmul+2,f,c
   8996  002230  3224               	rrcf	??___ftmul+1,f,c
-  8997  002232                     u6070:
+  8997  002232                     u6010:
   8998  002232  2E27               	decfsz	(??___ftmul+4)& (0+255),f,c
-  8999  002234  D7FA               	goto	u6075
+  8999  002234  D7FA               	goto	u6015
   9000  002236  5024               	movf	??___ftmul+1,w,c
   9001  002238  6E2D               	movwf	___ftmul@sign,c
   9002  00223A  662D               	tstfsz	___ftmul@sign& (0+255),c
-  9003  00223C  D007               	goto	l6998
-  9004  00223E                     u6080:
+  9003  00223C  D007               	goto	l6989
+  9004  00223E                     u6020:
   9005  00223E  0E00               	movlw	0
   9006  002240  6E1D               	movwf	?___ftmul,c
   9007  002242  0E00               	movlw	0
   9008  002244  6E1E               	movwf	?___ftmul+1,c
   9009  002246  0E00               	movlw	0
   9010  002248  6E1F               	movwf	?___ftmul+2,c
-  9011  00224A  D055               	goto	l1897
-  9012  00224C                     l6998:
+  9011  00224A  D055               	goto	l1888
+  9012  00224C                     l6989:
   9013  00224C  502D               	movf	___ftmul@sign,w,c
   9014  00224E  0F7B               	addlw	123
   9015  002250  2628               	addwf	___ftmul@exp,f,c
@@ -9043,16 +9043,16 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   9036  00227C  0E07               	movlw	7
   9037  00227E  6E2C               	movwf	___ftmul@cntr,c
   9038  002280  5023               	movf	??___ftmul& (0+255),w,c
-  9039  002282                     l7012:
+  9039  002282                     l7003:
   9040  002282  A01D               	btfss	___ftmul@f1,0,c
-  9041  002284  D006               	goto	l7016
+  9041  002284  D006               	goto	l7007
   9042  002286  5020               	movf	___ftmul@f2,w,c
   9043  002288  2629               	addwf	___ftmul@f3_as_product,f,c
   9044  00228A  5021               	movf	___ftmul@f2+1,w,c
   9045  00228C  222A               	addwfc	___ftmul@f3_as_product+1,f,c
   9046  00228E  5022               	movf	___ftmul@f2+2,w,c
   9047  002290  222B               	addwfc	___ftmul@f3_as_product+2,f,c
-  9048  002292                     l7016:
+  9048  002292                     l7007:
   9049  002292  90D8               	bcf	status,0,c
   9050  002294  321F               	rrcf	___ftmul@f1+2,f,c
   9051  002296  321E               	rrcf	___ftmul@f1+1,f,c
@@ -9062,21 +9062,21 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   9055  00229E  3621               	rlcf	___ftmul@f2+1,f,c
   9056  0022A0  3622               	rlcf	___ftmul@f2+2,f,c
   9057  0022A2  2E2C               	decfsz	___ftmul@cntr,f,c
-  9058  0022A4  D7EE               	goto	l7012
+  9058  0022A4  D7EE               	goto	l7003
   9059  0022A6  6E23               	movwf	??___ftmul& (0+255),c
   9060  0022A8  0E09               	movlw	9
   9061  0022AA  6E2C               	movwf	___ftmul@cntr,c
   9062  0022AC  5023               	movf	??___ftmul& (0+255),w,c
-  9063  0022AE                     l7022:
+  9063  0022AE                     l7013:
   9064  0022AE  A01D               	btfss	___ftmul@f1,0,c
-  9065  0022B0  D006               	goto	l7026
+  9065  0022B0  D006               	goto	l7017
   9066  0022B2  5020               	movf	___ftmul@f2,w,c
   9067  0022B4  2629               	addwf	___ftmul@f3_as_product,f,c
   9068  0022B6  5021               	movf	___ftmul@f2+1,w,c
   9069  0022B8  222A               	addwfc	___ftmul@f3_as_product+1,f,c
   9070  0022BA  5022               	movf	___ftmul@f2+2,w,c
   9071  0022BC  222B               	addwfc	___ftmul@f3_as_product+2,f,c
-  9072  0022BE                     l7026:
+  9072  0022BE                     l7017:
   9073  0022BE  90D8               	bcf	status,0,c
   9074  0022C0  321F               	rrcf	___ftmul@f1+2,f,c
   9075  0022C2  321E               	rrcf	___ftmul@f1+1,f,c
@@ -9086,7 +9086,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   9079  0022CA  322A               	rrcf	___ftmul@f3_as_product+1,f,c
   9080  0022CC  3229               	rrcf	___ftmul@f3_as_product,f,c
   9081  0022CE  2E2C               	decfsz	___ftmul@cntr,f,c
-  9082  0022D0  D7EE               	goto	l7022
+  9082  0022D0  D7EE               	goto	l7013
   9083  0022D2  C029  F001         	movff	___ftmul@f3_as_product,?___ftpack
   9084  0022D6  C02A  F002         	movff	___ftmul@f3_as_product+1,?___ftpack+1
   9085  0022DA  C02B  F003         	movff	___ftmul@f3_as_product+2,?___ftpack+2
@@ -9096,7 +9096,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   9089  0022EA  C003  F01F         	movff	?___ftpack+2,?___ftmul+2
   9090  0022EE  C002  F01E         	movff	?___ftpack+1,?___ftmul+1
   9091  0022F2  C001  F01D         	movff	?___ftpack,?___ftmul
-  9092  0022F6                     l1897:
+  9092  0022F6                     l1888:
   9093  0022F6  0012               	return	
   9094  0022F8                     __end_of___ftmul:
   9095                           	opt stack 0
@@ -9171,15 +9171,15 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   9164  001622  C030  F037         	movff	___ftadd@f1+2,??___ftadd+3
   9165  001626  2834               	incf	??___ftadd,w,c
   9166  001628  6E38               	movwf	(??___ftadd+4)& (0+255),c
-  9167  00162A  D004               	goto	u5840
-  9168  00162C                     u5845:
+  9167  00162A  D004               	goto	u5780
+  9168  00162C                     u5785:
   9169  00162C  90D8               	bcf	status,0,c
   9170  00162E  3237               	rrcf	??___ftadd+3,f,c
   9171  001630  3236               	rrcf	??___ftadd+2,f,c
   9172  001632  3235               	rrcf	??___ftadd+1,f,c
-  9173  001634                     u5840:
+  9173  001634                     u5780:
   9174  001634  2E38               	decfsz	(??___ftadd+4)& (0+255),f,c
-  9175  001636  D7FA               	goto	u5845
+  9175  001636  D7FA               	goto	u5785
   9176  001638  5035               	movf	??___ftadd+1,w,c
   9177  00163A  6E3B               	movwf	___ftadd@exp1,c
   9178  00163C  0E0F               	movlw	15
@@ -9189,23 +9189,23 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   9182  001648  C033  F037         	movff	___ftadd@f2+2,??___ftadd+3
   9183  00164C  2834               	incf	??___ftadd,w,c
   9184  00164E  6E38               	movwf	(??___ftadd+4)& (0+255),c
-  9185  001650  D004               	goto	u5850
-  9186  001652                     u5855:
+  9185  001650  D004               	goto	u5790
+  9186  001652                     u5795:
   9187  001652  90D8               	bcf	status,0,c
   9188  001654  3237               	rrcf	??___ftadd+3,f,c
   9189  001656  3236               	rrcf	??___ftadd+2,f,c
   9190  001658  3235               	rrcf	??___ftadd+1,f,c
-  9191  00165A                     u5850:
+  9191  00165A                     u5790:
   9192  00165A  2E38               	decfsz	(??___ftadd+4)& (0+255),f,c
-  9193  00165C  D7FA               	goto	u5855
+  9193  00165C  D7FA               	goto	u5795
   9194  00165E  5035               	movf	??___ftadd+1,w,c
   9195  001660  6E3A               	movwf	___ftadd@exp2,c
   9196  001662  503B               	movf	___ftadd@exp1,w,c
   9197  001664  B4D8               	btfsc	status,2,c
-  9198  001666  D00B               	goto	l1850
+  9198  001666  D00B               	goto	l1841
   9199  001668  503A               	movf	___ftadd@exp2,w,c
   9200  00166A  603B               	cpfslt	___ftadd@exp1,c
-  9201  00166C  D00F               	goto	l6924
+  9201  00166C  D00F               	goto	l6915
   9202  00166E  503B               	movf	___ftadd@exp1,w,c
   9203  001670  0800               	sublw	0
   9204  001672  243A               	addwf	___ftadd@exp2,w,c
@@ -9213,19 +9213,19 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   9206  001676  0E19               	movlw	25
   9207  001678  5C34               	subwf	??___ftadd,w,c
   9208  00167A  A0D8               	btfss	status,0,c
-  9209  00167C  D007               	goto	l6924
-  9210  00167E                     l1850:
+  9209  00167C  D007               	goto	l6915
+  9210  00167E                     l1841:
   9211  00167E  C031  F02E         	movff	___ftadd@f2,?___ftadd
   9212  001682  C032  F02F         	movff	___ftadd@f2+1,?___ftadd+1
   9213  001686  C033  F030         	movff	___ftadd@f2+2,?___ftadd+2
-  9214  00168A  D0AA               	goto	l1851
-  9215  00168C                     l6924:
+  9214  00168A  D0AA               	goto	l1842
+  9215  00168C                     l6915:
   9216  00168C  503A               	movf	___ftadd@exp2,w,c
   9217  00168E  B4D8               	btfsc	status,2,c
-  9218  001690  D00B               	goto	l1854
+  9218  001690  D00B               	goto	l1845
   9219  001692  503B               	movf	___ftadd@exp1,w,c
   9220  001694  603A               	cpfslt	___ftadd@exp2,c
-  9221  001696  D00F               	goto	l6930
+  9221  001696  D00F               	goto	l6921
   9222  001698  503A               	movf	___ftadd@exp2,w,c
   9223  00169A  0800               	sublw	0
   9224  00169C  243B               	addwf	___ftadd@exp1,w,c
@@ -9233,13 +9233,13 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   9226  0016A0  0E19               	movlw	25
   9227  0016A2  5C34               	subwf	??___ftadd,w,c
   9228  0016A4  A0D8               	btfss	status,0,c
-  9229  0016A6  D007               	goto	l6930
-  9230  0016A8                     l1854:
+  9229  0016A6  D007               	goto	l6921
+  9230  0016A8                     l1845:
   9231  0016A8  C02E  F02E         	movff	___ftadd@f1,?___ftadd
   9232  0016AC  C02F  F02F         	movff	___ftadd@f1+1,?___ftadd+1
   9233  0016B0  C030  F030         	movff	___ftadd@f1+2,?___ftadd+2
-  9234  0016B4  D095               	goto	l1851
-  9235  0016B6                     l6930:
+  9234  0016B4  D095               	goto	l1842
+  9235  0016B6                     l6921:
   9236  0016B6  6E34               	movwf	??___ftadd& (0+255),c
   9237  0016B8  0E06               	movlw	6
   9238  0016BA  6E39               	movwf	___ftadd@sign,c
@@ -9264,8 +9264,8 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   9257  0016E0  1633               	andwf	___ftadd@f2+2,f,c
   9258  0016E2  503A               	movf	___ftadd@exp2,w,c
   9259  0016E4  603B               	cpfslt	___ftadd@exp1,c
-  9260  0016E6  D018               	goto	l6956
-  9261  0016E8                     l6946:
+  9260  0016E6  D018               	goto	l6947
+  9261  0016E8                     l6937:
   9262  0016E8  90D8               	bcf	status,0,c
   9263  0016EA  3631               	rlcf	___ftadd@f2,f,c
   9264  0016EC  3632               	rlcf	___ftadd@f2+1,f,c
@@ -9274,29 +9274,29 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   9267  0016F2  503A               	movf	___ftadd@exp2,w,c
   9268  0016F4  183B               	xorwf	___ftadd@exp1,w,c
   9269  0016F6  B4D8               	btfsc	status,2,c
-  9270  0016F8  D00B               	goto	l6954
+  9270  0016F8  D00B               	goto	l6945
   9271  0016FA  0639               	decf	___ftadd@sign,f,c
   9272  0016FC  5039               	movf	___ftadd@sign& (0+255),w,c
   9273  0016FE  0B07               	andlw	7
   9274  001700  B4D8               	btfsc	status,2,c
-  9275  001702  D006               	goto	l6954
-  9276  001704  D7F1               	goto	l6946
-  9277  001706                     l6952:
+  9275  001702  D006               	goto	l6945
+  9276  001704  D7F1               	goto	l6937
+  9277  001706                     l6943:
   9278  001706  90D8               	bcf	status,0,c
   9279  001708  3230               	rrcf	___ftadd@f1+2,f,c
   9280  00170A  322F               	rrcf	___ftadd@f1+1,f,c
   9281  00170C  322E               	rrcf	___ftadd@f1,f,c
   9282  00170E  2A3B               	incf	___ftadd@exp1,f,c
-  9283  001710                     l6954:
+  9283  001710                     l6945:
   9284  001710  503A               	movf	___ftadd@exp2,w,c
   9285  001712  623B               	cpfseq	___ftadd@exp1,c
-  9286  001714  D7F8               	goto	l6952
-  9287  001716  D01A               	goto	l1865
-  9288  001718                     l6956:
+  9286  001714  D7F8               	goto	l6943
+  9287  001716  D01A               	goto	l1856
+  9288  001718                     l6947:
   9289  001718  503B               	movf	___ftadd@exp1,w,c
   9290  00171A  603A               	cpfslt	___ftadd@exp2,c
-  9291  00171C  D017               	goto	l1865
-  9292  00171E                     l6958:
+  9291  00171C  D017               	goto	l1856
+  9292  00171E                     l6949:
   9293  00171E  90D8               	bcf	status,0,c
   9294  001720  362E               	rlcf	___ftadd@f1,f,c
   9295  001722  362F               	rlcf	___ftadd@f1+1,f,c
@@ -9305,26 +9305,26 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   9298  001728  503A               	movf	___ftadd@exp2,w,c
   9299  00172A  183B               	xorwf	___ftadd@exp1,w,c
   9300  00172C  B4D8               	btfsc	status,2,c
-  9301  00172E  D00B               	goto	l6966
+  9301  00172E  D00B               	goto	l6957
   9302  001730  0639               	decf	___ftadd@sign,f,c
   9303  001732  5039               	movf	___ftadd@sign& (0+255),w,c
   9304  001734  0B07               	andlw	7
   9305  001736  B4D8               	btfsc	status,2,c
-  9306  001738  D006               	goto	l6966
-  9307  00173A  D7F1               	goto	l6958
-  9308  00173C                     l6964:
+  9306  001738  D006               	goto	l6957
+  9307  00173A  D7F1               	goto	l6949
+  9308  00173C                     l6955:
   9309  00173C  90D8               	bcf	status,0,c
   9310  00173E  3233               	rrcf	___ftadd@f2+2,f,c
   9311  001740  3232               	rrcf	___ftadd@f2+1,f,c
   9312  001742  3231               	rrcf	___ftadd@f2,f,c
   9313  001744  2A3A               	incf	___ftadd@exp2,f,c
-  9314  001746                     l6966:
+  9314  001746                     l6957:
   9315  001746  503A               	movf	___ftadd@exp2,w,c
   9316  001748  623B               	cpfseq	___ftadd@exp1,c
-  9317  00174A  D7F8               	goto	l6964
-  9318  00174C                     l1865:
+  9317  00174A  D7F8               	goto	l6955
+  9318  00174C                     l1856:
   9319  00174C  AE39               	btfss	___ftadd@sign,7,c
-  9320  00174E  D00C               	goto	l1874
+  9320  00174E  D00C               	goto	l1865
   9321  001750  0EFF               	movlw	255
   9322  001752  1A2E               	xorwf	___ftadd@f1,f,c
   9323  001754  0EFF               	movlw	255
@@ -9337,9 +9337,9 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   9330  001762  222F               	addwfc	___ftadd@f1+1,f,c
   9331  001764  0E00               	movlw	0
   9332  001766  2230               	addwfc	___ftadd@f1+2,f,c
-  9333  001768                     l1874:
+  9333  001768                     l1865:
   9334  001768  AC39               	btfss	___ftadd@sign,6,c
-  9335  00176A  D00C               	goto	l6972
+  9335  00176A  D00C               	goto	l6963
   9336  00176C  0EFF               	movlw	255
   9337  00176E  1A31               	xorwf	___ftadd@f2,f,c
   9338  001770  0EFF               	movlw	255
@@ -9352,7 +9352,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   9345  00177E  2232               	addwfc	___ftadd@f2+1,f,c
   9346  001780  0E00               	movlw	0
   9347  001782  2233               	addwfc	___ftadd@f2+2,f,c
-  9348  001784                     l6972:
+  9348  001784                     l6963:
   9349  001784  6E34               	movwf	??___ftadd& (0+255),c
   9350  001786  0E00               	movlw	0
   9351  001788  6E39               	movwf	___ftadd@sign,c
@@ -9364,7 +9364,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   9357  001794  5030               	movf	___ftadd@f1+2,w,c
   9358  001796  2233               	addwfc	___ftadd@f2+2,f,c
   9359  001798  AE33               	btfss	___ftadd@f2+2,7,c
-  9360  00179A  D010               	goto	l6982
+  9360  00179A  D010               	goto	l6973
   9361  00179C  0EFF               	movlw	255
   9362  00179E  1A31               	xorwf	___ftadd@f2,f,c
   9363  0017A0  0EFF               	movlw	255
@@ -9381,7 +9381,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   9374  0017B6  0E01               	movlw	1
   9375  0017B8  6E39               	movwf	___ftadd@sign,c
   9376  0017BA  5034               	movf	??___ftadd& (0+255),w,c
-  9377  0017BC                     l6982:
+  9377  0017BC                     l6973:
   9378  0017BC  C031  F001         	movff	___ftadd@f2,?___ftpack
   9379  0017C0  C032  F002         	movff	___ftadd@f2+1,?___ftpack+1
   9380  0017C4  C033  F003         	movff	___ftadd@f2+2,?___ftpack+2
@@ -9391,7 +9391,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   9384  0017D4  C003  F030         	movff	?___ftpack+2,?___ftadd+2
   9385  0017D8  C002  F02F         	movff	?___ftpack+1,?___ftadd+1
   9386  0017DC  C001  F02E         	movff	?___ftpack,?___ftadd
-  9387  0017E0                     l1851:
+  9387  0017E0                     l1842:
   9388  0017E0  0012               	return	
   9389  0017E2                     __end_of___ftadd:
   9390                           	opt stack 0
@@ -9502,19 +9502,19 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   9495  000670  C08E  F003         	movff	_B6+2,?___lmul+2
   9496  000674  C08F  F004         	movff	_B6+3,?___lmul+3
   9497  000678  EC2E  F01A         	call	___lmul	;wreg free
-  9498  00067C                     u5675:
+  9498  00067C                     u5615:
   9499  00067C  6614               	tstfsz	??_baroTruePres,c
-  9500  00067E  D001               	goto	u5676
-  9501  000680  D007               	goto	u5677
-  9502  000682                     u5676:
+  9500  00067E  D001               	goto	u5616
+  9501  000680  D007               	goto	u5617
+  9502  000682                     u5616:
   9503  000682  3404               	rlcf	?___lmul+3,w,c
   9504  000684  3204               	rrcf	?___lmul+3,f,c
   9505  000686  3203               	rrcf	?___lmul+2,f,c
   9506  000688  3202               	rrcf	?___lmul+1,f,c
   9507  00068A  3201               	rrcf	?___lmul,f,c
   9508  00068C  2E14               	decfsz	??_baroTruePres,f,c
-  9509  00068E  D7F6               	goto	u5675
-  9510  000690                     u5677:
+  9509  00068E  D7F6               	goto	u5615
+  9510  000690                     u5617:
   9511  000690  C004  F028         	movff	?___lmul+3,_baroTruePres$4850+3
   9512  000694  C003  F027         	movff	?___lmul+2,_baroTruePres$4850+2
   9513  000698  C002  F026         	movff	?___lmul+1,_baroTruePres$4850+1
@@ -9537,19 +9537,19 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   9530  0006C2  C027  F007         	movff	_baroTruePres$4850+2,?___lmul+6
   9531  0006C6  C028  F008         	movff	_baroTruePres$4850+3,?___lmul+7
   9532  0006CA  EC2E  F01A         	call	___lmul	;wreg free
-  9533  0006CE                     u5685:
+  9533  0006CE                     u5625:
   9534  0006CE  6614               	tstfsz	??_baroTruePres,c
-  9535  0006D0  D001               	goto	u5686
-  9536  0006D2  D007               	goto	u5687
-  9537  0006D4                     u5686:
+  9535  0006D0  D001               	goto	u5626
+  9536  0006D2  D007               	goto	u5627
+  9537  0006D4                     u5626:
   9538  0006D4  3404               	rlcf	?___lmul+3,w,c
   9539  0006D6  3204               	rrcf	?___lmul+3,f,c
   9540  0006D8  3203               	rrcf	?___lmul+2,f,c
   9541  0006DA  3202               	rrcf	?___lmul+1,f,c
   9542  0006DC  3201               	rrcf	?___lmul,f,c
   9543  0006DE  2E14               	decfsz	??_baroTruePres,f,c
-  9544  0006E0  D7F6               	goto	u5685
-  9545  0006E2                     u5687:
+  9544  0006E0  D7F6               	goto	u5625
+  9545  0006E2                     u5627:
   9546  0006E2  C004  F030         	movff	?___lmul+3,baroTruePres@X1+3
   9547  0006E6  C003  F02F         	movff	?___lmul+2,baroTruePres@X1+2
   9548  0006EA  C002  F02E         	movff	?___lmul+1,baroTruePres@X1+1
@@ -9572,19 +9572,19 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   9565  000714  C08E  F007         	movff	_B6+2,?___lmul+6
   9566  000718  C08F  F008         	movff	_B6+3,?___lmul+7
   9567  00071C  EC2E  F01A         	call	___lmul	;wreg free
-  9568  000720                     u5695:
+  9568  000720                     u5635:
   9569  000720  6614               	tstfsz	??_baroTruePres,c
-  9570  000722  D001               	goto	u5696
-  9571  000724  D007               	goto	u5697
-  9572  000726                     u5696:
+  9570  000722  D001               	goto	u5636
+  9571  000724  D007               	goto	u5637
+  9572  000726                     u5636:
   9573  000726  3404               	rlcf	?___lmul+3,w,c
   9574  000728  3204               	rrcf	?___lmul+3,f,c
   9575  00072A  3203               	rrcf	?___lmul+2,f,c
   9576  00072C  3202               	rrcf	?___lmul+1,f,c
   9577  00072E  3201               	rrcf	?___lmul,f,c
   9578  000730  2E14               	decfsz	??_baroTruePres,f,c
-  9579  000732  D7F6               	goto	u5695
-  9580  000734                     u5697:
+  9579  000732  D7F6               	goto	u5635
+  9580  000734                     u5637:
   9581  000734  C004  F02C         	movff	?___lmul+3,baroTruePres@X2+3
   9582  000738  C003  F02B         	movff	?___lmul+2,baroTruePres@X2+2
   9583  00073C  C002  F02A         	movff	?___lmul+1,baroTruePres@X2+1
@@ -9635,14 +9635,14 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   9628  00079A  2019               	addwfc	??_baroTruePres+5,w,c
   9629  00079C  6E1D               	movwf	(??_baroTruePres+9)& (0+255),c
   9630  00079E  0E02               	movlw	2
-  9631  0007A0                     u5705:
+  9631  0007A0                     u5645:
   9632  0007A0  90D8               	bcf	status,0,c
   9633  0007A2  361A               	rlcf	??_baroTruePres+6,f,c
   9634  0007A4  361B               	rlcf	??_baroTruePres+7,f,c
   9635  0007A6  361C               	rlcf	??_baroTruePres+8,f,c
   9636  0007A8  361D               	rlcf	??_baroTruePres+9,f,c
   9637  0007AA  2EE8               	decfsz	wreg,f,c
-  9638  0007AC  D7F9               	goto	u5705
+  9638  0007AC  D7F9               	goto	u5645
   9639  0007AE  0E02               	movlw	2
   9640  0007B0  241A               	addwf	??_baroTruePres+6,w,c
   9641  0007B2  6E01               	movwf	?___aldiv,c
@@ -9686,19 +9686,19 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   9679  00080C  C08E  F007         	movff	_B6+2,?___lmul+6
   9680  000810  C08F  F008         	movff	_B6+3,?___lmul+7
   9681  000814  EC2E  F01A         	call	___lmul	;wreg free
-  9682  000818                     u5715:
+  9682  000818                     u5655:
   9683  000818  6614               	tstfsz	??_baroTruePres,c
-  9684  00081A  D001               	goto	u5716
-  9685  00081C  D007               	goto	u5717
-  9686  00081E                     u5716:
+  9684  00081A  D001               	goto	u5656
+  9685  00081C  D007               	goto	u5657
+  9686  00081E                     u5656:
   9687  00081E  3404               	rlcf	?___lmul+3,w,c
   9688  000820  3204               	rrcf	?___lmul+3,f,c
   9689  000822  3203               	rrcf	?___lmul+2,f,c
   9690  000824  3202               	rrcf	?___lmul+1,f,c
   9691  000826  3201               	rrcf	?___lmul,f,c
   9692  000828  2E14               	decfsz	??_baroTruePres,f,c
-  9693  00082A  D7F6               	goto	u5715
-  9694  00082C                     u5717:
+  9693  00082A  D7F6               	goto	u5655
+  9694  00082C                     u5657:
   9695  00082C  C004  F030         	movff	?___lmul+3,baroTruePres@X1+3
   9696  000830  C003  F02F         	movff	?___lmul+2,baroTruePres@X1+2
   9697  000834  C002  F02E         	movff	?___lmul+1,baroTruePres@X1+1
@@ -9716,19 +9716,19 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   9709  000858  C08E  F003         	movff	_B6+2,?___lmul+2
   9710  00085C  C08F  F004         	movff	_B6+3,?___lmul+3
   9711  000860  EC2E  F01A         	call	___lmul	;wreg free
-  9712  000864                     u5725:
+  9712  000864                     u5665:
   9713  000864  6614               	tstfsz	??_baroTruePres,c
-  9714  000866  D001               	goto	u5726
-  9715  000868  D007               	goto	u5727
-  9716  00086A                     u5726:
+  9714  000866  D001               	goto	u5666
+  9715  000868  D007               	goto	u5667
+  9716  00086A                     u5666:
   9717  00086A  3404               	rlcf	?___lmul+3,w,c
   9718  00086C  3204               	rrcf	?___lmul+3,f,c
   9719  00086E  3203               	rrcf	?___lmul+2,f,c
   9720  000870  3202               	rrcf	?___lmul+1,f,c
   9721  000872  3201               	rrcf	?___lmul,f,c
   9722  000874  2E14               	decfsz	??_baroTruePres,f,c
-  9723  000876  D7F6               	goto	u5725
-  9724  000878                     u5727:
+  9723  000876  D7F6               	goto	u5665
+  9724  000878                     u5667:
   9725  000878  C004  F028         	movff	?___lmul+3,_baroTruePres$4850+3
   9726  00087C  C003  F027         	movff	?___lmul+2,_baroTruePres$4850+2
   9727  000880  C002  F026         	movff	?___lmul+1,_baroTruePres$4850+1
@@ -9781,19 +9781,19 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   9774  0008EC  0E00               	movlw	0
   9775  0008EE  2018               	addwfc	??_baroTruePres+4,w,c
   9776  0008F0  6E1C               	movwf	(??_baroTruePres+8)& (0+255),c
-  9777  0008F2                     u5735:
+  9777  0008F2                     u5675:
   9778  0008F2  6614               	tstfsz	??_baroTruePres,c
-  9779  0008F4  D001               	goto	u5736
-  9780  0008F6  D007               	goto	u5737
-  9781  0008F8                     u5736:
+  9779  0008F4  D001               	goto	u5676
+  9780  0008F6  D007               	goto	u5677
+  9781  0008F8                     u5676:
   9782  0008F8  341C               	rlcf	??_baroTruePres+8,w,c
   9783  0008FA  321C               	rrcf	??_baroTruePres+8,f,c
   9784  0008FC  321B               	rrcf	??_baroTruePres+7,f,c
   9785  0008FE  321A               	rrcf	??_baroTruePres+6,f,c
   9786  000900  3219               	rrcf	??_baroTruePres+5,f,c
   9787  000902  2E14               	decfsz	??_baroTruePres,f,c
-  9788  000904  D7F6               	goto	u5735
-  9789  000906                     u5737:
+  9788  000904  D7F6               	goto	u5675
+  9789  000906                     u5677:
   9790  000906  C01C  F024         	movff	??_baroTruePres+8,baroTruePres@X3+3
   9791  00090A  C01B  F023         	movff	??_baroTruePres+7,baroTruePres@X3+2
   9792  00090E  C01A  F022         	movff	??_baroTruePres+6,baroTruePres@X3+1
@@ -9820,16 +9820,16 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   9813  00093C  6A08               	clrf	?___lmul+7,c
   9814  00093E  EC2E  F01A         	call	___lmul	;wreg free
   9815  000942  0E10               	movlw	16
-  9816  000944  D005               	goto	u5740
-  9817  000946                     u5745:
+  9816  000944  D005               	goto	u5680
+  9817  000946                     u5685:
   9818  000946  90D8               	bcf	status,0,c
   9819  000948  3204               	rrcf	?___lmul+3,f,c
   9820  00094A  3203               	rrcf	?___lmul+2,f,c
   9821  00094C  3202               	rrcf	?___lmul+1,f,c
   9822  00094E  3201               	rrcf	?___lmul,f,c
-  9823  000950                     u5740:
+  9823  000950                     u5680:
   9824  000950  2EE8               	decfsz	wreg,f,c
-  9825  000952  D7F9               	goto	u5745
+  9825  000952  D7F9               	goto	u5685
   9826  000954  C004  F087         	movff	?___lmul+3,_B4+3
   9827  000958  C003  F086         	movff	?___lmul+2,_B4+2
   9828  00095C  C002  F085         	movff	?___lmul+1,_B4+1
@@ -9897,7 +9897,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   9890  0009E2  0100               	movlb	0	; () banked
   9891  0009E4  5993               	subwfb	(_B7+3)& (0+255),w,b
   9892  0009E6  B0D8               	btfsc	status,0,c
-  9893  0009E8  D01C               	goto	l6846
+  9893  0009E8  D01C               	goto	l6837
   9894                           
   9895                           ; BSR set to: 0
   9896  0009EA  90D8               	bcf	status,0,c
@@ -9923,7 +9923,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
   9916  000A18  C087  F008         	movff	_B4+3,?___lldiv+7
   9917  000A1C  EC3D  F017         	call	___lldiv	;wreg free
   9918  000A20  D017               	goto	L16
-  9919  000A22                     l6846:
+  9919  000A22                     l6837:
   9920  000A22  C090  F001         	movff	_B7,?___lldiv
   9921  000A26  C091  F002         	movff	_B7+1,?___lldiv+1
   9922  000A2A  C092  F003         	movff	_B7+2,?___lldiv+2
@@ -10048,19 +10048,19 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  10041  000B5E  0E00               	movlw	0
  10042  000B60  201C               	addwfc	??_baroTruePres+8,w,c
  10043  000B62  6E20               	movwf	(??_baroTruePres+12)& (0+255),c
- 10044  000B64                     u5765:
+ 10044  000B64                     u5705:
  10045  000B64  6614               	tstfsz	??_baroTruePres,c
- 10046  000B66  D001               	goto	u5766
- 10047  000B68  D007               	goto	u5767
- 10048  000B6A                     u5766:
+ 10046  000B66  D001               	goto	u5706
+ 10047  000B68  D007               	goto	u5707
+ 10048  000B6A                     u5706:
  10049  000B6A  3420               	rlcf	??_baroTruePres+12,w,c
  10050  000B6C  3220               	rrcf	??_baroTruePres+12,f,c
  10051  000B6E  321F               	rrcf	??_baroTruePres+11,f,c
  10052  000B70  321E               	rrcf	??_baroTruePres+10,f,c
  10053  000B72  321D               	rrcf	??_baroTruePres+9,f,c
  10054  000B74  2E14               	decfsz	??_baroTruePres,f,c
- 10055  000B76  D7F6               	goto	u5765
- 10056  000B78                     u5767:
+ 10055  000B76  D7F6               	goto	u5705
+ 10056  000B78                     u5707:
  10057  000B78  C020  F034         	movff	??_baroTruePres+12,baroTruePres@pressure+3
  10058  000B7C  C01F  F033         	movff	??_baroTruePres+11,baroTruePres@pressure+2
  10059  000B80  C01E  F032         	movff	??_baroTruePres+10,baroTruePres@pressure+1
@@ -10144,23 +10144,23 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  10137  002E8E  1006               	iorwf	___lldiv@divisor+1,w,c
  10138  002E90  1007               	iorwf	___lldiv@divisor+2,w,c
  10139  002E92  B4D8               	btfsc	status,2,c
- 10140  002E94  D02C               	goto	l1956
+ 10140  002E94  D02C               	goto	l1947
  10141  002E96  6E09               	movwf	??___lldiv& (0+255),c
  10142  002E98  0E01               	movlw	1
  10143  002E9A  6E0E               	movwf	___lldiv@counter,c
  10144  002E9C  5009               	movf	??___lldiv& (0+255),w,c
- 10145  002E9E  D006               	goto	l6704
- 10146  002EA0                     l6702:
+ 10145  002E9E  D006               	goto	l6695
+ 10146  002EA0                     l6693:
  10147  002EA0  90D8               	bcf	status,0,c
  10148  002EA2  3605               	rlcf	___lldiv@divisor,f,c
  10149  002EA4  3606               	rlcf	___lldiv@divisor+1,f,c
  10150  002EA6  3607               	rlcf	___lldiv@divisor+2,f,c
  10151  002EA8  3608               	rlcf	___lldiv@divisor+3,f,c
  10152  002EAA  2A0E               	incf	___lldiv@counter,f,c
- 10153  002EAC                     l6704:
+ 10153  002EAC                     l6695:
  10154  002EAC  AE08               	btfss	___lldiv@divisor+3,7,c
- 10155  002EAE  D7F8               	goto	l6702
- 10156  002EB0                     l6706:
+ 10155  002EAE  D7F8               	goto	l6693
+ 10156  002EB0                     l6697:
  10157  002EB0  90D8               	bcf	status,0,c
  10158  002EB2  360A               	rlcf	___lldiv@quotient,f,c
  10159  002EB4  360B               	rlcf	___lldiv@quotient+1,f,c
@@ -10175,7 +10175,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  10168  002EC6  5008               	movf	___lldiv@divisor+3,w,c
  10169  002EC8  5804               	subwfb	___lldiv@dividend+3,w,c
  10170  002ECA  A0D8               	btfss	status,0,c
- 10171  002ECC  D009               	goto	l6714
+ 10171  002ECC  D009               	goto	l6705
  10172  002ECE  5005               	movf	___lldiv@divisor,w,c
  10173  002ED0  5E01               	subwf	___lldiv@dividend,f,c
  10174  002ED2  5006               	movf	___lldiv@divisor+1,w,c
@@ -10185,15 +10185,15 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  10178  002EDA  5008               	movf	___lldiv@divisor+3,w,c
  10179  002EDC  5A04               	subwfb	___lldiv@dividend+3,f,c
  10180  002EDE  800A               	bsf	___lldiv@quotient,0,c
- 10181  002EE0                     l6714:
+ 10181  002EE0                     l6705:
  10182  002EE0  90D8               	bcf	status,0,c
  10183  002EE2  3208               	rrcf	___lldiv@divisor+3,f,c
  10184  002EE4  3207               	rrcf	___lldiv@divisor+2,f,c
  10185  002EE6  3206               	rrcf	___lldiv@divisor+1,f,c
  10186  002EE8  3205               	rrcf	___lldiv@divisor,f,c
  10187  002EEA  2E0E               	decfsz	___lldiv@counter,f,c
- 10188  002EEC  D7E1               	goto	l6706
- 10189  002EEE                     l1956:
+ 10188  002EEC  D7E1               	goto	l6697
+ 10189  002EEE                     l1947:
  10190  002EEE  C00A  F001         	movff	___lldiv@quotient,?___lldiv
  10191  002EF2  C00B  F002         	movff	___lldiv@quotient+1,?___lldiv+1
  10192  002EF6  C00C  F003         	movff	___lldiv@quotient+2,?___lldiv+2
@@ -10265,9 +10265,9 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  10258  003466  6E0B               	movwf	___lmul@product+2,c
  10259  003468  0E00               	movlw	0
  10260  00346A  6E0C               	movwf	___lmul@product+3,c
- 10261  00346C                     l6644:
+ 10261  00346C                     l6635:
  10262  00346C  A001               	btfss	___lmul@multiplier,0,c
- 10263  00346E  D008               	goto	l6648
+ 10263  00346E  D008               	goto	l6639
  10264  003470  5005               	movf	___lmul@multiplicand,w,c
  10265  003472  2609               	addwf	___lmul@product,f,c
  10266  003474  5006               	movf	___lmul@multiplicand+1,w,c
@@ -10276,7 +10276,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  10269  00347A  220B               	addwfc	___lmul@product+2,f,c
  10270  00347C  5008               	movf	___lmul@multiplicand+3,w,c
  10271  00347E  220C               	addwfc	___lmul@product+3,f,c
- 10272  003480                     l6648:
+ 10272  003480                     l6639:
  10273  003480  90D8               	bcf	status,0,c
  10274  003482  3605               	rlcf	___lmul@multiplicand,f,c
  10275  003484  3606               	rlcf	___lmul@multiplicand+1,f,c
@@ -10292,7 +10292,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  10285  003498  1002               	iorwf	___lmul@multiplier+1,w,c
  10286  00349A  1003               	iorwf	___lmul@multiplier+2,w,c
  10287  00349C  A4D8               	btfss	status,2,c
- 10288  00349E  D7E6               	goto	l6644
+ 10288  00349E  D7E6               	goto	l6635
  10289  0034A0  C009  F001         	movff	___lmul@product,?___lmul
  10290  0034A4  C00A  F002         	movff	___lmul@product+1,?___lmul+1
  10291  0034A8  C00B  F003         	movff	___lmul@product+2,?___lmul+2
@@ -10365,7 +10365,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  10358  0026AE  6E0B               	movwf	___aldiv@sign,c
  10359  0026B0  5009               	movf	??___aldiv& (0+255),w,c
  10360  0026B2  AE08               	btfss	___aldiv@divisor+3,7,c
- 10361  0026B4  D00C               	goto	l6606
+ 10361  0026B4  D00C               	goto	l6597
  10362  0026B6  1E08               	comf	___aldiv@divisor+3,f,c
  10363  0026B8  1E07               	comf	___aldiv@divisor+2,f,c
  10364  0026BA  1E06               	comf	___aldiv@divisor+1,f,c
@@ -10378,9 +10378,9 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  10371  0026C8  0E01               	movlw	1
  10372  0026CA  6E0B               	movwf	___aldiv@sign,c
  10373  0026CC  5009               	movf	??___aldiv& (0+255),w,c
- 10374  0026CE                     l6606:
+ 10374  0026CE                     l6597:
  10375  0026CE  AE04               	btfss	___aldiv@dividend+3,7,c
- 10376  0026D0  D00A               	goto	l6612
+ 10376  0026D0  D00A               	goto	l6603
  10377  0026D2  1E04               	comf	___aldiv@dividend+3,f,c
  10378  0026D4  1E03               	comf	___aldiv@dividend+2,f,c
  10379  0026D6  1E02               	comf	___aldiv@dividend+1,f,c
@@ -10391,7 +10391,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  10384  0026E0  2204               	addwfc	___aldiv@dividend+3,f,c
  10385  0026E2  0E01               	movlw	1
  10386  0026E4  1A0B               	xorwf	___aldiv@sign,f,c
- 10387  0026E6                     l6612:
+ 10387  0026E6                     l6603:
  10388  0026E6  0E00               	movlw	0
  10389  0026E8  6E0C               	movwf	___aldiv@quotient,c
  10390  0026EA  0E00               	movlw	0
@@ -10405,23 +10405,23 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  10398  0026FA  1006               	iorwf	___aldiv@divisor+1,w,c
  10399  0026FC  1007               	iorwf	___aldiv@divisor+2,w,c
  10400  0026FE  B4D8               	btfsc	status,2,c
- 10401  002700  D02C               	goto	l6634
+ 10401  002700  D02C               	goto	l6625
  10402  002702  6E09               	movwf	??___aldiv& (0+255),c
  10403  002704  0E01               	movlw	1
  10404  002706  6E0A               	movwf	___aldiv@counter,c
  10405  002708  5009               	movf	??___aldiv& (0+255),w,c
- 10406  00270A  D006               	goto	l6620
- 10407  00270C                     l6618:
+ 10406  00270A  D006               	goto	l6611
+ 10407  00270C                     l6609:
  10408  00270C  90D8               	bcf	status,0,c
  10409  00270E  3605               	rlcf	___aldiv@divisor,f,c
  10410  002710  3606               	rlcf	___aldiv@divisor+1,f,c
  10411  002712  3607               	rlcf	___aldiv@divisor+2,f,c
  10412  002714  3608               	rlcf	___aldiv@divisor+3,f,c
  10413  002716  2A0A               	incf	___aldiv@counter,f,c
- 10414  002718                     l6620:
+ 10414  002718                     l6611:
  10415  002718  AE08               	btfss	___aldiv@divisor+3,7,c
- 10416  00271A  D7F8               	goto	l6618
- 10417  00271C                     l6622:
+ 10416  00271A  D7F8               	goto	l6609
+ 10417  00271C                     l6613:
  10418  00271C  90D8               	bcf	status,0,c
  10419  00271E  360C               	rlcf	___aldiv@quotient,f,c
  10420  002720  360D               	rlcf	___aldiv@quotient+1,f,c
@@ -10436,7 +10436,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  10429  002732  5008               	movf	___aldiv@divisor+3,w,c
  10430  002734  5804               	subwfb	___aldiv@dividend+3,w,c
  10431  002736  A0D8               	btfss	status,0,c
- 10432  002738  D009               	goto	l6630
+ 10432  002738  D009               	goto	l6621
  10433  00273A  5005               	movf	___aldiv@divisor,w,c
  10434  00273C  5E01               	subwf	___aldiv@dividend,f,c
  10435  00273E  5006               	movf	___aldiv@divisor+1,w,c
@@ -10446,18 +10446,18 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  10439  002746  5008               	movf	___aldiv@divisor+3,w,c
  10440  002748  5A04               	subwfb	___aldiv@dividend+3,f,c
  10441  00274A  800C               	bsf	___aldiv@quotient,0,c
- 10442  00274C                     l6630:
+ 10442  00274C                     l6621:
  10443  00274C  90D8               	bcf	status,0,c
  10444  00274E  3208               	rrcf	___aldiv@divisor+3,f,c
  10445  002750  3207               	rrcf	___aldiv@divisor+2,f,c
  10446  002752  3206               	rrcf	___aldiv@divisor+1,f,c
  10447  002754  3205               	rrcf	___aldiv@divisor,f,c
  10448  002756  2E0A               	decfsz	___aldiv@counter,f,c
- 10449  002758  D7E1               	goto	l6622
- 10450  00275A                     l6634:
+ 10449  002758  D7E1               	goto	l6613
+ 10450  00275A                     l6625:
  10451  00275A  500B               	movf	___aldiv@sign,w,c
  10452  00275C  B4D8               	btfsc	status,2,c
- 10453  00275E  D008               	goto	l6638
+ 10453  00275E  D008               	goto	l6629
  10454  002760  1E0F               	comf	___aldiv@quotient+3,f,c
  10455  002762  1E0E               	comf	___aldiv@quotient+2,f,c
  10456  002764  1E0D               	comf	___aldiv@quotient+1,f,c
@@ -10466,7 +10466,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  10459  00276A  220D               	addwfc	___aldiv@quotient+1,f,c
  10460  00276C  220E               	addwfc	___aldiv@quotient+2,f,c
  10461  00276E  220F               	addwfc	___aldiv@quotient+3,f,c
- 10462  002770                     l6638:
+ 10462  002770                     l6629:
  10463  002770  C00C  F001         	movff	___aldiv@quotient,?___aldiv
  10464  002774  C00D  F002         	movff	___aldiv@quotient+1,?___aldiv+1
  10465  002778  C00E  F003         	movff	___aldiv@quotient+2,?___aldiv+2
@@ -10556,12 +10556,12 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  10549  001B32  EC10  F01C         	call	___wmul	;wreg free
  10550  001B36  0E0F               	movlw	15
  10551  001B38  6E14               	movwf	(??_baroTrueTemp+2)& (0+255),c
- 10552  001B3A                     u5645:
+ 10552  001B3A                     u5585:
  10553  001B3A  90D8               	bcf	status,0,c
  10554  001B3C  3202               	rrcf	?___wmul+1,f,c
  10555  001B3E  3201               	rrcf	?___wmul,f,c
  10556  001B40  2E14               	decfsz	(??_baroTrueTemp+2)& (0+255),f,c
- 10557  001B42  D7FB               	goto	u5645
+ 10557  001B42  D7FB               	goto	u5585
  10558  001B44  C001  F020         	movff	?___wmul,baroTrueTemp@X1
  10559  001B48  C002  F021         	movff	?___wmul+1,baroTrueTemp@X1+1
  10560  001B4C  6A22               	clrf	baroTrueTemp@X1+2,c
@@ -10573,12 +10573,12 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  10566  001B56  0100               	movlb	0	; () banked
  10567  001B58  C0AF  F013         	movff	_MC+1,??_baroTrueTemp+1
  10568  001B5C  0E0B               	movlw	11
- 10569  001B5E                     u5655:
+ 10569  001B5E                     u5595:
  10570  001B5E  90D8               	bcf	status,0,c
  10571  001B60  3612               	rlcf	??_baroTrueTemp,f,c
  10572  001B62  3613               	rlcf	??_baroTrueTemp+1,f,c
  10573  001B64  2EE8               	decfsz	wreg,f,c
- 10574  001B66  D7FB               	goto	u5655
+ 10574  001B66  D7FB               	goto	u5595
  10575  001B68  C012  F001         	movff	??_baroTrueTemp,?___aldiv
  10576  001B6C  C013  F002         	movff	??_baroTrueTemp+1,?___aldiv+1
  10577  001B70  0E00               	movlw	0
@@ -10656,19 +10656,19 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  10649  001C04  0100               	movlb	0	; () banked
  10650  001C06  218B               	addwfc	(_B5+3)& (0+255),w,b
  10651  001C08  6E16               	movwf	(??_baroTrueTemp+4)& (0+255),c
- 10652  001C0A                     u5665:
+ 10652  001C0A                     u5605:
  10653  001C0A  6612               	tstfsz	??_baroTrueTemp,c
- 10654  001C0C  D001               	goto	u5666
- 10655  001C0E  D007               	goto	u5667
- 10656  001C10                     u5666:
+ 10654  001C0C  D001               	goto	u5606
+ 10655  001C0E  D007               	goto	u5607
+ 10656  001C10                     u5606:
  10657  001C10  3416               	rlcf	??_baroTrueTemp+4,w,c
  10658  001C12  3216               	rrcf	??_baroTrueTemp+4,f,c
  10659  001C14  3215               	rrcf	??_baroTrueTemp+3,f,c
  10660  001C16  3214               	rrcf	??_baroTrueTemp+2,f,c
  10661  001C18  3213               	rrcf	??_baroTrueTemp+1,f,c
  10662  001C1A  2E12               	decfsz	??_baroTrueTemp,f,c
- 10663  001C1C  D7F6               	goto	u5665
- 10664  001C1E                     u5667:
+ 10663  001C1C  D7F6               	goto	u5605
+ 10664  001C1E                     u5607:
  10665  001C1E  C016  F01B         	movff	??_baroTrueTemp+4,baroTrueTemp@temperature+3
  10666  001C22  C015  F01A         	movff	??_baroTrueTemp+3,baroTrueTemp@temperature+2
  10667  001C26  C014  F019         	movff	??_baroTrueTemp+2,baroTrueTemp@temperature+1
@@ -10979,14 +10979,14 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  10972                           	opt stack 0
  10973  003B26                     _Delay10TCYx:
  10974                           	opt stack 28
- 10975  003B26                     l1711:
+ 10975  003B26                     l1702:
  10976  003B26  0E03               	movlw	3
- 10977  003B28                     u7117:
+ 10977  003B28                     u7057:
  10978  003B28  2EE8               	decfsz	wreg,f,c
- 10979  003B2A  D7FE               	goto	u7117
+ 10979  003B2A  D7FE               	goto	u7057
  10980  003B2C  F000               	nop	
  10981  003B2E  2E01               	decfsz	Delay10TCYx@unit,f,c
- 10982  003B30  D7FA               	goto	l1711
+ 10982  003B30  D7FA               	goto	l1702
  10983  003B32  0012               	return	
  10984  003B34                     __end_of_Delay10TCYx:
  10985                           	opt stack 0
@@ -11311,12 +11311,12 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  11304                           
  11305                           ;i2c_writ.c: 15: if ( SSPCON1bits.WCOL )
  11306  003562  AEC6               	btfss	4038,7,c	;volatile
- 11307  003564  D002               	goto	l6748
+ 11307  003564  D002               	goto	l6739
  11308                           
  11309                           ;i2c_writ.c: 16: return ( -1 );
  11310  003566  0EFF               	movlw	255
  11311  003568  D024               	goto	l522
- 11312  00356A                     l6748:
+ 11312  00356A                     l6739:
  11313                           
  11314                           ;i2c_writ.c: 17: else
  11315                           ;i2c_writ.c: 18: {
@@ -11325,12 +11325,12 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  11318  00356C  0B0F               	andlw	15
  11319  00356E  0A08               	xorlw	8
  11320  003570  B4D8               	btfsc	status,2,c
- 11321  003572  D00C               	goto	l6766
+ 11321  003572  D00C               	goto	l6757
  11322  003574  50C6               	movf	4038,w,c	;volatile
  11323  003576  0B0F               	andlw	15
  11324  003578  0A0B               	xorlw	11
  11325  00357A  B4D8               	btfsc	status,2,c
- 11326  00357C  D007               	goto	l6766
+ 11326  00357C  D007               	goto	l6757
  11327                           
  11328                           ;i2c_writ.c: 20: {
  11329                           ;i2c_writ.c: 21: SSPCON1bits.CKP = 1;
@@ -11342,9 +11342,9 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  11335                           ;i2c_writ.c: 24: if ( ( !SSPSTATbits.R_W ) && ( !SSPSTATbits.BF ) )
  11336  003584  A4C7               	btfss	4039,2,c	;volatile
  11337  003586  B0C7               	btfsc	4039,0,c	;volatile
- 11338  003588  D013               	goto	l6780
- 11339  00358A  D010               	goto	u5600
- 11340  00358C                     l6766:
+ 11338  003588  D013               	goto	l6771
+ 11339  00358A  D010               	goto	u5540
+ 11340  00358C                     l6757:
  11341                           
  11342                           ;i2c_writ.c: 33: else if( ((SSPCON1&0x0F)==0x08) || ((SSPCON1&0x0F)==0x0B) )
  11343  00358C  50C6               	movf	4038,w,c	;volatile
@@ -11366,13 +11366,13 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  11359                           
  11360                           ;i2c_writ.c: 37: if ( SSPCON2bits.ACKSTAT )
  11361  0035A8  ACC5               	btfss	4037,6,c	;volatile
- 11362  0035AA  D002               	goto	l6780
- 11363  0035AC                     u5600:
+ 11362  0035AA  D002               	goto	l6771
+ 11363  0035AC                     u5540:
  11364                           
  11365                           ;i2c_writ.c: 38: return ( -2 );
  11366  0035AC  0EFE               	movlw	254
  11367  0035AE  D001               	goto	l522
- 11368  0035B0                     l6780:
+ 11368  0035B0                     l6771:
  11369                           
  11370                           ;i2c_writ.c: 39: else return ( 0 );
  11371  0035B0  0E00               	movlw	0
@@ -11445,12 +11445,12 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  11438                           	opt stack 0
  11439  003B4E                     _IdleI2C:
  11440                           	opt stack 27
- 11441  003B4E                     l6150:
+ 11441  003B4E                     l6141:
  11442  003B4E  50C5               	movf	4037,w,c	;volatile
  11443  003B50  0B1F               	andlw	31
  11444  003B52  B4D8               	btfsc	status,2,c
  11445  003B54  B4C7               	btfsc	4039,2,c	;volatile
- 11446  003B56  D7FB               	goto	l6150
+ 11446  003B56  D7FB               	goto	l6141
  11447  003B58  0012               	return	
  11448  003B5A                     __end_of_IdleI2C:
  11449                           	opt stack 0
@@ -11532,7 +11532,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  11525  003620  B4D8               	btfsc	status,2,c
  11526  003622  5C13               	subwf	accelCalibrate@i,w,c
  11527  003624  B0D8               	btfsc	status,0,c
- 11528  003626  D009               	goto	l7140
+ 11528  003626  D009               	goto	l7131
  11529                           
  11530                           ;accelmeter.c: 86: average += accelGetADC();
  11531  003628  EC3A  F018         	call	_accelGetADC	;wreg free
@@ -11543,7 +11543,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  11536  003634  4A13               	infsnz	accelCalibrate@i,f,c
  11537  003636  2A14               	incf	accelCalibrate@i+1,f,c
  11538  003638  D7EF               	goto	L17
- 11539  00363A                     l7140:
+ 11539  00363A                     l7131:
  11540                           
  11541                           ;accelmeter.c: 87: }
  11542                           ;accelmeter.c: 89: accelZero = average / 4;
@@ -11647,7 +11647,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  11640  002C5E  B4D8               	btfsc	status,2,c
  11641  002C60  5C17               	subwf	accelSelfTest@i,w,c
  11642  002C62  B0D8               	btfsc	status,0,c
- 11643  002C64  D009               	goto	l7554
+ 11643  002C64  D009               	goto	l7545
  11644                           
  11645                           ;accelmeter.c: 60: Delay10KTCYx(0);
  11646  002C66  6E12               	movwf	??_accelSelfTest& (0+255),c
@@ -11658,7 +11658,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  11651  002C72  4A17               	infsnz	accelSelfTest@i,f,c
  11652  002C74  2A18               	incf	accelSelfTest@i+1,f,c
  11653  002C76  D7EF               	goto	L18
- 11654  002C78                     l7554:
+ 11654  002C78                     l7545:
  11655                           
  11656                           ;accelmeter.c: 61: }
  11657                           ;accelmeter.c: 63: accelNew = accelGetADC();
@@ -11679,7 +11679,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  11672  002C92  0A80               	xorlw	128
  11673  002C94  5812               	subwfb	??_accelSelfTest& (0+255),w,c
  11674  002C96  B0D8               	btfsc	status,0,c
- 11675  002C98  D013               	goto	l7566
+ 11675  002C98  D013               	goto	l7557
  11676                           
  11677                           ;accelmeter.c: 68: accelFail = 1;
  11678  002C9A  6E12               	movwf	??_accelSelfTest& (0+255),c
@@ -11706,7 +11706,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  11699                           
  11700                           ;accelmeter.c: 71: }
  11701  002CBE  D006               	goto	l697
- 11702  002CC0                     l7566:
+ 11702  002CC0                     l7557:
  11703                           
  11704                           ;accelmeter.c: 72: else{
  11705                           ;accelmeter.c: 73: accelFail = 0;
@@ -11783,8 +11783,8 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  11776                           
  11777                           ;incstack = 0
  11778                           ;incstack = 0
- 11779  0023F6  D058               	goto	l7408
- 11780  0023F8                     l7388:
+ 11779  0023F6  D058               	goto	l7399
+ 11780  0023F8                     l7379:
  11781                           
  11782                           ;errors.c: 32: morseLong();
  11783  0023F8  ECB3  F01B         	call	_morseLong	;wreg free
@@ -11803,7 +11803,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  11796                           
  11797                           ;errors.c: 37: break;
  11798  00240C  D06C               	goto	l980
- 11799  00240E                     l7390:
+ 11799  00240E                     l7381:
  11800                           
  11801                           ;errors.c: 39: morseShort();
  11802  00240E  ECAA  F01C         	call	_morseShort	;wreg free
@@ -11822,7 +11822,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  11815                           
  11816                           ;errors.c: 44: break;
  11817  002422  D061               	goto	l980
- 11818  002424                     l7392:
+ 11818  002424                     l7383:
  11819                           
  11820                           ;errors.c: 46: morseShort();
  11821  002424  ECAA  F01C         	call	_morseShort	;wreg free
@@ -11832,7 +11832,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  11825                           
  11826                           ;errors.c: 48: break;
  11827  00242C  D05C               	goto	l980
- 11828  00242E                     l7394:
+ 11828  00242E                     l7385:
  11829                           
  11830                           ;errors.c: 50: morseLong();
  11831  00242E  ECB3  F01B         	call	_morseLong	;wreg free
@@ -11842,7 +11842,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  11835                           
  11836                           ;errors.c: 52: break;
  11837  002436  D057               	goto	l980
- 11838  002438                     l7396:
+ 11838  002438                     l7387:
  11839                           
  11840                           ;errors.c: 54: morseShort();
  11841  002438  ECAA  F01C         	call	_morseShort	;wreg free
@@ -11861,7 +11861,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  11854                           
  11855                           ;errors.c: 59: break;
  11856  00244C  D04C               	goto	l980
- 11857  00244E                     l7398:
+ 11857  00244E                     l7389:
  11858                           
  11859                           ;errors.c: 61: morseLong();
  11860  00244E  ECB3  F01B         	call	_morseLong	;wreg free
@@ -11880,7 +11880,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  11873                           
  11874                           ;errors.c: 66: break;
  11875  002462  D041               	goto	l980
- 11876  002464                     l7400:
+ 11876  002464                     l7391:
  11877                           
  11878                           ;errors.c: 68: morseLong();
  11879  002464  ECB3  F01B         	call	_morseLong	;wreg free
@@ -11896,7 +11896,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  11889                           
  11890                           ;errors.c: 72: break;
  11891  002474  D038               	goto	l980
- 11892  002476                     l7402:
+ 11892  002476                     l7393:
  11893                           
  11894                           ;errors.c: 74: morseShort();
  11895  002476  ECAA  F01C         	call	_morseShort	;wreg free
@@ -11909,7 +11909,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  11902                           
  11903                           ;errors.c: 77: break;
  11904  002482  D031               	goto	l980
- 11905  002484                     l7404:
+ 11905  002484                     l7395:
  11906                           
  11907                           ;errors.c: 79: morseShort();
  11908  002484  ECAA  F01C         	call	_morseShort	;wreg free
@@ -11925,7 +11925,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  11918                           
  11919                           ;errors.c: 83: break;
  11920  002494  D028               	goto	l980
- 11921  002496                     l7406:
+ 11921  002496                     l7397:
  11922                           
  11923                           ;errors.c: 85: morseShort();
  11924  002496  ECAA  F01C         	call	_morseShort	;wreg free
@@ -11941,7 +11941,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  11934                           
  11935                           ;errors.c: 89: }
  11936  0024A6  D01F               	goto	l980
- 11937  0024A8                     l7408:
+ 11937  0024A8                     l7399:
  11938  0024A8  5004               	movf	morseCode@error,w,c
  11939                           
  11940                           ; Switch size 1, requested type "space"
@@ -11952,34 +11952,34 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  11945                           ;	Chosen strategy is simple_byte
  11946  0024AA  0A41               	xorlw	65	; case 65
  11947  0024AC  B4D8               	btfsc	status,2,c
- 11948  0024AE  D7E3               	goto	l7402
+ 11948  0024AE  D7E3               	goto	l7393
  11949  0024B0  0A02               	xorlw	2	; case 67
  11950  0024B2  B4D8               	btfsc	status,2,c
- 11951  0024B4  D7A1               	goto	l7388
+ 11951  0024B4  D7A1               	goto	l7379
  11952  0024B6  0A06               	xorlw	6	; case 69
  11953  0024B8  B4D8               	btfsc	status,2,c
- 11954  0024BA  D7B4               	goto	l7392
+ 11954  0024BA  D7B4               	goto	l7383
  11955  0024BC  0A03               	xorlw	3	; case 70
  11956  0024BE  B4D8               	btfsc	status,2,c
- 11957  0024C0  D7A6               	goto	l7390
+ 11957  0024C0  D7A6               	goto	l7381
  11958  0024C2  0A01               	xorlw	1	; case 71
  11959  0024C4  B4D8               	btfsc	status,2,c
- 11960  0024C6  D7CE               	goto	l7400
+ 11960  0024C6  D7CE               	goto	l7391
  11961  0024C8  0A0B               	xorlw	11	; case 76
  11962  0024CA  B4D8               	btfsc	status,2,c
- 11963  0024CC  D7B5               	goto	l7396
+ 11963  0024CC  D7B5               	goto	l7387
  11964  0024CE  0A18               	xorlw	24	; case 84
  11965  0024D0  B4D8               	btfsc	status,2,c
- 11966  0024D2  D7AD               	goto	l7394
+ 11966  0024D2  D7AD               	goto	l7385
  11967  0024D4  0A01               	xorlw	1	; case 85
  11968  0024D6  B4D8               	btfsc	status,2,c
- 11969  0024D8  D7D5               	goto	l7404
+ 11969  0024D8  D7D5               	goto	l7395
  11970  0024DA  0A02               	xorlw	2	; case 87
  11971  0024DC  B4D8               	btfsc	status,2,c
- 11972  0024DE  D7DB               	goto	l7406
+ 11972  0024DE  D7DB               	goto	l7397
  11973  0024E0  0A0D               	xorlw	13	; case 90
  11974  0024E2  B4D8               	btfsc	status,2,c
- 11975  0024E4  D7B4               	goto	l7398
+ 11975  0024E4  D7B4               	goto	l7389
  11976  0024E6                     l980:
  11977  0024E6  0012               	return	
  11978  0024E8                     __end_of_morseCode:
@@ -12343,18 +12343,18 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  12336                           	opt stack 0
  12337  003AA6                     _Delay10KTCYx:
  12338                           	opt stack 28
- 12339  003AA6                     l1704:
+ 12339  003AA6                     l1695:
  12340  003AA6  0E0D               	movlw	13
  12341  003AA8  6E02               	movwf	??_Delay10KTCYx& (0+255),c
  12342  003AAA  0EFB               	movlw	251
- 12343  003AAC                     u7127:
+ 12343  003AAC                     u7067:
  12344  003AAC  2EE8               	decfsz	wreg,f,c
- 12345  003AAE  D7FE               	goto	u7127
+ 12345  003AAE  D7FE               	goto	u7067
  12346  003AB0  2E02               	decfsz	??_Delay10KTCYx& (0+255),f,c
- 12347  003AB2  D7FC               	goto	u7127
+ 12347  003AB2  D7FC               	goto	u7067
  12348  003AB4  D000               	nop2	
  12349  003AB6  2E01               	decfsz	Delay10KTCYx@unit,f,c
- 12350  003AB8  D7F6               	goto	l1704
+ 12350  003AB8  D7F6               	goto	l1695
  12351  003ABA  0012               	return	
  12352  003ABC                     __end_of_Delay10KTCYx:
  12353                           	opt stack 0
@@ -12506,9 +12506,9 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  12499                           	opt stack 0
  12500  003B34                     _xBeeTxByte:
  12501                           	opt stack 28
- 12502  003B34                     l1406:
+ 12502  003B34                     l1397:
  12503  003B34  A2AC               	btfss	4012,1,c	;volatile
- 12504  003B36  D7FE               	goto	l1406
+ 12504  003B36  D7FE               	goto	l1397
  12505                           
  12506                           ;telemetry.c: 157: WriteUSART(data);
  12507  003B38  C00F  F001         	movff	xBeeTxByte@data,?_WriteUSART
@@ -12685,15 +12685,15 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  12678  003098  B4D8               	btfsc	status,2,c
  12679  00309A  5C0D               	subwf	accelGetADC@i,w,c
  12680  00309C  B0D8               	btfsc	status,0,c
- 12681  00309E  D010               	goto	l6804
+ 12681  00309E  D010               	goto	l6795
  12682                           
  12683                           ;accelmeter.c: 34: ConvertADC();
  12684  0030A0  ECBA  F01D         	call	_ConvertADC	;wreg free
- 12685  0030A4                     l6796:
+ 12685  0030A4                     l6787:
  12686  0030A4  ECB7  F01D         	call	_BusyADC	;wreg free
  12687  0030A8  0900               	iorlw	0
  12688  0030AA  A4D8               	btfss	status,2,c
- 12689  0030AC  D7FB               	goto	l6796
+ 12689  0030AC  D7FB               	goto	l6787
  12690                           
  12691                           ;accelmeter.c: 36: accelRaw += ReadADC();
  12692  0030AE  ECB2  F01D         	call	_ReadADC	;wreg free
@@ -12704,7 +12704,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  12697  0030BA  4A0D               	infsnz	accelGetADC@i,f,c
  12698  0030BC  2A0E               	incf	accelGetADC@i+1,f,c
  12699  0030BE  D7E8               	goto	L19
- 12700  0030C0                     l6804:
+ 12700  0030C0                     l6795:
  12701                           
  12702                           ;accelmeter.c: 37: }
  12703                           ;accelmeter.c: 39: accelRaw /= 4;
@@ -12792,7 +12792,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  12785  002CD2  6E07               	movwf	___awdiv@sign,c
  12786  002CD4  5005               	movf	??___awdiv& (0+255),w,c
  12787  002CD6  AE04               	btfss	___awdiv@divisor+1,7,c
- 12788  002CD8  D008               	goto	l6660
+ 12788  002CD8  D008               	goto	l6651
  12789  002CDA  6C03               	negf	___awdiv@divisor,c
  12790  002CDC  1E04               	comf	___awdiv@divisor+1,f,c
  12791  002CDE  B0D8               	btfsc	status,0,c
@@ -12801,16 +12801,16 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  12794  002CE4  0E01               	movlw	1
  12795  002CE6  6E07               	movwf	___awdiv@sign,c
  12796  002CE8  5005               	movf	??___awdiv& (0+255),w,c
- 12797  002CEA                     l6660:
+ 12797  002CEA                     l6651:
  12798  002CEA  AE02               	btfss	___awdiv@dividend+1,7,c
- 12799  002CEC  D006               	goto	l6666
+ 12799  002CEC  D006               	goto	l6657
  12800  002CEE  6C01               	negf	___awdiv@dividend,c
  12801  002CF0  1E02               	comf	___awdiv@dividend+1,f,c
  12802  002CF2  B0D8               	btfsc	status,0,c
  12803  002CF4  2A02               	incf	___awdiv@dividend+1,f,c
  12804  002CF6  0E01               	movlw	1
  12805  002CF8  1A07               	xorwf	___awdiv@sign,f,c
- 12806  002CFA                     l6666:
+ 12806  002CFA                     l6657:
  12807  002CFA  0E00               	movlw	0
  12808  002CFC  6E09               	movwf	___awdiv@quotient+1,c
  12809  002CFE  0E00               	movlw	0
@@ -12818,21 +12818,21 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  12811  002D02  5004               	movf	___awdiv@divisor+1,w,c
  12812  002D04  1003               	iorwf	___awdiv@divisor,w,c
  12813  002D06  B4D8               	btfsc	status,2,c
- 12814  002D08  D01E               	goto	l6688
+ 12814  002D08  D01E               	goto	l6679
  12815  002D0A  6E05               	movwf	??___awdiv& (0+255),c
  12816  002D0C  0E01               	movlw	1
  12817  002D0E  6E06               	movwf	___awdiv@counter,c
  12818  002D10  5005               	movf	??___awdiv& (0+255),w,c
- 12819  002D12  D004               	goto	l6674
- 12820  002D14                     l6672:
+ 12819  002D12  D004               	goto	l6665
+ 12820  002D14                     l6663:
  12821  002D14  90D8               	bcf	status,0,c
  12822  002D16  3603               	rlcf	___awdiv@divisor,f,c
  12823  002D18  3604               	rlcf	___awdiv@divisor+1,f,c
  12824  002D1A  2A06               	incf	___awdiv@counter,f,c
- 12825  002D1C                     l6674:
+ 12825  002D1C                     l6665:
  12826  002D1C  AE04               	btfss	___awdiv@divisor+1,7,c
- 12827  002D1E  D7FA               	goto	l6672
- 12828  002D20                     l6676:
+ 12827  002D1E  D7FA               	goto	l6663
+ 12828  002D20                     l6667:
  12829  002D20  90D8               	bcf	status,0,c
  12830  002D22  3608               	rlcf	___awdiv@quotient,f,c
  12831  002D24  3609               	rlcf	___awdiv@quotient+1,f,c
@@ -12841,27 +12841,27 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  12834  002D2A  5004               	movf	___awdiv@divisor+1,w,c
  12835  002D2C  5802               	subwfb	___awdiv@dividend+1,w,c
  12836  002D2E  A0D8               	btfss	status,0,c
- 12837  002D30  D005               	goto	l6684
+ 12837  002D30  D005               	goto	l6675
  12838  002D32  5003               	movf	___awdiv@divisor,w,c
  12839  002D34  5E01               	subwf	___awdiv@dividend,f,c
  12840  002D36  5004               	movf	___awdiv@divisor+1,w,c
  12841  002D38  5A02               	subwfb	___awdiv@dividend+1,f,c
  12842  002D3A  8008               	bsf	___awdiv@quotient,0,c
- 12843  002D3C                     l6684:
+ 12843  002D3C                     l6675:
  12844  002D3C  90D8               	bcf	status,0,c
  12845  002D3E  3204               	rrcf	___awdiv@divisor+1,f,c
  12846  002D40  3203               	rrcf	___awdiv@divisor,f,c
  12847  002D42  2E06               	decfsz	___awdiv@counter,f,c
- 12848  002D44  D7ED               	goto	l6676
- 12849  002D46                     l6688:
+ 12848  002D44  D7ED               	goto	l6667
+ 12849  002D46                     l6679:
  12850  002D46  5007               	movf	___awdiv@sign,w,c
  12851  002D48  B4D8               	btfsc	status,2,c
- 12852  002D4A  D004               	goto	l6692
+ 12852  002D4A  D004               	goto	l6683
  12853  002D4C  6C08               	negf	___awdiv@quotient,c
  12854  002D4E  1E09               	comf	___awdiv@quotient+1,f,c
  12855  002D50  B0D8               	btfsc	status,0,c
  12856  002D52  2A09               	incf	___awdiv@quotient+1,f,c
- 12857  002D54                     l6692:
+ 12857  002D54                     l6683:
  12858  002D54  C008  F001         	movff	___awdiv@quotient,?___awdiv
  12859  002D58  C009  F002         	movff	___awdiv@quotient+1,?___awdiv+1
  12860  002D5C  0012               	return	
@@ -13411,7 +13411,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  13404                           ;incstack = 0
  13405                           ;incstack = 0
  13406  002D5E  AE0E               	btfss	___ftge@ff1+2,7,c
- 13407  002D60  D016               	goto	l7038
+ 13407  002D60  D016               	goto	l7029
  13408  002D62  C00C  F012         	movff	___ftge@ff1,??___ftge
  13409  002D66  C00D  F013         	movff	___ftge@ff1+1,??___ftge+1
  13410  002D6A  C00E  F014         	movff	___ftge@ff1+2,??___ftge+2
@@ -13431,9 +13431,9 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  13424  002D88  0E80               	movlw	128
  13425  002D8A  2014               	addwfc	??___ftge+2,w,c
  13426  002D8C  6E0E               	movwf	___ftge@ff1+2,c
- 13427  002D8E                     l7038:
+ 13427  002D8E                     l7029:
  13428  002D8E  AE11               	btfss	___ftge@ff2+2,7,c
- 13429  002D90  D016               	goto	l7042
+ 13429  002D90  D016               	goto	l7033
  13430  002D92  C00F  F012         	movff	___ftge@ff2,??___ftge
  13431  002D96  C010  F013         	movff	___ftge@ff2+1,??___ftge+1
  13432  002D9A  C011  F014         	movff	___ftge@ff2+2,??___ftge+2
@@ -13453,7 +13453,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  13446  002DB8  0E80               	movlw	128
  13447  002DBA  2014               	addwfc	??___ftge+2,w,c
  13448  002DBC  6E11               	movwf	___ftge@ff2+2,c
- 13449  002DBE                     l7042:
+ 13449  002DBE                     l7033:
  13450  002DBE  0E00               	movlw	0
  13451  002DC0  1A0C               	xorwf	___ftge@ff1,f,c
  13452  002DC2  0E00               	movlw	0
@@ -13473,12 +13473,12 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 52243
  13466  002DDE  5011               	movf	___ftge@ff2+2,w,c
  13467  002DE0  580E               	subwfb	___ftge@ff1+2,w,c
  13468  002DE2  B0D8               	btfsc	status,0,c
- 13469  002DE4  D002               	goto	l7048
+ 13469  002DE4  D002               	goto	l7039
  13470  002DE6  90D8               	bcf	status,0,c
- 13471  002DE8  D001               	goto	l1891
- 13472  002DEA                     l7048:
+ 13471  002DE8  D001               	goto	l1882
+ 13472  002DEA                     l7039:
  13473  002DEA  80D8               	bsf	status,0,c
- 13474  002DEC                     l1891:
+ 13474  002DEC                     l1882:
  13475  002DEC  0012               	return	
  13476  002DEE                     __end_of___ftge:
  13477                           	opt stack 0
@@ -15013,7 +15013,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V1.20 build 52243 
-Symbol Table                                                                                   Mon Oct 21 22:07:30 2013
+Symbol Table                                                                                   Thu Nov 14 12:43:10 2013
 
      __end_of_battConfigByte 38FC         __end_of_baroTrueTemp 1C38         __end_of_baroTruePres 0B9A  
                ___altoft@exp 0018               baroCalibrate@b 0052               baroCalibrate@m 004F  
@@ -15048,80 +15048,80 @@ Symbol Table                                                                    
                         wreg 000FE8                ___asftmul@f1p 002E                ___asftsub@f1p 0042  
                __CFG_LVP$OFF 000000             battSafeCheck@ptr 0012                 ___ftdiv@cntr 0028  
                ___ftdiv@sign 002D                 __CFG_WDT$OFF 000000                         l1035 2BA6  
-                       l2025 3452                         l2035 3694                         l1406 3B34  
-                       l2057 19F4                         l2058 19E6                         l1443 3B5A  
-                       l2059 1B08                         l1611 19A0                         l1612 186E  
-                       l1711 3B26                         l1704 3AA6                         l1379 3286  
-                       l1813 290A                         l1741 3716                         l1742 3722  
-                       l1592 11AA                         l1850 167E                         l1851 17E0  
-                       l1907 39BC                         l1917 26A8                         l1854 16A8  
-                       l1865 174C                         l1874 1768                         l1882 23F4  
-                       l1891 2DEC                         l1956 2EEE                         l7012 2282  
-                       l1884 239E                         l1885 23C4                         l6150 3B4E  
-                       l7022 22AE                         l7110 3428                         l7016 2292  
-                       l7120 3448                         l7112 342C                         l1897 22F6  
-                       l7042 2DBE                         l7026 22BE                         l7140 363A  
-                       l7108 3420                         l7038 2D8E                         l7062 25F6  
-                       l7048 2DEA                         l7400 2464                         l7080 264A  
-                       l7304 325C                         l7402 2476                         l7090 2672  
-                       l7404 2484                         l6620 2718                         l6612 26E6  
-                       l7092 267E                         l7084 265A                         l7252 35E6  
-                       l7406 2496                         l6630 274C                         l6622 271C  
-                       l6606 26CE                         l6702 2EA0                         l7094 2682  
-                       l7502 235C                         l7262 387C                         l7408 24A8  
-                       l6704 2EAC                         l7600 20AA                         l7352 2C2A  
-                       l7344 2BF4                         l6618 270C                         l6634 275A  
-                       l6714 2EE0                         l6706 2EB0                         l7098 2698  
-                       l7370 2530                         l7258 3864                         l6730 368A  
-                       l6722 366A                         l6660 2CEA                         l6804 30C0  
-                       l6644 346C                         l6580 28B0                         l6572 2872  
-                       l7276 29EE                         l7284 2A0A                         l7372 25B4  
-                       l7700 1818                         l6724 3672                         l7390 240E  
-                       l6638 2770                         l6582 28CE                         l6574 287C  
-                       l6910 2F3A                         l7382 36BA                         l6726 3676  
-                       l6672 2D14                         l7392 2424                         l6648 3480  
-                       l6584 28D8                         l6576 289A                         l6568 2864  
-                       l6674 2D1C                         l6666 2CFA                         l7394 242E  
-                       l7554 2C78                         l6930 16B6                         l7626 2B52  
-                       l7474 293C                         l7482 2958                         l7714 1960  
-                       l6692 2D54                         l6684 2D3C                         l6676 2D20  
-                       l7396 2438                         l7388 23F8                         l6780 35B0  
-                       l6748 356A                         l6924 168C                         l6908 2F2E  
-                       l7398 244E                         l7566 2CC0                         l6766 358C  
-                       l6846 0A22                         l7582 200E                         l7574 1FD2  
-                       l7638 2B9A                         l7718 1984                         l7742 106E  
-                       l6688 2D46                         l6952 1706                         l7592 2068  
-                       l7496 2324                         l7728 0F7C                         l6954 1710  
-                       l6946 16E8                         l7586 2044                         l7578 1FF0  
-                       l7754 112E                         l6796 30A4                         l6972 1784  
-                       l6964 173C                         l6956 1718                         l7596 2086  
-                       l7588 204A                         l7676 1A48                         l7916 0E56  
-                       l6982 17BC                         l6966 1746                         l6958 171E  
-                       l6878 3032                         l6886 304E                         l6992 2214  
-                       l7866 0CBC                         l7858 0CA0                         l6998 224C  
-                       l7878 0D12                         l7898 0D7C                baroGetVal@reg 0002  
-                       u5020 3988                         _PIE1 000F9D                         u5026 398A  
-                       u6200 2660                         u6050 2206                         u6070 2232  
-                       u6150 25E8                         u6055 21FE                         u7015 1972  
-                       u5600 35AC                         u6080 223E                         u6170 2614  
-                       u6075 222A                         u6155 25E0                         u7117 3B28  
-                       u7045 1080                         u7127 3AAC                         u6175 260C  
-                       u7071 0CC6                         u5705 07A0                         u7081 0CD8  
-                       u5715 0818                         u5740 0950                         u5716 081E  
-                       u5645 1B3A                         u5725 0864                         u5717 082C  
-                       u5726 086A                         u5655 1B5E                         u5735 08F2  
-                       u5727 0878                         u5736 08F8                         u5840 1634  
-                       u5665 1C0A                         u5745 0946                         u5737 0906  
-                       u5666 1C10                         u5850 165A                         u5667 1C1E  
-                       u5675 067C                         u5676 0682                         u5765 0B64  
-                       u5685 06CE                         u5677 0690                         u5845 162C  
-                       u6645 2BCC                         u5766 0B6A                         u5686 06D4  
-                       u6750 2316                         u6646 2BD2                         u5767 0B78  
-                       u5695 0720                         u5687 06E2                         u5855 1652  
-                       u6647 2BE0                         u5696 0726                         u5697 0734  
-                       u6770 2342                         u6755 230E                         u6675 36F4  
-                       u6780 234E                         u6775 233A                         u6980 183C  
-                       u6965 19D4                         u6986 183E        __end_of_gyroCalibrate 3608  
+                       l2016 3452                         l2050 1B08                         l2026 3694  
+                       l2048 19F4                         l2049 19E6                         l1370 3286  
+                       l1434 3B5A                         l1602 19A0                         l1603 186E  
+                       l1702 3B26                         l1804 290A                         l1732 3716  
+                       l1397 3B34                         l1733 3722                         l1583 11AA  
+                       l1841 167E                         l1842 17E0                         l1908 26A8  
+                       l1845 16A8                         l1695 3AA6                         l1856 174C  
+                       l1865 1768                         l1873 23F4                         l1882 2DEC  
+                       l1947 2EEE                         l7003 2282                         l1875 239E  
+                       l1876 23C4                         l6141 3B4E                         l7013 22AE  
+                       l7101 3428                         l7007 2292                         l7111 3448  
+                       l7103 342C                         l1888 22F6                         l7033 2DBE  
+                       l7017 22BE                         l1898 39BC                         l7131 363A  
+                       l7029 2D8E                         l7053 25F6                         l7039 2DEA  
+                       l7071 264A                         l7081 2672                         l6611 2718  
+                       l6603 26E6                         l7083 267E                         l7075 265A  
+                       l7243 35E6                         l6621 274C                         l6613 271C  
+                       l7085 2682                         l7253 387C                         l7343 2C2A  
+                       l7335 2BF4                         l6609 270C                         l6625 275A  
+                       l6705 2EE0                         l7089 2698                         l7361 2530  
+                       l7249 3864                         l6721 368A                         l6713 366A  
+                       l6651 2CEA                         l6635 346C                         l6571 28B0  
+                       l6563 2872                         l7267 29EE                         l7275 2A0A  
+                       l7363 25B4                         l7099 3420                         l6715 3672  
+                       l7381 240E                         l6629 2770                         l6573 28CE  
+                       l6565 287C                         l6901 2F3A                         l7373 36BA  
+                       l6717 3676                         l6663 2D14                         l7391 2464  
+                       l7383 2424                         l6639 3480                         l6575 28D8  
+                       l6567 289A                         l6559 2864                         l7295 325C  
+                       l6665 2D1C                         l6657 2CFA                         l7393 2476  
+                       l7385 242E                         l7545 2C78                         l6921 16B6  
+                       l7617 2B52                         l7465 293C                         l7473 2958  
+                       l7705 1960                         l6683 2D54                         l6675 2D3C  
+                       l6667 2D20                         l7395 2484                         l7387 2438  
+                       l7379 23F8                         l6771 35B0                         l6739 356A  
+                       l6915 168C                         l7397 2496                         l7389 244E  
+                       l7557 2CC0                         l6757 358C                         l6597 26CE  
+                       l6693 2EA0                         l6837 0A22                         l7573 200E  
+                       l7565 1FD2                         l7629 2B9A                         l7493 235C  
+                       l7709 1984                         l7733 106E                         l6679 2D46  
+                       l7399 24A8                         l6695 2EAC                         l6943 1706  
+                       l7591 20AA                         l7583 2068                         l7487 2324  
+                       l7719 0F7C                         l6697 2EB0                         l6945 1710  
+                       l6937 16E8                         l7577 2044                         l7569 1FF0  
+                       l7745 112E                         l6787 30A4                         l6795 30C0  
+                       l6963 1784                         l6955 173C                         l6947 1718  
+                       l7587 2086                         l7579 204A                         l7667 1A48  
+                       l7691 1818                         l7907 0E56                         l6973 17BC  
+                       l6957 1746                         l6949 171E                         l6869 3032  
+                       l6877 304E                         l6983 2214                         l7857 0CBC  
+                       l7849 0CA0                         l6899 2F2E                         l6989 224C  
+                       l7869 0D12                         l7889 0D7C                baroGetVal@reg 0002  
+                       _PIE1 000F9D                         u6010 2232                         u6020 223E  
+                       u6110 2614                         u6015 222A                         u6115 260C  
+                       u7011 0CC6                         u6140 2660                         u7021 0CD8  
+                       u6090 25E8                         u5540 35AC                         u5605 1C0A  
+                       u5606 1C10                         u5607 1C1E                         u5615 067C  
+                       u6095 25E0                         u5616 0682                         u7057 3B28  
+                       u5705 0B64                         u5625 06CE                         u5617 0690  
+                       u5706 0B6A                         u5626 06D4                         u7067 3AAC  
+                       u5707 0B78                         u5635 0720                         u5627 06E2  
+                       u5636 0726                         u5645 07A0                         u5637 0734  
+                       u6710 2342                         u5655 0818                         u6615 36F4  
+                       u5680 0950                         u5656 081E                         u6720 234E  
+                       u5585 1B3A                         u5665 0864                         u5657 082C  
+                       u5666 086A                         u5595 1B5E                         u5675 08F2  
+                       u5667 0878                         u6715 233A                         u5676 08F8  
+                       u5780 1634                         u5685 0946                         u5677 0906  
+                       u5790 165A                         u4990 3988                         u6920 183C  
+                       u5785 162C                         u6585 2BCC                         u6905 19D4  
+                       u6690 2316                         u6586 2BD2                         u5795 1652  
+                       u6587 2BE0                         u4996 398A                         u5990 2206  
+                       u6926 183E                         u6695 230E                         u5995 21FE  
+                       u6955 1972                         u6985 1080        __end_of_gyroCalibrate 3608  
         xBeeATCommandUC@cmd1 0010          xBeeATCommandUC@cmd2 0011        accelGetRoll@accelTemp 0078  
                        _fabs 36E2                         _atan 17E2                         _asin 0F30  
                        _main 0B9A                 ___ftpack@arg 0001                 ___ftpack@exp 0004  

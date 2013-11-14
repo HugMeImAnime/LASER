@@ -2843,182 +2843,160 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 332 ]
 [e $ != -> . . _SSPCON2bits 0 4 `i -> -> -> 0 `i `Vuc `i 333  ]
 [e :U 334 ]
-[; ;smbus.c: 64: while(SSPCON2bits.ACKSTAT);
-"64
-[e $U 335  ]
-[e :U 336 ]
-[e :U 335 ]
-[e $ != -> . . _SSPCON2bits 0 6 `i -> -> -> 0 `i `Vuc `i 336  ]
-[e :U 337 ]
-[; ;smbus.c: 65: SSPCON2bits.PEN=1;while(SSPCON2bits.PEN);
-"65
-[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
-[e $U 338  ]
-[e :U 339 ]
-[e :U 338 ]
-[e $ != -> . . _SSPCON2bits 0 2 `i -> -> -> 0 `i `Vuc `i 339  ]
-[e :U 340 ]
-[; ;smbus.c: 66: while ( SSPCON2bits.PEN );
-"66
-[e $U 341  ]
-[e :U 342 ]
-[e :U 341 ]
-[e $ != -> . . _SSPCON2bits 0 2 `i -> -> -> 0 `i `Vuc `i 342  ]
-[e :U 343 ]
-[; ;smbus.c: 68: return value;
-"68
+[; ;smbus.c: 69: return value;
+"69
 [e ) _value ]
 [e $UE 319  ]
-[; ;smbus.c: 70: }
-"70
+[; ;smbus.c: 71: }
+"71
 [e :UE 319 ]
 }
-"77
+"78
 [v _ReadI2CByte `(uc ~T0 @X0 1 ef1`uc ]
 {
-[; ;smbus.c: 76: unsigned char ReadI2CByte(unsigned char Address)
-[; ;smbus.c: 77: {
+[; ;smbus.c: 77: unsigned char ReadI2CByte(unsigned char Address)
+[; ;smbus.c: 78: {
 [e :U _ReadI2CByte ]
 [v _Address `uc ~T0 @X0 1 r1 ]
 [f ]
-"78
+"79
 [v _Data `uc ~T0 @X0 1 a ]
-[; ;smbus.c: 78: unsigned char Data;
-[; ;smbus.c: 80: IdleI2C();
-"80
-[e ( _IdleI2C ..  ]
-[; ;smbus.c: 81: SSPCON2bits.SEN=1;while(SSPCON2bits.SEN);
+[; ;smbus.c: 79: unsigned char Data;
+[; ;smbus.c: 81: IdleI2C();
 "81
+[e ( _IdleI2C ..  ]
+[; ;smbus.c: 82: SSPCON2bits.SEN=1;while(SSPCON2bits.SEN);
+"82
 [e = . . _SSPCON2bits 0 0 -> -> 1 `i `uc ]
+[e $U 336  ]
+[e :U 337 ]
+[e :U 336 ]
+[e $ != -> . . _SSPCON2bits 0 0 `i -> -> -> 0 `i `Vuc `i 337  ]
+[e :U 338 ]
+[; ;smbus.c: 83: while ( SSPCON2bits.SEN );
+"83
+[e $U 339  ]
+[e :U 340 ]
+[e :U 339 ]
+[e $ != -> . . _SSPCON2bits 0 0 `i -> -> -> 0 `i `Vuc `i 340  ]
+[e :U 341 ]
+[; ;smbus.c: 85: WriteI2C((Address<<1)+1);
+"85
+[e ( _WriteI2C (1 -> + << -> _Address `i -> 1 `i -> 1 `i `uc ]
+[; ;smbus.c: 86: IdleI2C();
+"86
+[e ( _IdleI2C ..  ]
+[; ;smbus.c: 88: Data = ReadI2C();
+"88
+[e = _Data ( _ReadI2C ..  ]
+[; ;smbus.c: 89: IdleI2C();
+"89
+[e ( _IdleI2C ..  ]
+[; ;smbus.c: 91: SSPCON2bits.PEN=1;while(SSPCON2bits.PEN);
+"91
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+[e $U 342  ]
+[e :U 343 ]
+[e :U 342 ]
+[e $ != -> . . _SSPCON2bits 0 2 `i -> -> -> 0 `i `Vuc `i 343  ]
+[e :U 344 ]
+[; ;smbus.c: 92: while ( SSPCON2bits.PEN );
+"92
 [e $U 345  ]
 [e :U 346 ]
 [e :U 345 ]
-[e $ != -> . . _SSPCON2bits 0 0 `i -> -> -> 0 `i `Vuc `i 346  ]
+[e $ != -> . . _SSPCON2bits 0 2 `i -> -> -> 0 `i `Vuc `i 346  ]
 [e :U 347 ]
-[; ;smbus.c: 82: while ( SSPCON2bits.SEN );
-"82
-[e $U 348  ]
-[e :U 349 ]
-[e :U 348 ]
-[e $ != -> . . _SSPCON2bits 0 0 `i -> -> -> 0 `i `Vuc `i 349  ]
-[e :U 350 ]
-[; ;smbus.c: 84: WriteI2C((Address<<1)+1);
-"84
-[e ( _WriteI2C (1 -> + << -> _Address `i -> 1 `i -> 1 `i `uc ]
-[; ;smbus.c: 85: IdleI2C();
-"85
-[e ( _IdleI2C ..  ]
-[; ;smbus.c: 87: Data = ReadI2C();
-"87
-[e = _Data ( _ReadI2C ..  ]
-[; ;smbus.c: 88: IdleI2C();
-"88
-[e ( _IdleI2C ..  ]
-[; ;smbus.c: 90: SSPCON2bits.PEN=1;while(SSPCON2bits.PEN);
-"90
-[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
-[e $U 351  ]
-[e :U 352 ]
-[e :U 351 ]
-[e $ != -> . . _SSPCON2bits 0 2 `i -> -> -> 0 `i `Vuc `i 352  ]
-[e :U 353 ]
-[; ;smbus.c: 91: while ( SSPCON2bits.PEN );
-"91
-[e $U 354  ]
-[e :U 355 ]
-[e :U 354 ]
-[e $ != -> . . _SSPCON2bits 0 2 `i -> -> -> 0 `i `Vuc `i 355  ]
-[e :U 356 ]
-[; ;smbus.c: 93: return Data;
-"93
-[e ) _Data ]
-[e $UE 344  ]
-[; ;smbus.c: 94: }
+[; ;smbus.c: 94: return Data;
 "94
-[e :UE 344 ]
+[e ) _Data ]
+[e $UE 335  ]
+[; ;smbus.c: 95: }
+"95
+[e :UE 335 ]
 }
-"97
+"98
 [v _ReadI2CWord `(us ~T0 @X0 1 ef1`uc ]
 {
-[; ;smbus.c: 96: unsigned short ReadI2CWord(unsigned char Address)
-[; ;smbus.c: 97: {
+[; ;smbus.c: 97: unsigned short ReadI2CWord(unsigned char Address)
+[; ;smbus.c: 98: {
 [e :U _ReadI2CWord ]
 [v _Address `uc ~T0 @X0 1 r1 ]
 [f ]
-"98
+"99
 [v _Data `us ~T0 @X0 1 a ]
-[; ;smbus.c: 98: unsigned short Data;
-[; ;smbus.c: 100: IdleI2C();
-"100
-[e ( _IdleI2C ..  ]
-[; ;smbus.c: 101: SSPCON2bits.SEN=1;while(SSPCON2bits.SEN);
+[; ;smbus.c: 99: unsigned short Data;
+[; ;smbus.c: 101: IdleI2C();
 "101
+[e ( _IdleI2C ..  ]
+[; ;smbus.c: 102: SSPCON2bits.SEN=1;while(SSPCON2bits.SEN);
+"102
 [e = . . _SSPCON2bits 0 0 -> -> 1 `i `uc ]
+[e $U 349  ]
+[e :U 350 ]
+[e :U 349 ]
+[e $ != -> . . _SSPCON2bits 0 0 `i -> -> -> 0 `i `Vuc `i 350  ]
+[e :U 351 ]
+[; ;smbus.c: 103: while ( SSPCON2bits.SEN );
+"103
+[e $U 352  ]
+[e :U 353 ]
+[e :U 352 ]
+[e $ != -> . . _SSPCON2bits 0 0 `i -> -> -> 0 `i `Vuc `i 353  ]
+[e :U 354 ]
+[; ;smbus.c: 105: WriteI2C((Address<<1)+1);
+"105
+[e ( _WriteI2C (1 -> + << -> _Address `i -> 1 `i -> 1 `i `uc ]
+[; ;smbus.c: 106: IdleI2C();
+"106
+[e ( _IdleI2C ..  ]
+[; ;smbus.c: 110: Data = ReadI2C();
+"110
+[e = _Data -> ( _ReadI2C ..  `us ]
+[; ;smbus.c: 111: IdleI2C();
+"111
+[e ( _IdleI2C ..  ]
+[; ;smbus.c: 112: SSPCON2bits.ACKDT=0;SSPCON2bits.ACKEN=1;while(SSPCON2bits.ACKEN);
+"112
+[e = . . _SSPCON2bits 0 5 -> -> 0 `i `uc ]
+[e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
+[e $U 355  ]
+[e :U 356 ]
+[e :U 355 ]
+[e $ != -> . . _SSPCON2bits 0 4 `i -> -> -> 0 `i `Vuc `i 356  ]
+[e :U 357 ]
+[; ;smbus.c: 113: IdleI2C();
+"113
+[e ( _IdleI2C ..  ]
+[; ;smbus.c: 115: Data <<= 8;
+"115
+[e =<< _Data -> 8 `i ]
+[; ;smbus.c: 119: Data += ReadI2C();
+"119
+[e =+ _Data -> ( _ReadI2C ..  `us ]
+[; ;smbus.c: 120: IdleI2C();
+"120
+[e ( _IdleI2C ..  ]
+[; ;smbus.c: 122: SSPCON2bits.PEN=1;while(SSPCON2bits.PEN);
+"122
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
 [e $U 358  ]
 [e :U 359 ]
 [e :U 358 ]
-[e $ != -> . . _SSPCON2bits 0 0 `i -> -> -> 0 `i `Vuc `i 359  ]
+[e $ != -> . . _SSPCON2bits 0 2 `i -> -> -> 0 `i `Vuc `i 359  ]
 [e :U 360 ]
-[; ;smbus.c: 102: while ( SSPCON2bits.SEN );
-"102
+[; ;smbus.c: 123: while ( SSPCON2bits.PEN );
+"123
 [e $U 361  ]
 [e :U 362 ]
 [e :U 361 ]
-[e $ != -> . . _SSPCON2bits 0 0 `i -> -> -> 0 `i `Vuc `i 362  ]
+[e $ != -> . . _SSPCON2bits 0 2 `i -> -> -> 0 `i `Vuc `i 362  ]
 [e :U 363 ]
-[; ;smbus.c: 104: WriteI2C((Address<<1)+1);
-"104
-[e ( _WriteI2C (1 -> + << -> _Address `i -> 1 `i -> 1 `i `uc ]
-[; ;smbus.c: 105: IdleI2C();
-"105
-[e ( _IdleI2C ..  ]
-[; ;smbus.c: 109: Data = ReadI2C();
-"109
-[e = _Data -> ( _ReadI2C ..  `us ]
-[; ;smbus.c: 110: IdleI2C();
-"110
-[e ( _IdleI2C ..  ]
-[; ;smbus.c: 111: SSPCON2bits.ACKDT=0;SSPCON2bits.ACKEN=1;while(SSPCON2bits.ACKEN);
-"111
-[e = . . _SSPCON2bits 0 5 -> -> 0 `i `uc ]
-[e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
-[e $U 364  ]
-[e :U 365 ]
-[e :U 364 ]
-[e $ != -> . . _SSPCON2bits 0 4 `i -> -> -> 0 `i `Vuc `i 365  ]
-[e :U 366 ]
-[; ;smbus.c: 112: IdleI2C();
-"112
-[e ( _IdleI2C ..  ]
-[; ;smbus.c: 114: Data <<= 8;
-"114
-[e =<< _Data -> 8 `i ]
-[; ;smbus.c: 118: Data += ReadI2C();
-"118
-[e =+ _Data -> ( _ReadI2C ..  `us ]
-[; ;smbus.c: 119: IdleI2C();
-"119
-[e ( _IdleI2C ..  ]
-[; ;smbus.c: 121: SSPCON2bits.PEN=1;while(SSPCON2bits.PEN);
-"121
-[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
-[e $U 367  ]
-[e :U 368 ]
-[e :U 367 ]
-[e $ != -> . . _SSPCON2bits 0 2 `i -> -> -> 0 `i `Vuc `i 368  ]
-[e :U 369 ]
-[; ;smbus.c: 122: while ( SSPCON2bits.PEN );
-"122
-[e $U 370  ]
-[e :U 371 ]
-[e :U 370 ]
-[e $ != -> . . _SSPCON2bits 0 2 `i -> -> -> 0 `i `Vuc `i 371  ]
-[e :U 372 ]
-[; ;smbus.c: 124: return Data;
-"124
-[e ) _Data ]
-[e $UE 357  ]
-[; ;smbus.c: 125: }
+[; ;smbus.c: 125: return Data;
 "125
-[e :UE 357 ]
+[e ) _Data ]
+[e $UE 348  ]
+[; ;smbus.c: 126: }
+"126
+[e :UE 348 ]
 }

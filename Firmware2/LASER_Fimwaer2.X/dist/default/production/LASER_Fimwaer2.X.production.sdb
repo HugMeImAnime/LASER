@@ -276,9 +276,9 @@
 [v _writeRegSMB writeRegSMB `(v  1 e 0 0 ]
 "38
 [v _readSMB readSMB `(uc  1 e 1 0 ]
-"77
+"78
 [v _ReadI2CByte ReadI2CByte `(uc  1 e 1 0 ]
-"97
+"98
 [v _ReadI2CWord ReadI2CWord `(us  1 e 2 0 ]
 "25 C:\Users\Paul\Documents\GitHub\LASER\Firmware2\LASER_Fimwaer2.X\telemetry.c
 [v _openRS232 openRS232 `(v  1 e 0 0 ]
